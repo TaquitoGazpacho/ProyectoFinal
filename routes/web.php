@@ -88,4 +88,4 @@ Route::post('/changeSuscription', 'SuscripcionController@cambiarSuscripcion')->n
 
 Route::get('/administradorP', function () {
     return view('prueba');
-})->name('index');
+})->name('prueba');

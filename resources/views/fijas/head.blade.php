@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- CSS -->
-<link rel="stylesheet" href={{asset("css/complementos/bootstrap.min.css")}}>
+<link rel="stylesheet" href={{asset("bootstrap/css/bootstrap.min.css")}}>
 <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 
 <!-- Font Awesome -->
@@ -16,7 +16,7 @@
 <script src={{asset("js/complementos/jquery.min.js")}}></script>
 
 <!-- JavaScript -->
-<script src={{asset("js/complementos/bootstrap.min.js")}}></script>
+<script src={{asset("bootstrap/js/bootstrap.min.js")}}></script>
 <script src="{{ asset('js/index.js') }}"></script>
 
 <!-- SweetAlert -->

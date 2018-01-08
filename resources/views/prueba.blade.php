@@ -7,11 +7,11 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href={{asset("css/complementos/bootstrap.min.css")}}>
+    <link rel="stylesheet" href={{asset("bootstrap/css/bootstrap.min.css")}}>
     <!-- Font Awesome -->
-    <link rel="stylesheet" href={{asset("css/complementos/font-awesome.min.css")}}>
+    <link rel="stylesheet" href={{asset("font-awesome/css/font-awesome.min.css")}}>
     <!-- Ionicons -->
-    <link rel="stylesheet" href={{asset("css/complementos/ionicons.min.css")}}>
+    <link rel="stylesheet" href={{asset("css/complementos/ionicons/css/ionicons.min.css")}}>
     <!-- Theme style -->
     <link rel="stylesheet" href={{asset("adminLTE/css/AdminLTE.min.css")}}>
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -259,16 +259,16 @@
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="adminLTE/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                            <span class="hidden-xs">Alexander Pierce</span>
+                            <img src="adminLTE/img/iker.png" class="user-image" alt="User Image">
+                            <span class="hidden-xs">Iker Ruzo</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="adminLTE/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                <img src="adminLTE/img/iker.png" class="img-circle" alt="User Image">
 
                                 <p>
-                                    Alexander Pierce - Web Developer
+                                    Iker Ruzo - Web Developer
                                     <small>Member since Nov. 2012</small>
                                 </p>
                             </li>
@@ -313,10 +313,10 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="adminLTE/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    <img src="adminLTE/img/iker.png" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>Alexander Pierce</p>
+                    <p>Iker Ruzo</p>
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
@@ -652,12 +652,12 @@
                             <!-- /.item -->
                             <!-- chat item -->
                             <div class="item">
-                                <img src="adminLTE/img/user3-128x128.jpg" alt="user image" class="offline">
+                                <img src="adminLTE/img/iker.png" alt="user image" class="offline">
 
                                 <p class="message">
                                     <a href="#" class="name">
                                         <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:15</small>
-                                        Alexander Pierce
+                                        Iker Ruzo
                                     </a>
                                     I would like to meet you to discuss the latest news about
                                     the arrival of the new theme. They say it is going to be one the
@@ -1240,7 +1240,7 @@
     $.widget.bridge('uibutton', $.ui.button);
 </script>
 <!-- Bootstrap 3.3.7 -->
-<script src={{asset("js/complementos/bootstrap.min.js")}}></script>
+<script src={{asset("bootstrap/js/bootstrap.min.js")}}></script>
 <!-- Morris.js charts -->
 <script src={{asset("js/complementos/raphael.min.js")}}></script>
 <script src={{asset("js/complementos/morris.min.js")}}></script>
