@@ -13,8 +13,32 @@ var mix = require('laravel-mix');
 
 mix.sass('resources/assets/sass/style.scss', 'public/css')
     .options({
-        processCssUrls: false
+        processCssUrls: false,
+        includePaths: ['node_modules']
     });
+
+mix.copy('node_modules/bootstrap/dist/css/bootstrap.min.css', 'public/css/complementos');
+mix.copy('node_modules/font-awesome/css/font-awesome.min.css', 'public/css/complementos');
+mix.copy('node_modules/ionicons/dist/css/ionicons.min.css', 'public/css/complementos');
+mix.copy('node_modules/morris.js/morris.css', 'public/css/complementos');
+mix.copy('node_modules/jvectormap/jquery-jvectormap.css', 'public/css/complementos');
+mix.copy('node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css', 'public/css/complementos');
+mix.copy('node_modules/bootstrap-daterangepicker/daterangepicker.css', 'public/css/complementos');
+
+mix.copy('node_modules/jquery/dist/jquery.min.js', 'public/js/complementos');
+mix.copy('node_modules/jquery-ui-dist/jquery-ui.min.js', 'public/js/complementos');
+mix.copy('node_modules/bootstrap/dist/js/bootstrap.min.js', 'public/js/complementos');
+mix.copy('node_modules/raphael/raphael.min.js', 'public/js/complementos');
+mix.copy('node_modules/morris.js/morris.min.js', 'public/js/complementos');
+mix.copy('node_modules/jquery-sparkline/jquery.sparkline.min.js', 'public/js/complementos');
+mix.copy('node_modules/jquery-knob/dist/jquery.knob.min.js', 'public/js/complementos');
+mix.copy('node_modules/moment/min/moment.min.js', 'public/js/complementos');
+mix.copy('node_modules/bootstrap-daterangepicker/daterangepicker.js', 'public/js/complementos');
+mix.copy('node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js', 'public/js/complementos');
+mix.copy('node_modules/jquery-slimscroll/jquery.slimscroll.min.js', 'public/js/complementos');
+mix.copy('node_modules/fastclick/lib/fastclick.js', 'public/js/complementos');
+
+
 
 //mix.js('resources/assets/js/app.js', 'public/js')
 // .sass('resources/assets/sass/style.scss', 'public/css');

@@ -1,3 +1,22 @@
 {
-    "/css/style.css": "/css/style.css"
+    "/css/style.css": "/css/style.css",
+    "/css/complementos/bootstrap.min.css": "/css/complementos/bootstrap.min.css",
+    "/css/complementos/font-awesome.min.css": "/css/complementos/font-awesome.min.css",
+    "/css/complementos/ionicons.min.css": "/css/complementos/ionicons.min.css",
+    "/css/complementos/morris.css": "/css/complementos/morris.css",
+    "/css/complementos/jquery-jvectormap.css": "/css/complementos/jquery-jvectormap.css",
+    "/css/complementos/bootstrap-datepicker.min.css": "/css/complementos/bootstrap-datepicker.min.css",
+    "/css/complementos/daterangepicker.css": "/css/complementos/daterangepicker.css",
+    "/js/complementos/jquery.min.js": "/js/complementos/jquery.min.js",
+    "/js/complementos/jquery-ui.min.js": "/js/complementos/jquery-ui.min.js",
+    "/js/complementos/bootstrap.min.js": "/js/complementos/bootstrap.min.js",
+    "/js/complementos/raphael.min.js": "/js/complementos/raphael.min.js",
+    "/js/complementos/morris.min.js": "/js/complementos/morris.min.js",
+    "/js/complementos/jquery.sparkline.min.js": "/js/complementos/jquery.sparkline.min.js",
+    "/js/complementos/jquery.knob.min.js": "/js/complementos/jquery.knob.min.js",
+    "/js/complementos/moment.min.js": "/js/complementos/moment.min.js",
+    "/js/complementos/daterangepicker.js": "/js/complementos/daterangepicker.js",
+    "/js/complementos/bootstrap-datepicker.min.js": "/js/complementos/bootstrap-datepicker.min.js",
+    "/js/complementos/jquery.slimscroll.min.js": "/js/complementos/jquery.slimscroll.min.js",
+    "/js/complementos/fastclick.js": "/js/complementos/fastclick.js"
 }
