@@ -27,7 +27,7 @@
     {{--<link rel="stylesheet" href="node_modules/bootstrap-daterangepicker/daterangepicker.css">--}}
     <!-- bootstrap wysihtml5 - text editor -->
 
-    <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href={{asset("adminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css")}}>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -73,7 +73,7 @@
                                     <li><!-- start message -->
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                                <img src="adminLTE/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 Support Team
@@ -86,7 +86,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="adminLTE/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 AdminLTE Design Team
@@ -98,7 +98,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="adminLTE/img/user4-128x128.jpg" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 Developers
@@ -110,7 +110,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="adminLTE/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 Sales Department
@@ -122,7 +122,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="adminLTE/img/user4-128x128.jpg" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 Reviewers
@@ -259,13 +259,13 @@
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                            <img src="adminLTE/img/user2-160x160.jpg" class="user-image" alt="User Image">
                             <span class="hidden-xs">Alexander Pierce</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                <img src="adminLTE/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                                 <p>
                                     Alexander Pierce - Web Developer
@@ -313,7 +313,7 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    <img src="adminLTE/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
                     <p>Alexander Pierce</p>
@@ -625,7 +625,7 @@
                         <div class="box-body chat" id="chat-box">
                             <!-- chat item -->
                             <div class="item">
-                                <img src="dist/img/user4-128x128.jpg" alt="user image" class="online">
+                                <img src="adminLTE/img/user4-128x128.jpg" alt="user image" class="online">
 
                                 <p class="message">
                                     <a href="#" class="name">
@@ -652,7 +652,7 @@
                             <!-- /.item -->
                             <!-- chat item -->
                             <div class="item">
-                                <img src="dist/img/user3-128x128.jpg" alt="user image" class="offline">
+                                <img src="adminLTE/img/user3-128x128.jpg" alt="user image" class="offline">
 
                                 <p class="message">
                                     <a href="#" class="name">
@@ -667,7 +667,7 @@
                             <!-- /.item -->
                             <!-- chat item -->
                             <div class="item">
-                                <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+                                <img src="adminLTE/img/user2-160x160.jpg" alt="user image" class="offline">
 
                                 <p class="message">
                                     <a href="#" class="name">
@@ -713,7 +713,7 @@
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
-                            <!-- See dist/js/pages/dashboard.js to activate the todoList plugin -->
+                            <!-- See adminLTE/js/pages/dashboard.js to activate the todoList plugin -->
                             <ul class="todo-list">
                                 <li>
                                     <!-- drag handle -->
@@ -1247,8 +1247,8 @@
 <!-- Sparkline -->
 <script src={{asset("js/complementos/jquery.sparkline.min.js")}}></script>
 <!-- jvectormap -->
-<script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script src={{asset("adminLTE/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js")}}></script>
+<script src={{asset("adminLTE/plugins/jvectormap/jquery-jvectormap-world-mill-en.js")}}></script>
 <!-- jQuery Knob Chart -->
 <script src={{asset("js/complementos/jquery.knob.min.js")}}></script>
 <!-- daterangepicker -->
@@ -1257,7 +1257,7 @@
 <!-- datepicker -->
 <script src={{asset("js/complementos/bootstrap-datepicker.min.js")}}></script>
 <!-- Bootstrap WYSIHTML5 -->
-<script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<script src={{asset("adminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js")}}></script>
 <!-- Slimscroll -->
 <script src={{asset("js/complementos/jquery.slimscroll.min.js")}}></script>
 <!-- FastClick -->

@@ -18,7 +18,8 @@ mix.sass('resources/assets/sass/style.scss', 'public/css')
     });
 
 mix.copy('node_modules/bootstrap/dist/css/bootstrap.min.css', 'public/css/complementos');
-mix.copy('node_modules/font-awesome/css/font-awesome.min.css', 'public/css/complementos');
+mix.copy('node_modules/font-awesome/css', 'public/font-awesome/css');
+mix.copy('node_modules/font-awesome/fonts', 'public/font-awesome/fonts');
 mix.copy('node_modules/ionicons/dist/css/ionicons.min.css', 'public/css/complementos');
 mix.copy('node_modules/morris.js/morris.css', 'public/css/complementos');
 mix.copy('node_modules/jvectormap/jquery-jvectormap.css', 'public/css/complementos');

@@ -112,7 +112,6 @@ $( document ).ready( function() {
 
         let datosFormulario = $(this).serialize();
         let url = $(this).attr("action");
-        console.log(url);
 
         $.post(url, datosFormulario, function (respuesta) {
             //recoger valores en formulario
