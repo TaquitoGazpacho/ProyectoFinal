@@ -125,7 +125,7 @@ function mostrarUsuario(event){
     let sexo = $("#usuario_"+usuario_id+"_sexo").text();
     for (let i=0;i<sexo_opciones.length; i++){
         if (sexo_opciones[i].value.toLowerCase() == sexo.toLowerCase()){
-            document.getElementById('user_'+sexo_opciones[i].value).checked = true;
+            document.getElementById('user_'+sexo_opciones[i].value.toLowerCase()).checked = true;
         }
     }
     let suscripciones = $('form #userSuscripcion option');
