@@ -9,34 +9,81 @@ $empresas = Empresa_reparto::getEmpresas();
 @section('pageDescription', 'Edición y registro de transportistas')
 
 @section('contenido')
-    <table class="table table-hover">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Email</th>
-            <th>Teléfono</th>
-            <th>Nif</th>
-            <th>Editar</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach($empresas as $empresa)
-            <tr>
-                <td id="{{$empresa->id}}_id">{{$empresa->id}}</td>
-                <td id="{{$empresa->id}}_nombre">{{$empresa->nombre}}</td>
-                <td id="{{$empresa->id}}_email">{{$empresa->email}}</td>
-                <td id="{{$empresa->id}}_telefono">{{$empresa->telefono}}</td>
-                <td id="{{$empresa->id}}_nif">{{$empresa->nif}}</td>
+    {{--<table class="table table-hover">--}}
+        {{--<thead>--}}
+        {{--<tr>--}}
+            {{--<th>ID</th>--}}
+            {{--<th>Nombre</th>--}}
+            {{--<th>Email</th>--}}
+            {{--<th>Teléfono</th>--}}
+            {{--<th>Nif</th>--}}
+            {{--<th>Editar</th>--}}
+        {{--</tr>--}}
+        {{--</thead>--}}
+        {{--<tbody>--}}
+        {{--@foreach($empresas as $empresa)--}}
+            {{--<tr>--}}
+                {{--<td id="{{$empresa->id}}_id">{{$empresa->id}}</td>--}}
+                {{--<td id="{{$empresa->id}}_nombre">{{$empresa->nombre}}</td>--}}
+                {{--<td id="{{$empresa->id}}_email">{{$empresa->email}}</td>--}}
+                {{--<td id="{{$empresa->id}}_telefono">{{$empresa->telefono}}</td>--}}
+                {{--<td id="{{$empresa->id}}_nif">{{$empresa->nif}}</td>--}}
                 {{--<td><button name="{{$empresa->nombre}}" class="btn btn-default" onclick="mostrarEmpresa(event)" data-toggle="modal" data-target="#modalEditarEmpresa">Editar</button></td>--}}
-                <td><button name="{{$empresa->id}}" class="btn btn-default" onclick="mostrarEmpresa(event)" data-toggle="modal" data-target="#modalEditarEmpresa">Editar</button></td>
-            </tr>
-        @endforeach
-        </tbody>
-    </table>
-    <a class="btn btn-warning" data-toggle="modal" data-target="#modalEmpresa">Registrar Empresa</a>
-    @include('fijas.registroEmpresaReparto')
+                {{--<td><button name="{{$empresa->id}}" class="btn btn-default" onclick="mostrarEmpresa(event)" data-toggle="modal" data-target="#modalEditarEmpresa">Editar</button></td>--}}
+            {{--</tr>--}}
+        {{--@endforeach--}}
+        {{--</tbody>--}}
+    {{--</table>--}}
+    {{--<a class="btn btn-warning" data-toggle="modal" data-target="#modalEmpresa">Registrar Empresa</a>--}}
+    {{--@include('fijas.registroEmpresaReparto')--}}
     {{--Modal--}}
-    @include('fijas.editarEmpresaReparto')
+    {{--@include('fijas.editarEmpresaReparto')--}}
 
+    <div class="box-body table-responsive">
+        <table id="tablaConOpciones" class="table table-hover">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Nif</th>
+                <th>Editar</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($empresas as $empresa)
+                <tr>
+                    <td id="{{$empresa->id}}_id">{{$empresa->id}}</td>
+                    <td id="{{$empresa->id}}_nombre">{{$empresa->nombre}}</td>
+                    <td id="{{$empresa->id}}_email">{{$empresa->email}}</td>
+                    <td id="{{$empresa->id}}_telefono">{{$empresa->telefono}}</td>
+                    <td id="{{$empresa->id}}_nif">{{$empresa->nif}}</td>
+{{--                <td><button name="{{$empresa->nombre}}" class="btn btn-default" onclick="mostrarEmpresa(event)" data-toggle="modal" data-target="#modalEditarEmpresa">Editar</button></td>--}}
+                    <td><button name="{{$empresa->id}}" class="btn btn-default" onclick="mostrarEmpresa(event)" data-toggle="modal" data-target="#modalEditarEmpresa">Editar</button></td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+        <a class="btn btn-warning" data-toggle="modal" data-target="#modalEmpresa">Registrar Empresa</a>
+        @include('fijas.registroEmpresaReparto')
+        {{--Modal--}}
+        @include('fijas.editarEmpresaReparto')
+    </div>
+
+@endsection
+
+@section('js')
+    <script>
+        $(function () {
+            $('#tablaConOpciones').DataTable({
+                'paging'      : true,
+                'lengthChange': false,
+                'searching'   : false,
+                'ordering'    : true,
+                'info'        : true,
+                'autoWidth'   : false
+            })
+        })
+    </script>
 @endsection
