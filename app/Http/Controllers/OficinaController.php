@@ -46,7 +46,7 @@ class OficinaController extends Controller
     {
         $id = $id_request;
         $datosOficina = $this->mostrarDatos($id);
-        return view('/fijas/editarOficina', ['datosOficina' => $datosOficina]);
+        return view('admin.editarOficina', ['datosOficina' => $datosOficina]);
     }
     public function mostrarDatos($id)
     {
@@ -64,7 +64,6 @@ class OficinaController extends Controller
                 'calle' => $request->calle,
                 'num_calle' => $request->num_calle,
             ]);
-        return redirect()->route('admin.home');
     }
     public function dropOficinas(Request $request){
         for ($i=0; $i<sizeof($request->delete); $i++){

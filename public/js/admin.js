@@ -64,6 +64,9 @@ $( document ).ready( function() {
     });
 });
 
+
+// *********************************** Vista Admin cambio de parametros de usuario ********************************************
+
 // function editarUsuario(event) {
 //     let url = window.location.href;
 //     let urlFija = '/editarUsuario?id='+event.target.name;//document.getElementsByName('empresa')[0].value;
@@ -109,10 +112,6 @@ $( document ).ready( function() {
 //
 // } //ESTA SE SUSTITUYE POR mostrarUsuario() justo abajo
 
-
-// *********************************** Vista Admin cambio de parametros de usuario ********************************************
-
-
 function mostrarUsuario(event){
     let usuario_id= event.target.name;
     $('#userId').val(usuario_id);
@@ -138,11 +137,9 @@ function mostrarUsuario(event){
 
 $( document ).ready( function() {
     $("#editarUsuario form").submit(function (event) {
-        console.log("holadola");
         event.preventDefault();
 
         let datosFormulario = $(this).serialize();
-        console.log('datos:'+datosFormulario);
 
         let url = $(this).attr("action");
 
@@ -185,7 +182,6 @@ function estadoTaquilla(event, id){
 
     http.onreadystatechange = function () {
         if (http.readyState === 4) {
-            console.log(http.readyState);
             // Se ha recibido la respuesta.
             if (http.status === 200) {
                 // Aquí escribiremos lo que queremos que
@@ -202,6 +198,48 @@ function estadoTaquilla(event, id){
     }
 
 }
+
+
+
+// *********************************** Vista Admin cambio de parametros oficina********************************************
+
+function mostrarOficina(event){
+    var oficina_id = event.target.name;
+    $('#oficinaId').val(oficina_id);
+    $('#oficinaCiudad').val($("#oficina_"+oficina_id+"_ciudad").text());
+    $('#oficinaCalle').val($("#oficina_"+oficina_id+"_calle").text());
+    $('#oficinaNum').val($("#oficina_"+oficina_id+"_num").text());
+}
+
+
+$( document ).ready(function(){
+    $("#editarOficina").on("submit", function(event){
+        event.preventDefault();
+        let datosFormulario = $(this).serialize();
+
+        let url = $(this).attr("action");
+
+        $.post(url, datosFormulario, function (respuesta) {
+            //recoger valores en formulario
+            let id = $("#oficinaId").val();
+            let ciudad = $("#oficinaCiudad").val();
+            let calle = $("#oficinaCalle").val();
+            let numero = $("#oficinaNum").val();
+
+            //escribir valores en tabla
+            $('#oficina_' + id + '_ciudad').text(ciudad);
+            $('#oficina_' + id + '_calle').text(calle);
+            $('#oficina_' + id + '_num').text(numero);
+
+            //cerrar modal
+            $('#editarOficinaDiv').modal('toggle');
+        });
+    })
+});
+
+
+
+// *********************************** Sweet Alert********************************************
 
 function sweetAlertSimple(titulo, texto, icono) {
     swal({

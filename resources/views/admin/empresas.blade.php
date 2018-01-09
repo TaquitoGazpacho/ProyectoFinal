@@ -66,9 +66,9 @@ $empresas = Empresa_reparto::getEmpresas();
             </tbody>
         </table>
         <a class="btn btn-warning" data-toggle="modal" data-target="#modalEmpresa">Registrar Empresa</a>
-        @include('fijas.registroEmpresaReparto')
+        @include('admin.registroEmpresaReparto')
         {{--Modal--}}
-        @include('fijas.editarEmpresaReparto')
+        @include('admin.editarEmpresaReparto')
     </div>
 
 @endsection

@@ -58,7 +58,7 @@ Route::prefix('admin')->group(function() {
     Route::prefix('oficinas')->group(function(){
         Route::get('/', 'OficinaController@oficinas')->name('admin.oficinas');
         Route::prefix('editarOficina')->group(function (){
-            Route::get('/{id}', 'OficinaController@index')->name('editarOficina');
+            //Route::get('/{id}', 'OficinaController@index')->name('editarOficina');
             Route::post('/actualizar', 'OficinaController@actualizar')->name('editarOficina.actualizarOficina');
             Route::post('/registro', 'OficinaController@store')->name('registrarOficina');
             Route::post('/eliminar', 'OficinaController@dropOficinas')->name('eliminarOficinas');

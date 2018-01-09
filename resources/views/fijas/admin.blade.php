@@ -73,7 +73,7 @@
                         @endforeach
                     </tbody>
                 </table>
-                @include('fijas.editarUsuario');
+                @include('admin.editarUsuario');
 
             </div>
 
@@ -112,9 +112,9 @@
                     </tbody>
                 </table>
                 <a class="btn btn-warning" data-toggle="modal" data-target="#modalEmpresa">Registrar Empresa</a>
-                @include('fijas.registroEmpresaReparto')
+                @include('admin.registroEmpresaReparto')
                 {{--Modal--}}
-                @include('fijas.editarEmpresaReparto')
+                @include('admin.editarEmpresaReparto')
 
             </div>
 
@@ -155,7 +155,7 @@
                     <a class="btn btn-warning" data-toggle="modal" data-target="#modalOficina">Registrar Oficina</a>
                     <input type="submit" value="Eliminar" class="btn btn-error pull-right"/>
                 </form>
-                @include('fijas.registroOficinas')
+                @include('admin.registroOficinas')
             </div>
         </div>
     </div>

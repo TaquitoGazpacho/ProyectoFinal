@@ -101,7 +101,7 @@
     </div>
     <!-- /.box-body -->
 
-    @include('fijas.editarUsuario')
+    @include('admin.editarUsuario')
 @endsection
 
 @section('js')
