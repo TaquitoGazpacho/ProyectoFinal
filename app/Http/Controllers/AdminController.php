@@ -22,9 +22,11 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('fijas.admin');
+        return view('admin.home');
     }
-
+    public function usuarios(){
+        return view('admin.usuarios');
+    }
     public function mostrarDatosEmpresa(Request $request) {
 
         $nombre = $request->empresa;

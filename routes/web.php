@@ -47,25 +47,36 @@ Route::prefix('admin')->group(function() {
     Route::get('/login', 'Auth\Admin\LoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\Admin\LoginController@login')->name('admin.login.submit');
     Route::post('/logout', 'App\Http\Controllers\Auth\LoginController@logout')->name('admin.logout');
-    Route::get('/editarUsuario', 'AdminController@editUser')->name('admin.editUser');
-    Route::post('/editarUsuario', 'AdminController@cambiarDatosUser')->name('admin.editarUsuario');
 
-    Route::prefix('editarOficina')->group(function (){
+    Route::prefix('usuarios')->group(function(){
+        Route::get('/', 'AdminController@usuarios')->name('admin.usuarios');
+        Route::prefix('editarUsuario')->group(function() {
+            Route::get('/', 'AdminController@editUser')->name('admin.editUser');
+            Route::post('/', 'AdminController@cambiarDatosUser')->name('admin.editarUsuario');
+        });
+    });
+    Route::prefix('oficinas')->group(function(){
+        Route::get('/', 'OficinaController@oficinas')->name('admin.oficinas');
+        Route::prefix('editarOficina')->group(function (){
+            Route::get('/{id}', 'OficinaController@index')->name('editarOficina');
+            Route::post('/actualizar', 'OficinaController@actualizar')->name('editarOficina.actualizarOficina');
+            Route::post('/registro', 'OficinaController@store')->name('registrarOficina');
+            Route::post('/eliminar', 'OficinaController@dropOficinas')->name('eliminarOficinas');
 
-        Route::get('/{id}', 'OficinaController@index')->name('editarOficina');
-        Route::post('/actualizar', 'OficinaController@actualizar')->name('editarOficina.actualizarOficina');
-        Route::post('/registro', 'OficinaController@store')->name('registrarOficina');
-        Route::post('/eliminar', 'OficinaController@dropOficinas')->name('eliminarOficinas');
-
+        });
     });
 
-    Route::prefix('editarEmpresa')->group(function (){
 
-        Route::post('/', 'EmpresaRepartoController@index')->name('editarEmpresa');
-        Route::post('/registrar', 'EmpresaRepartoController@store')->name('registrarEmpresaReparto');
-        Route::post('/actualizar', 'EmpresaRepartoController@actualizar')->name('editarEmpresa.actualizarEmpresaReparto');
-        Route::get('/mostrarDatos', 'AdminController@mostrarDatosEmpresa')->name('mostrarDatos');
+    Route::prefix('empresas')->group(function () {
+        Route::get('/','EmpresaRepartoController@empresas')->name('admin.empresa');
+        Route::prefix('editarEmpresa')->group(function () {
 
+            Route::post('/', 'EmpresaRepartoController@index')->name('editarEmpresa');
+            Route::post('/registrar', 'EmpresaRepartoController@store')->name('registrarEmpresaReparto');
+            Route::post('/actualizar', 'EmpresaRepartoController@actualizar')->name('editarEmpresa.actualizarEmpresaReparto');
+            Route::get('/mostrarDatos', 'AdminController@mostrarDatosEmpresa')->name('mostrarDatos');
+
+        });
     });
 
     Route::prefix('taquilla')->group(function (){
@@ -85,7 +96,3 @@ Route::prefix('admin')->group(function() {
 Route::get('/verifyemail/{token}', 'Auth\User\RegisterController@verify');
 
 Route::post('/changeSuscription', 'SuscripcionController@cambiarSuscripcion')->name('cambiarSuscripcion');
-
-Route::get('/administradorP', function () {
-    return view('prueba');
-})->name('prueba');

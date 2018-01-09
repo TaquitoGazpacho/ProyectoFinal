@@ -9,6 +9,10 @@ use Illuminate\Http\Request;
 
 class OficinaController extends Controller
 {
+    public function oficinas()
+    {
+        return view('admin.oficinas');
+    }
     protected function validator(array $data)
     {
         return Validator::make($data, [
@@ -36,7 +40,7 @@ class OficinaController extends Controller
         //se cambiara
         $datosOficina = $this->mostrarDatos($oficina->id);
         $oficinaRegistrada = true;
-        return view('fijas.admin', ['oficinaRegistrada'=>$oficinaRegistrada]);
+        return redirect()->route('admin.oficinas');
     }
     public function index($id_request)
     {
