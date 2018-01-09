@@ -25,8 +25,9 @@
     <link rel="stylesheet" href={{asset("css/complementos/bootstrap-datepicker.min.css")}}>
     <!-- Daterange picker -->
     <link rel="stylesheet" href={{asset("css/complementos/daterangepicker.css")}}>
+    <!-- responsive tables-->
+    <link rel="stylesheet" href={{asset("css/complementos/dataTables.bootstrap.css")}}>
     <!-- bootstrap wysihtml5 - text editor -->
-
     <link rel="stylesheet" href={{asset("adminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css")}}>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -266,10 +267,10 @@ desired effect
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">HEADER</li>
                 <!-- Optionally, you can add icons to the links -->
-                <li class="activable"><a name="home" href="{{ route('admin.home') }}"><i class="fa fa-link"></i> <span>Home</span></a></li>
-                <li class="activable"><a name="usuarios" href="{{ route('admin.usuarios') }}"><i class="fa fa-link"></i> <span>Usuarios</span></a></li>
-                <li class="activable"><a name="transporte" href="{{ route('admin.empresa') }}"><i class="fa fa-link"></i> <span>Transporte</span></a></li>
-                <li class="activable"><a name="oficinas" href="{{ route('admin.oficinas') }}"><i class="fa fa-link"></i> <span>Oficinas</span></a></li>
+                <li class="active"><a href="{{ route('admin.home') }}"><i class="fa fa-link"></i> <span>Home</span></a></li>
+                <li><a href="{{ route('admin.usuarios') }}"><i class="fa fa-link"></i> <span>Usuarios</span></a></li>
+                <li><a href="{{ route('admin.empresa') }}"><i class="fa fa-link"></i> <span>Transporte</span></a></li>
+                <li><a href="{{ route('admin.oficinas') }}"><i class="fa fa-link"></i> <span>Oficinas</span></a></li>
                 <li class="treeview">
                     <a href="#"><i class="fa fa-link"></i> <span>Link</span>
                         <span class="pull-right-container">
@@ -439,6 +440,9 @@ desired effect
 <script src={{asset("js/complementos/jquery.slimscroll.min.js")}}></script>
 <!-- FastClick -->
 <script src={{asset("js/complementos/fastclick.js")}}></script>
+<!-- Responsive Tables-->
+<script src={{asset("js/complementos/jquery.dataTables.js")}}></script>
+<script src={{asset("js/complementos/dataTables.bootstrap.js")}}></script>
 <!-- AdminLTE App -->
 <script src={{asset("adminLTE/js/adminlte.min.js")}}></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
@@ -446,6 +450,7 @@ desired effect
 <!-- AdminLTE for demo purposes -->
 <script src={{asset("adminLTE/js/demo.js")}}></script>
 
+@yield('js')
 
 {{--Nuestro JS--}}
 <script src={{asset("js/admin.js")}}></script>

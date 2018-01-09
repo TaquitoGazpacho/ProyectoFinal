@@ -211,20 +211,21 @@ function sweetAlertSimple(titulo, texto, icono) {
     });
 }
 
-// var activable = document.getElementsByClassName("activable");
+
+
+// var activable = $(".activable");
+// activable.on("click", function(event){
+//     $("li[name="+event.target.name+"]").addClass("active");
 //
-// // Loop through the buttons and add the active class to the current/clicked button
-// for (var i = 0; i < activable.length; i++) {
-//     activable[i].addEventListener("click", function() {
-//         var current = document.getElementsByClassName("active");
-//         current[0].className = current[0].className.replace(" active", "");
-//         this.className += " active";
+// });
+
+// $(document).ready(function () {
+//     $('.sidebar-menu li a').click(function(e) {
+//
+//         $('.sidebar-menu li.active').removeClass('active');
+//
+//         var $parent = $(this).parent();
+//         $parent.addClass('active');
+//         //e.preventDefault();
 //     });
-// }
-
-var activable = $(".activable");
-activable.on("click", function(event){
-    console.log(event.target.name);
-    event.preventDefault();
-
-});
+// });

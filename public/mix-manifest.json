@@ -4,6 +4,7 @@
     "/css/complementos/jquery-jvectormap.css": "/css/complementos/jquery-jvectormap.css",
     "/css/complementos/bootstrap-datepicker.min.css": "/css/complementos/bootstrap-datepicker.min.css",
     "/css/complementos/daterangepicker.css": "/css/complementos/daterangepicker.css",
+    "/css/complementos/dataTables.bootstrap.css": "/css/complementos/dataTables.bootstrap.css",
     "/js/complementos/jquery.min.js": "/js/complementos/jquery.min.js",
     "/js/complementos/jquery-ui.min.js": "/js/complementos/jquery-ui.min.js",
     "/bootstrap/js/bootstrap.min.js": "/bootstrap/js/bootstrap.min.js",
@@ -15,5 +16,7 @@
     "/js/complementos/daterangepicker.js": "/js/complementos/daterangepicker.js",
     "/js/complementos/bootstrap-datepicker.min.js": "/js/complementos/bootstrap-datepicker.min.js",
     "/js/complementos/jquery.slimscroll.min.js": "/js/complementos/jquery.slimscroll.min.js",
-    "/js/complementos/fastclick.js": "/js/complementos/fastclick.js"
+    "/js/complementos/fastclick.js": "/js/complementos/fastclick.js",
+    "/js/complementos/jquery.dataTables.js": "/js/complementos/jquery.dataTables.js",
+    "/js/complementos/dataTables.bootstrap.js": "/js/complementos/dataTables.bootstrap.js"
 }
