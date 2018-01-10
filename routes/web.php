@@ -68,7 +68,7 @@ Route::prefix('admin')->group(function() {
 
 
     Route::prefix('empresas')->group(function () {
-        Route::get('/','EmpresaRepartoController@empresas')->name('admin.empresa');
+        Route::get('/','AdminController@empresas')->name('admin.empresa');
         Route::prefix('editarEmpresa')->group(function () {
 
             Route::post('/', 'EmpresaRepartoController@index')->name('editarEmpresa');

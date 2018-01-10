@@ -28,6 +28,10 @@ class AdminController extends Controller
         return view('admin.home',['taquillas'=>$taquillas]);
     }
 
+    public function empresas(){
+        return view('admin.empresas');
+    }
+
     public function usuarios(){
         return view('admin.usuarios');
     }

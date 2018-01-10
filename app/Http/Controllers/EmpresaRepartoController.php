@@ -15,9 +15,6 @@ class EmpresaRepartoController extends Controller
         $this->middleware('auth:empresa');
     }
 
-    public function empresas(){
-        return view('admin.empresas');
-    }
     public function index(){
         return view('fijas.empresa');
     }
