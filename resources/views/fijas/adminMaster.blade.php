@@ -68,7 +68,7 @@ desired effect
     <header class="main-header">
 
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <a href="{{ route('admin.home') }}" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>A</b>LT</span>
             <!-- logo for regular state and mobile devices -->
@@ -275,14 +275,17 @@ desired effect
                 <li><a href="{{ route('admin.empresa') }}"><i class="fa fa-link"></i> <span>Transporte</span></a></li>
                 <li><a href="{{ route('admin.oficinas') }}"><i class="fa fa-link"></i> <span>Oficinas</span></a></li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Link</span>
+                    <a href="#"><i class="fa fa-link"></i> <span>Página Web</span>
                         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="#">Link in level 2</a></li>
-                        <li><a href="#">Link in level 2</a></li>
+                        <li><a href="{{ route('index') }}">Home</a></li>
+                        <li><a href="{{ route('index') }}#servicios">Servicios</a></li>
+                        <li><a href="{{ route('index') }}#opiniones">Opiniones</a></li>
+                        <li><a href="{{ route('index') }}#sobreLaEmpresa">Sobre la Empresa</a></li>
+                        <li><a href="{{ route('index') }}#contactanos">Contáctanos</a></li>
                     </ul>
                 </li>
             </ul>
