@@ -1,4 +1,4 @@
-@extends('fijas.master')
+    @extends('fijas.master')
 
 @section('section')
 

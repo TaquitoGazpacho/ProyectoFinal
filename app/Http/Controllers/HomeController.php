@@ -25,6 +25,6 @@ class HomeController extends Controller
     public function index()
     {
         $oficinas = Oficina::getOficinas();
-        return view('home', ['oficinas' => $oficinas]);
+        return view('user.home', ['oficinas' => $oficinas]);
     }
 }

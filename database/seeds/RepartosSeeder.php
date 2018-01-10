@@ -46,5 +46,41 @@ class RepartosSeeder extends Seeder
             'oficina_id' => '2',
             'taquilla_id' => '5',
         ]);
+
+        DB::table('repartos')->insert([
+            'clave_repartidor' => '3456',
+            'clave_usuario' => '6543',
+            'usuario_id' => '4',
+            'empresa_id' => '2',
+            'oficina_id' => '2',
+            'taquilla_id' => '5',
+        ]);
+
+        DB::table('repartos')->insert([
+            'clave_repartidor' => '3456',
+            'clave_usuario' => '6543',
+            'usuario_id' => '4',
+            'empresa_id' => '3',
+            'oficina_id' => '2',
+            'taquilla_id' => '5',
+        ]);
+
+        DB::table('repartos')->insert([
+            'clave_repartidor' => '3456',
+            'clave_usuario' => '6543',
+            'usuario_id' => '4',
+            'empresa_id' => '1',
+            'oficina_id' => '2',
+            'taquilla_id' => '5',
+        ]);
+
+        DB::table('repartos')->insert([
+            'clave_repartidor' => '3456',
+            'clave_usuario' => '6543',
+            'usuario_id' => '4',
+            'empresa_id' => '2',
+            'oficina_id' => '2',
+            'taquilla_id' => '5',
+        ]);
     }
 }

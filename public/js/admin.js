@@ -151,7 +151,22 @@ $( document ).ready( function() {
             let email = $("#userEmail").val();
             let telefono = $("#userTelefono").val();
             let sexo = $("input[name='userSex']:checked").val();
-            //let suscripcion = $("#userSuscripcion").text();
+            let suscripcion = $("#userSuscripcion").val();
+            let suscripcionTxt;
+            switch(suscripcion) {
+                case "1":
+                    suscripcionTxt = "Gratis";
+                    break;
+                case "2":
+                    suscripcionTxt = "Básico";
+                    break;
+                case "3":
+                    suscripcionTxt = "Premium";
+                    break;
+                case "4":
+                    suscripcionTxt = "Empresa";
+                    break;
+            }
 
             //escribir valores en tabla
             $('#usuario_' + id + '_nombre').text(nombre);
@@ -159,7 +174,7 @@ $( document ).ready( function() {
             $('#usuario_' + id + '_email').text(email);
             $('#usuario_' + id + '_telefono').text(telefono);
             $('#usuario_' + id + '_sexo').text(sexo);
-            //$('#usuario_' + id + '_suscripcion').text(suscripcion);
+            $('#usuario_' + id + '_suscripcion').text(suscripcionTxt);
 
             //cerrar modal
             $('#editarUsuario').modal('toggle');
