@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Taquilla;
 use Illuminate\Http\Request;
 use App\Models\Oficina;
 use App\Models\Empresa_reparto;
@@ -22,11 +23,15 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.home');
+        $taquillas = $this->cogerDatosTaquillas();
+
+        return view('admin.home',['taquillas'=>$taquillas]);
     }
+
     public function usuarios(){
         return view('admin.usuarios');
     }
+
     public function mostrarDatosEmpresa(Request $request) {
 
         $nombre = $request->empresa;
@@ -58,5 +63,22 @@ class AdminController extends Controller
             ]);
 
         //return redirect()->route('admin.home');
+    }
+
+    public function cogerDatosTaquillas()
+    {
+        $libres = Taquilla::where([
+            ['ocupada','=', false],
+            ['estado', '=', 'Funcionando']
+        ])->count();
+        $ocupadas = Taquilla::where([
+            ['ocupada','=', true],
+            ['estado', '=', 'Funcionando']
+        ])->count();
+        $estropeadas = Taquilla::where('estado','Estropeada')->count();
+        //total para poder advertir al admin si hay una taquilla en uso y estropeada
+        $total = Taquilla::count();
+
+        return response()->json(['libres'=>$libres, 'ocupadas'=>$ocupadas, 'estropeadas'=>$estropeadas, 'total'=>$total]);
     }
 }
