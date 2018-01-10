@@ -100,7 +100,7 @@ desired effect
                                         <a href="#">
                                             <div class="pull-left">
                                                 <!-- User Image -->
-                                                <img src={{ asset("adminLTE/img/iker.png")}} class="img-circle" alt="User Image">
+                                                <img src="https://pm1.narvii.com/6356/18eecd4d6611feb73b8741a070220bd77fcb7a63_hq.jpg" class="img-circle" alt="User Image">
                                             </div>
                                             <!-- Message title and timestamp -->
                                             <h4>
@@ -185,17 +185,17 @@ desired effect
                         <!-- Menu Toggle Button -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <!-- The user image in the navbar-->
-                            <img src={{ asset("adminLTE/img/iker.png")}} class="user-image" alt="User Image">
+                            <img src="https://pm1.narvii.com/6356/18eecd4d6611feb73b8741a070220bd77fcb7a63_hq.jpg" class="user-image" alt="User Image">
                             <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                            <span class="hidden-xs">Iker Ruzo</span>
+                            <span class="hidden-xs">Mr. Perrington</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- The user image in the menu -->
                             <li class="user-header">
-                                <img src={{ asset("adminLTE/img/iker.png")}} class="img-circle" alt="User Image">
+                                <img src="https://pm1.narvii.com/6356/18eecd4d6611feb73b8741a070220bd77fcb7a63_hq.jpg" class="img-circle" alt="User Image">
 
                                 <p>
-                                    Iker Ruzo - Web Developer
+                                    Mr. Perrington - Web Developer
                                     <small>Member since Nov. 2012</small>
                                 </p>
                             </li>
@@ -245,26 +245,14 @@ desired effect
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src={{ asset("adminLTE/img/iker.png")}} class="img-circle" alt="User Image">
+                    <img src="https://pm1.narvii.com/6356/18eecd4d6611feb73b8741a070220bd77fcb7a63_hq.jpg" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>Iker Ruzo</p>
+                    <p>Mr. Perrington</p>
                     <!-- Status -->
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
-
-            <!-- search form (Optional) -->
-            <form action="#" method="get" class="sidebar-form">
-                <div class="input-group">
-                    <input type="text" name="q" class="form-control" placeholder="Search...">
-                    <span class="input-group-btn">
-              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-              </button>
-            </span>
-                </div>
-            </form>
-            <!-- /.search form -->
 
             <!-- Sidebar Menu -->
             <ul class="sidebar-menu" data-widget="tree">
@@ -304,10 +292,6 @@ desired effect
                     @yield('pageDescription')
                 </small>
             </h1>
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-                <li class="active">Here</li>
-            </ol>
         </section>
 
         <!-- Main content -->
@@ -454,7 +438,7 @@ desired effect
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src={{asset("adminLTE/js/pages/dashboard.js")}}></script>
 <!-- AdminLTE for demo purposes -->
-<script src={{asset("adminLTE/js/demo.js")}}></script>
+{{--<script src={{asset("adminLTE/js/demo.js")}}></script>--}}
 
 @yield('js')
 

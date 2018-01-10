@@ -1,7 +1,7 @@
 @extends('fijas.adminMaster')
 
-@section('pageHeader', 'X')
-@section('pageDescription', 'x')
+@section('pageHeader', 'Admin Home')
+@section('pageDescription', "D'oh!")
 
 @section('contenido')
     {{--ESTOY VACIO POR DENTRO, DESPUES TENDRE GRAFICOS Y COSAS CHULAS <br/>--}}
@@ -19,7 +19,7 @@
                 </ul>
                 <div class="tab-content no-padding">
                     <!-- Morris chart - Sales -->
-                    <div class="chart  active" id="sales-chart" style="position: relative; height: 300px;"></div>
+                    <div class="chart  active" id="graficoTaquillas" style="position: relative; height: 300px;"></div>
                 </div>
             </div>
             <!-- /.nav-tabs-custom -->
@@ -33,7 +33,7 @@
         // Donut Chart
         $('#taquiTotal').text('Total: '+@json($taquillas).original.total);
         var donut = new Morris.Donut({
-            element  : 'sales-chart',
+            element  : 'graficoTaquillas',
             resize   : true,
             colors   : ['#3c8dbc', '#f56954', '#00a65a'],
             data     : [
