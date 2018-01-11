@@ -35,4 +35,7 @@ class HomeController extends Controller
     public function ajustes() {
         return view('user.ajustes');
     }
+    public function pedidos(){
+        return view('user.pedidos');
+    }
 }

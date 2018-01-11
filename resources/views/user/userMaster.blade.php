@@ -293,6 +293,7 @@ desired effect
                 <!-- Optionally, you can add icons to the links -->
                 <li class="active"><a href="{{ route('home') }}"><i class="fa fa-home"></i> <span>Home</span></a></li>
                 <li><a href="{{ route('home.suscripcion') }}"><i class="fa fa-usd"></i> <span>Suscripción</span></a></li>
+                <li><a href="{{ route('home.pedidos') }}"><i class="fa fa-usd"></i> <span>Pedidos</span></a></li>
                 <li><a href="{{ route('home.ajustes') }}"><i class="fa fa-cog"></i> <span>Ajustes</span></a></li>
             </ul>
             <!-- /.sidebar-menu -->
