@@ -1,5 +1,13 @@
 @extends('fijas.master')
 
+@section('cssExtra')
+    <style>
+        header{
+            padding-top: 8%;
+        }
+    </style>
+@endsection
+
 @section('principal')
     <header>
         <div class="centrado">

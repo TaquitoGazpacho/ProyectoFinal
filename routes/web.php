@@ -31,6 +31,8 @@ Route::get('/register', 'Auth\User\RegisterController@showRegistrationForm')->na
 Route::post('/editarUsuario', 'Auth\User\EditUserController@ejecutar')->name('editarUsuario');
 Route::post('/editarUsuario/oficina', 'Auth\User\EditUserController@cambiarOficina')->name('editarUsuario.oficina');
 Route::get('/perfil', 'HomeController@index')->name('home');
+Route::get('/perfil/suscripcion', 'HomeController@suscripcion')->name('home.suscripcion');
+Route::get('perfil/ajustes', 'HomeController@ajustes')->name('home.ajustes');
 
 
 

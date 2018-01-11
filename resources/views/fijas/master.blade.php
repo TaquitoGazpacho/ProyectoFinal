@@ -1,7 +1,7 @@
 <html>
     <head>
         @include('fijas.head')
-
+        @yield('cssExtra')
     </head>
     <body>
         <!--Pantalla principal-->
