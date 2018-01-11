@@ -58,9 +58,11 @@
                 <thead>
                 <tr>
                     <th>ID</th>
+                    <th>País</th>
                     <th>Ciudad</th>
                     <th>Calle</th>
                     <th>Número</th>
+                    <th>Coord</th>
                     <th>Cant. Taquillas</th>
                     <th>Añadir Taquillas</th>
                     <th>Editar</th>
@@ -71,9 +73,11 @@
                 @foreach ($oficinas as $oficina)
                     <tr>
                         <td id="oficina_{{$oficina->id}}_id">{{ $oficina->id }}</td>
+                        <td id="oficina_{{$oficina->id}}_id">{{ $oficina->pais }}</td>
                         <td id="oficina_{{$oficina->id}}_ciudad">{{ $oficina->ciudad }}</td>
                         <td id="oficina_{{$oficina->id}}_calle">{{ $oficina->calle }}</td>
                         <td id="oficina_{{$oficina->id}}_num">{{ $oficina->num_calle }}</td>
+                        <td id="oficina_{{$oficina->id}}_num">{{ $oficina->lat.", ".$oficina->alt }}</td>
                         <?php
                             $ofi = new \App\Models\Oficina();
                             $ofi->setId($oficina->id);

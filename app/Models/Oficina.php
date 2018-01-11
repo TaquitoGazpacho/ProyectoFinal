@@ -9,17 +9,53 @@ class Oficina extends Model
 {
 
     protected $fillable = [
-        'ciudad', 'calle', 'num_calle',
+        'pais','ciudad', 'calle', 'num_calle', 'cp', 'lat', 'alt'
     ];
 
     public function __construct(){
+        $this->pais="";
         $this->ciudad="";
         $this->calle="";
         $this->num_calle="";
+        $this->cp="";
+        $this->alt=0;
+        $this->lat=0;
     }
 
     public function setId($id){
         $this->id=$id;
+    }
+
+    public function setPais($pais){
+        $this->pais=$pais;
+    }
+
+    public function getPais(){
+        return $this->pais;
+    }
+
+    public function setCp($cp){
+        $this->cp=$cp;
+    }
+
+    public function getCP(){
+        return $this->cp;
+    }
+
+    public function setLat($lat){
+        $this->lat=$lat;
+    }
+
+    public function getLat(){
+        return $this->lat;
+    }
+
+    public function setAlt($alt){
+        $this->alt=$alt;
+    }
+
+    public function getAlt(){
+        return $this->alt;
     }
 
     public function getCiudad(){
@@ -49,9 +85,13 @@ class Oficina extends Model
     public function getOficina($id){
         $office=Oficina::where('id', $id)->first();
         $this->id =$id;
+        $this->setPais($office->pais);
         $this->setCiudad($office->ciudad);
         $this->setCalle($office->calle);
         $this->setNumCalle($office->num_calle);
+        $this->setCp($office->cp);
+        $this->setAlt($office->alt);
+        $this->setLat($office->lat);
     }
 
     public function taquilla()
@@ -71,7 +111,7 @@ class Oficina extends Model
 
     public static function getOficinas()
     {
-        $oficinas = DB::table('oficinas')->select('id', 'ciudad', 'calle', 'num_calle')->orderBy('ciudad')->get();
+        $oficinas = DB::table('oficinas')->select('id', 'pais', 'ciudad', 'calle', 'num_calle', 'cp', 'alt', 'lat')->orderBy('pais')->orderBy('ciudad')->get();
         return $oficinas;
     }
 }
