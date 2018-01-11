@@ -27,4 +27,12 @@ class HomeController extends Controller
         $oficinas = Oficina::getOficinas();
         return view('user.home', ['oficinas' => $oficinas]);
     }
+
+    public function suscripcion() {
+        return view('user.suscripcion');
+    }
+
+    public function ajustes() {
+        return view('user.ajustes');
+    }
 }
