@@ -61,7 +61,7 @@
     {{--</table>--}}
 
     <div class="box-body table-responsive">
-        <table id="tablaConOpciones" class="table table-hover">
+        <table id="tablaUsuarios" class="table table-hover">
             <thead>
             <tr>
                 <th>ID</th>
@@ -107,10 +107,10 @@
 @section('js')
     <script>
         $(function () {
-            $('#tablaConOpciones').DataTable({
+            $('#tablaUsuarios').DataTable({
                 'paging'      : true,
                 'lengthChange': false,
-                'searching'   : false,
+                'searching'   : true,
                 'ordering'    : true,
                 'info'        : true,
                 'autoWidth'   : false

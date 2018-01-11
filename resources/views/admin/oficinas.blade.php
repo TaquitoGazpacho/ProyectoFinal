@@ -54,7 +54,7 @@
     <div class="box-body table-responsive">
         <form action="{{route('eliminarOficinas')}}" method="post">
             {{ csrf_field() }}
-            <table id="tablaConOpciones" class="table table-hover">
+            <table id="tablaOficina" class="table table-hover">
                 <thead>
                 <tr>
                     <th>ID</th>
@@ -99,10 +99,10 @@
 @section('js')
     <script>
         $(function () {
-            $('#tablaConOpciones').DataTable({
+            $('#tablaOficina').DataTable({
                 'paging'      : true,
                 'lengthChange': false,
-                'searching'   : false,
+                'searching'   : true,
                 'ordering'    : true,
                 'info'        : true,
                 'autoWidth'   : false
