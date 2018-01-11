@@ -40,7 +40,7 @@ $empresas = Empresa_reparto::getEmpresas();
     {{--@include('fijas.editarEmpresaReparto')--}}
 
     <div class="box-body table-responsive">
-        <table id="tablaConOpciones" class="table table-hover">
+        <table id="tablaEmpresa" class="table table-hover">
             <thead>
             <tr>
                 <th>ID</th>
@@ -76,10 +76,10 @@ $empresas = Empresa_reparto::getEmpresas();
 @section('js')
     <script>
         $(function () {
-            $('#tablaConOpciones').DataTable({
+            $('#tablaEmpresa').DataTable({
                 'paging'      : true,
                 'lengthChange': false,
-                'searching'   : false,
+                'searching'   : true,
                 'ordering'    : true,
                 'info'        : true,
                 'autoWidth'   : false
