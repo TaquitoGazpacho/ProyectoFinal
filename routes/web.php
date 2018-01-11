@@ -33,6 +33,7 @@ Route::post('/editarUsuario/oficina', 'Auth\User\EditUserController@cambiarOfici
 Route::get('/perfil', 'HomeController@index')->name('home');
 Route::get('/perfil/suscripcion', 'HomeController@suscripcion')->name('home.suscripcion');
 Route::get('perfil/ajustes', 'HomeController@ajustes')->name('home.ajustes');
+Route::get('perfil/pedidos', 'HomeController@pedidos')->name('home.pedidos');
 
 
 
