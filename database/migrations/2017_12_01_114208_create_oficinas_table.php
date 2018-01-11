@@ -15,9 +15,13 @@ class CreateOficinasTable extends Migration
     {
         Schema::create('oficinas', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('pais');
             $table->string('ciudad');
             $table->string('calle');
             $table->integer('num_calle');
+            $table->string('cp');
+            $table->decimal('lat');
+            $table->decimal('alt',9, 3);
             $table->timestamps();
 
         });

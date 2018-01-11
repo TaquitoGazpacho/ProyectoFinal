@@ -24,8 +24,8 @@ class AdminController extends Controller
     public function index()
     {
         $taquillas = $this->cogerDatosTaquillas();
-
-        return view('admin.home',['taquillas'=>$taquillas]);
+        $oficinas = $this->cogerDatosOficinas();
+        return view('admin.home',['taquillas'=>$taquillas, 'oficinas' =>$oficinas]);
     }
 
     public function empresas(){
@@ -84,5 +84,10 @@ class AdminController extends Controller
         $total = Taquilla::count();
 
         return response()->json(['libres'=>$libres, 'ocupadas'=>$ocupadas, 'estropeadas'=>$estropeadas, 'total'=>$total]);
+    }
+
+    public function cogerDatosOficinas(){
+        $oficinas = DB::table('oficinas')->select('calle','alt','lat')->get();
+        return response()->json([$oficinas]);
     }
 }
