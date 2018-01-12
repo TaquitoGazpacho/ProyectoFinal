@@ -80,3 +80,8 @@ function sweetAlertSimple(titulo, texto, icono) {
         type: icono
     });
 }
+
+
+
+
+

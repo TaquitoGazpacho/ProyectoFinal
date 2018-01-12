@@ -630,6 +630,10 @@ PRICING STYLES
   padding-top: 80px;
 }
 
+.progress {
+  background-color: #d1d5d0;
+}
+
 #cambiarOficina .select2 {
   width: 200px;
 }

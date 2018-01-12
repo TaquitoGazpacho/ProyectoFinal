@@ -18,6 +18,7 @@ class CreatePedidosTable extends Migration
             $table->integer('numero_pedido');
             $table->string('estado');
             $table->boolean('recogido');
+            $table->integer('numero_taquilla');
             $table->timestamps();
 
         });

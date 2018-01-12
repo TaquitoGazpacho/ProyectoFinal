@@ -13,25 +13,28 @@ class PedidoSeeder extends Seeder
     {
         DB::table('pedidos')->insert([
             'numero_pedido' => '1234',
-            'estado' => 'enviado',
+            'estado' => 'Enviado',
             'recogido' => false,
-            'user_id' => '1',
+            'numero_taquilla' => '1',
+            'user_id' => '4',
             'oficina_id' => '2',
 
         ]);
         DB::table('pedidos')->insert([
             'numero_pedido' => '1235',
-            'estado' => 'enviado',
+            'estado' => 'Enviado',
             'recogido' => false,
-            'user_id' => '2',
+            'numero_taquilla' => '4',
+            'user_id' => '4',
             'oficina_id' => '1',
 
         ]);
         DB::table('pedidos')->insert([
             'numero_pedido' => '1236',
-            'estado' => 'recibido',
+            'estado' => 'Recibido',
             'recogido' => true,
-            'user_id' => '3',
+            'numero_taquilla' => '2',
+            'user_id' => '4',
             'oficina_id' => '3',
 
         ]);
@@ -39,6 +42,7 @@ class PedidoSeeder extends Seeder
             'numero_pedido' => '1236',
             'estado' => 'enviado',
             'recogido' => false,
+            'numero_taquilla' => '3',
             'user_id' => '3',
             'oficina_id' => '2',
 
