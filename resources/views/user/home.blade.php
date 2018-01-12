@@ -112,10 +112,10 @@
                                 {{--@endforeach--}}
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
+                                        {{--<div class="form-group">--}}
                                             <select id="paisOficinas" class="form-control select2">
                                                 {{ $pais="" }}
-                                                <option selected disabled> -- Elige opción -- </option>
+                                                <option selected disabled> -- Elige País -- </option>
                                                 @foreach($oficinas as $oficina)
                                                     @if($pais != $oficina->pais)
                                                         {{$pais=$oficina->pais}}
@@ -123,9 +123,12 @@
                                                     @endif
                                                 @endforeach
                                             </select>
-
-                                            <select id="ciudadOficinas" class="form-control select2" disabled=""></select>
-                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                            <select id="ciudadOficinas" class="form-control select2" disabled="">
+                                                <option selected disabled> -- Elige Ciudad -- </option>
+                                            </select>
+                                        {{--</div>--}}
                                     </div>
                                 </div>
 
@@ -195,7 +198,7 @@
         $('<option/>', {
             disabled: true,
             selected: true,
-            text: "-- Elige opción --"
+            text: "-- Elige Ciudad --"
         }).appendTo($("#ciudadOficinas"));
         $(oficinas).each(function(index, oficina){
             if (event.target.value == oficina.pais) {
