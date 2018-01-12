@@ -346,6 +346,6 @@ desired effect
 @yield('js')
 
 {{--Nuestro JS--}}
-<script src={{asset("js/admin.js")}}></script>
+<script src={{asset("js/user.js")}}></script>
 </body>
 </html>
