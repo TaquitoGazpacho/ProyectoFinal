@@ -30,6 +30,7 @@ mix.copy('node_modules/jvectormap/jquery-jvectormap.css', 'public/css/complement
 mix.copy('node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css', 'public/css/complementos');
 mix.copy('node_modules/bootstrap-daterangepicker/daterangepicker.css', 'public/css/complementos');
 mix.copy('node_modules/datatables.net-bs/css/dataTables.bootstrap.css', 'public/css/complementos');
+mix.copy('node_modules/select2/dist/css/select2.min.css', 'public/css/complementos');
 
 mix.copy('node_modules/jquery/dist/jquery.min.js', 'public/js/complementos');
 mix.copy('node_modules/jquery-ui-dist/jquery-ui.min.js', 'public/js/complementos');
@@ -45,6 +46,7 @@ mix.copy('node_modules/jquery-slimscroll/jquery.slimscroll.min.js', 'public/js/c
 mix.copy('node_modules/fastclick/lib/fastclick.js', 'public/js/complementos');
 mix.copy('node_modules/datatables.net/js/jquery.dataTables.js', 'public/js/complementos');
 mix.copy('node_modules/datatables.net-bs/js/dataTables.bootstrap.js', 'public/js/complementos');
+mix.copy('node_modules/select2/dist/js/select2.min.js', 'public/js/complementos');
 
 
 

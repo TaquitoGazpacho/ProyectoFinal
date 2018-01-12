@@ -629,3 +629,7 @@ PRICING STYLES
 .db-pricing-eleven.popular .price {
   padding-top: 80px;
 }
+
+#cambiarOficina .select2 {
+  width: 200px;
+}

@@ -111,7 +111,7 @@ class Oficina extends Model
 
     public static function getOficinas()
     {
-        $oficinas = DB::table('oficinas')->select('id', 'pais', 'ciudad', 'calle', 'num_calle', 'cp', 'alt', 'lat')->orderBy('pais')->orderBy('ciudad')->get();
+        $oficinas = DB::table('oficinas')->select('id', 'pais', 'ciudad', 'calle', 'num_calle', 'cp', 'alt', 'lat')->orderBy('pais', 'asc')->orderBy('ciudad', 'asc')->get();
         return $oficinas;
     }
 }
