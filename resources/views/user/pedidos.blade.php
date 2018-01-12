@@ -22,7 +22,7 @@
                 <tr>
                     <td id="pedido_{{$pedido->id}}_numero">{{$pedido->numero_pedido}}</td>
                     <td id="pedido_{{$pedido->id}}_estado">{{$pedido->estado}}</td>
-                    <td id="pedido_{{$pedido->id}}_recogido">{{$pedido->recogido}}</td>
+                <td id="pedido_{{$pedido->id}}_recogido">{{$pedido->recogido}}</td>
                 </tr>
             @endforeach
             </tbody>

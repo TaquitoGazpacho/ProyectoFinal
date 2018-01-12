@@ -27,7 +27,7 @@ class PedidosOficinaForeignKey extends Migration
     public function down()
     {
         Schema::table('pedidos', function (Blueprint $table) {
-            $table->dropForeign('pedido_oficina_id_foreign');
+            $table->dropForeign('pedidos_oficina_id_foreign');
             $table->dropColumn('oficina_id');
         });
     }

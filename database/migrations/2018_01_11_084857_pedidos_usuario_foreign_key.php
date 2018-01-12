@@ -30,7 +30,7 @@ class PedidosUsuarioForeignKey extends Migration
     public function down()
     {
         Schema::table('pedidos', function (Blueprint $table) {
-            $table->dropForeign('pedido_user_id_foreign');
+            $table->dropForeign('pedidos_user_id_foreign');
             $table->dropColumn('user_id');
         });
     }
