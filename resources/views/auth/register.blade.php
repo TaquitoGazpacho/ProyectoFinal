@@ -57,9 +57,9 @@
 
                                 <div class="col-md-6">
                                     {{--<input id="sex" type="text" class="form-control" name="sex" value="{{ old('sex') }}" autofocus>--}}
-                                    <input type="radio" name="sex" value="male"> Male<br>
-                                    <input type="radio" name="sex" value="female"> Female<br>
-                                    <input type="radio" name="sex" value="other"> Other
+                                    <label><input type="radio" name="sex" value="Masculino"> Masculino</label><br>
+                                    <label><input type="radio" name="sex" value="Femenino"> Femenino</label><br>
+                                    <label><input type="radio" name="sex" value="otro"> Otro</label>
                                     @if ($errors->has('sex'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('sex') }}</strong>
