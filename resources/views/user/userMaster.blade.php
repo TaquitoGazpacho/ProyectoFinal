@@ -309,7 +309,28 @@ desired effect
             </aside>
         </div>
         <main id="page-content-wrapper" role="main">
-            Prueba
+
+
+            <section class="content-header">
+                <h1>
+                    @yield('pageHeader')
+                    <small>
+                        @yield('pageDescription')
+                    </small>
+                </h1>
+            </section>
+
+            <!-- Main content -->
+            <section class="content container-fluid">
+
+                <!--------------------------
+                  | Your Page Content Here |
+                  -------------------------->
+
+            @yield('contenido')
+
+
+
         </main>
     </div>
 
