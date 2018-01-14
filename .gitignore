@@ -12,3 +12,7 @@ yarn-error.log
 .env
 composer.lock
 package-lock.json
+/public/css
+/public/js/complementos
+/public/bootstrap
+/public/font-awesome
