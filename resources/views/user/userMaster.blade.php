@@ -80,15 +80,15 @@ desired effect
             <a class="navbar-brand" href="{{ route('index') }}">LockBox</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="{{ Route::current()->getName() == 'index' ? 'active' : null }}"><a href="{{ route('index') }}">Home <span class="sr-only">(current)</span></a></li>
-            <li><a href="{{ route('index') }}#servicios">Servicios</a></li>
-            <li><a href="{{ route('index') }}#opiniones">Opiniones</a></li>
-            <li><a href="{{ route('index') }}#sobreLaEmpresa">Sobre la empresa</a></li>
-            <li><a href="{{ route('index') }}#contactanos">Contáctanos</a></li>
+            <li class="hidden-xs hidden-sm {{ Route::current()->getName() == 'index' ? 'active' : null }}"><a href="{{ route('index') }}">Home <span class="sr-only">(current)</span></a></li>
+            <li class="hidden-xs hidden-sm"><a href="{{ route('index') }}#servicios">Servicios</a></li>
+            <li class="hidden-xs hidden-sm"><a href="{{ route('index') }}#opiniones">Opiniones</a></li>
+            <li class="hidden-xs hidden-sm"><a href="{{ route('index') }}#sobreLaEmpresa">Sobre la empresa</a></li>
+            <li class="hidden-xs hidden-sm"><a href="{{ route('index') }}#contactanos">Contáctanos</a></li>
         </ul>
 
         @if(Auth::guard('web')->check())
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
                 <li class="dropdown user user-menu">
                     <!-- Menu Toggle Button -->
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -138,7 +138,7 @@ desired effect
                 </li>
             </ul>
         @else
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
                 <li class="{{ Route::current()->getName() === 'login' ? 'active' : null }}"><a href="{{ route('login') }}">Login</a></li>
                 <li class="{{ Route::current()->getName() === 'register' ? 'active' : null }}"><a href="{{ route('register') }}">Regístrate</a></li>
             </ul>
@@ -155,13 +155,25 @@ desired effect
                 {{--<ul class="hidden-lg hidden-md visible-xs visible-sm dropdown"><i class="fa fa-cog"></i><span>Hola</span>--}}
                     {{--<li>Hola</li>--}}
                 {{--</ul>--}}
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog"></i> <span>Works</span> <span class="caret"></span></a>
+                <li class="dropdown visible-xs visible-sm">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog"></i> <span>Página web</span> <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="{{ route('index') }}#servicios">Servicios</a></li>
                         <li><a href="{{ route('index') }}#opiniones">Opiniones</a></li>
                         <li><a href="{{ route('index') }}#sobreLaEmpresa">Sobre la empresa</a></li>
                         <li><a href="{{ route('index') }}#contactanos">Contáctanos</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown user user-menu">
+                    <!-- Menu Toggle Button -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span>User</span> <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                        <li>
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Sign out</a>
+                        </li>
                     </ul>
                 </li>
             </ul>
