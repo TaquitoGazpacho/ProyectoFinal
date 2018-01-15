@@ -282,3 +282,4 @@ function sweetAlertSimple(titulo, texto, icono) {
 //         //e.preventDefault();
 //     });
 // });
+

@@ -33,9 +33,12 @@ class OficinaController extends Controller
     {
         $this->validator($request->all())->validate();
         $oficina= new Oficina();
+        $oficina->setPais($request->pais);
         $oficina->setCalle($request->calle);
         $oficina->setCiudad($request->ciudad);
         $oficina->setNumCalle($request->num_calle);
+        $oficina->setLat($request->lat);
+        $oficina->setAlt($request->alt);
         $oficina->save();
         //se cambiara
         $datosOficina = $this->mostrarDatos($oficina->id);

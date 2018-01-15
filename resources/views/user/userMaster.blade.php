@@ -211,14 +211,14 @@ desired effect
                                     <!-- Menu Toggle Button -->
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                         <!-- The user image in the navbar-->
-                                        <img src={{ Auth::guard('web')->user()->image }} class="user-image" alt="User Image">
+                                        <img src="{{ asset(Auth::guard('web')->user()->image) }}" class="user-image " alt="User Image">
                                         <!-- hidden-xs hides the username on small devices so only the image appears. -->
                                         <span class="hidden-xs">{{ Auth::guard('web')->user()->name. " ". Auth::guard('web')->user()->surname }}</span>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <!-- The user image in the menu -->
-                                        <li class="user-header">
-                                            <img src={{ Auth::guard('web')->user()->image }} class="img-circle" alt="User Image">
+                                        <li class="user-header hide-mobile">
+                                            <img src="{{ asset(Auth::guard('web')->user()->image) }}" class="img-circle" alt="User Image">
 
                                             <p>
                                                 {{ Auth::guard('web')->user()->name. " ". Auth::guard('web')->user()->surname }}
@@ -227,7 +227,7 @@ desired effect
                                         </li>
                                         <!-- Menu Body -->
                                         <li class="user-body">
-                                            <div class="row">
+                                            <div class="row ">
                                                 <div class="col-xs-4 text-center">
                                                     <a href="#">Followers</a>
                                                 </div>
@@ -243,7 +243,7 @@ desired effect
                                         <!-- Menu Footer-->
                                         <li class="user-footer">
                                             <div class="pull-left">
-                                                <a href="{{ route('home') }}" class="btn btn-default btn-flat">Perfil</a>
+                                                <a href="{{ route('home.pedidos') }}" class="btn btn-default btn-flat">Tu cuenta</a>
                                             </div>
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                 {{ csrf_field() }}
@@ -273,7 +273,7 @@ desired effect
                     <li>
                         <a href="{{ route('home') }}">
                             <span class="sidebar-icon"><i class="fa fa-home"></i></span>
-                            <span class="sidebar-title">Home</span>
+                            <span class="sidebar-title">Perfil</span>
                         </a>
                     </li>
                     <li>
@@ -311,25 +311,26 @@ desired effect
         <main id="page-content-wrapper" role="main">
 
 
-            <section class="content-header">
-                <h1>
-                    @yield('pageHeader')
-                    <small>
-                        @yield('pageDescription')
-                    </small>
-                </h1>
-            </section>
+            {{--<section class="content-header">--}}
+                {{--<h1>--}}
+                    {{--@yield('pageHeader')--}}
+                    {{--<small>--}}
+                        {{--@yield('pageDescription')--}}
+                    {{--</small>--}}
+                {{--</h1>--}}
+            {{--</section>--}}
 
             <!-- Main content -->
-            <section class="content container-fluid">
+            <section class="content container-fluid mobile-area">
 
                 <!--------------------------
                   | Your Page Content Here |
                   -------------------------->
 
-            @yield('contenido')
+                @yield('contenido')
 
 
+            </section>
 
         </main>
     </div>

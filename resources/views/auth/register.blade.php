@@ -53,13 +53,13 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('sex') ? ' has-error' : '' }}">
-                                <label for="surname" class="col-md-4 control-label">Sex</label>
+                                <label for="sex" class="col-md-4 control-label">Sex</label>
 
                                 <div class="col-md-6">
                                     {{--<input id="sex" type="text" class="form-control" name="sex" value="{{ old('sex') }}" autofocus>--}}
                                     <label><input type="radio" name="sex" value="Masculino"> Masculino</label><br>
                                     <label><input type="radio" name="sex" value="Femenino"> Femenino</label><br>
-                                    <label><input type="radio" name="sex" value="otro"> Otro</label>
+                                    <label><input type="radio" name="sex" value="Otro"> Otro</label>
                                     @if ($errors->has('sex'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('sex') }}</strong>

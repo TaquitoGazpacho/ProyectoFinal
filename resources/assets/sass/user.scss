@@ -214,4 +214,15 @@ body {
       height: 0;
     }
   }
+  .mobile-area {
+    margin-left: 30px;
+  }
+  .mobile-img {
+    max-width: 200px;
+    height: auto;
+    margin-left: 30px;
+  }
+  .hide-mobile {
+    display: none;
+  }
 }
