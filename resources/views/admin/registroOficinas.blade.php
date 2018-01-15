@@ -11,6 +11,10 @@
                 {{ csrf_field() }}
                 <div class="modal-body">
                     <div class="form-group">
+                        <label for="exampleInputPais">Pais</label>
+                        <input type="text" name="pais" class="form-control" id="exampleInputPais" placeholder="País">
+                    </div>
+                    <div class="form-group">
                         <label for="exampleInputCiudad">Ciudad</label>
                         <input type="text" name="ciudad" class="form-control" id="exampleInputCiudad" placeholder="Ciudad">
                     </div>
@@ -21,6 +25,12 @@
                     <div class="form-group">
                         <label for="exampleInputNumero">Número</label>
                         <input type="text" name="num_calle" class="form-control" id="exampleInputNumero" placeholder="Numero">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputAltLat">Alt/Lat</label>
+                        <input type="number" name="lat" class="form-control" id="exampleInputLat" placeholder="lat" step="0.01">
+                        <br/>
+                        <input type="number" name="alt" class="form-control" id="exampleInputAlt" placeholder="alt" step="0.01">
                     </div>
 
                 </div>
@@ -33,6 +43,5 @@
             </form>
 
         </div>
-
     </div>
 </div>
