@@ -26,16 +26,16 @@
                         @php
                             if($pedido->estado=="Enviado")
                             {
-                                $p="60";
+                                $std="60";
                             }elseif($pedido->estado=="Recibido"){
-                                $p="80";
+                                $std="80";
 
                             }else{
-                                $p="100";
+                                $std="100";
                             }
                         @endphp
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{$p}}%;">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{$std}}%;">
                                 {{$pedido->estado}}
                             </div>
                         </div>

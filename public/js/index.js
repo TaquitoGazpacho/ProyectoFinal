@@ -29,7 +29,7 @@ function addEvent(){
 }
 
 function validate(event){
-    event.preventDefault()
+    event.preventDefault();
     var elementos = document.getElementById("contactanos").elements;
     var errors="";
     for (var i=0;i<elementos.length;i++){
