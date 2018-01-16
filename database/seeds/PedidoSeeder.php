@@ -22,7 +22,7 @@ class PedidoSeeder extends Seeder
         ]);
         DB::table('pedidos')->insert([
             'numero_pedido' => '1235',
-            'estado' => 'Enviado',
+            'estado' => 'Recogido',
             'recogido' => false,
             'numero_taquilla' => '4',
             'user_id' => '4',
@@ -39,11 +39,49 @@ class PedidoSeeder extends Seeder
 
         ]);
         DB::table('pedidos')->insert([
-            'numero_pedido' => '1236',
+            'numero_pedido' => '1237',
             'estado' => 'enviado',
             'recogido' => false,
             'numero_taquilla' => '3',
-            'user_id' => '3',
+            'user_id' => '1',
+            'oficina_id' => '2',
+
+        ]);
+
+
+        DB::table('pedidos')->insert([
+            'numero_pedido' => '1224',
+            'estado' => 'Enviado',
+            'recogido' => false,
+            'numero_taquilla' => '1',
+            'user_id' => '2',
+            'oficina_id' => '2',
+
+        ]);
+        DB::table('pedidos')->insert([
+            'numero_pedido' => '2235',
+            'estado' => 'Recogido',
+            'recogido' => false,
+            'numero_taquilla' => '4',
+            'user_id' => '2',
+            'oficina_id' => '1',
+
+        ]);
+        DB::table('pedidos')->insert([
+            'numero_pedido' => '2236',
+            'estado' => 'Recibido',
+            'recogido' => true,
+            'numero_taquilla' => '2',
+            'user_id' => '2',
+            'oficina_id' => '3',
+
+        ]);
+        DB::table('pedidos')->insert([
+            'numero_pedido' => '2236',
+            'estado' => 'enviado',
+            'recogido' => false,
+            'numero_taquilla' => '3',
+            'user_id' => '2',
             'oficina_id' => '2',
 
         ]);
