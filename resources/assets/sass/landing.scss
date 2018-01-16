@@ -650,3 +650,17 @@ PRICING STYLES
 .progress{
   background-color: #d1d5d0;
 }
+
+/* ------------------------------------- 404 Page -------------------------------------------- */
+body {
+  background-image: url("../img/gothamMarkerOpA.jpg");
+  color: white;
+  background-repeat: no-repeat ;
+.error-template {
+  padding: 40px 15px;text-align: center;}
+.error-actions {
+  margin-top:15px;margin-bottom:15px;}
+.error-actions .btn {
+  margin-right:10px; }
+
+}

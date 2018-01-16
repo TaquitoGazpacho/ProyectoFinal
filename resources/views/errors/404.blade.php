@@ -1,10 +1,33 @@
-<div class="page_content_wrap">
-    <div class="content_wrap">
-        <div class="text-align-center error-404">
-            <h1 class="huge">Error 404</h1>
-            <hr class="sm">
-            <p><strong>Lo sentimos - La página que buscas, no existe! :(</strong></p>
-            <p>La página que estas buscando, ha sido movida, borrada o renombrada<br>O con suerte nunca existio.</p>
+<title>404 Error</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- CSS -->
+<link rel="stylesheet" href={{asset("bootstrap/css/bootstrap.min.css")}}>
+<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+
+<html>
+    <head></head>
+
+    <body class="background404">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="error-template">
+                        <h1>
+                            Ups!</h1>
+                        <h2>
+                            404 Not Found</h2>
+                        <div class="error-details">
+                            Lo sentimos, ha ocurrido un error, la página que estás buscando no existe!
+                        </div>
+                        <div class="error-actions">
+                            <a href="{{ route('index') }}" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span>
+                                Llévame a inicio </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </body>
+</html>
