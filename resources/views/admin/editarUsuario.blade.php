@@ -7,7 +7,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Registrar Empresa</h4>
             </div>
-            <form method="post" action="{{ route('admin.editarUsuario') }} ">
+            <form method="post" action="{{ route('admin.editarUsuario') }}">
                 {{ csrf_field() }}
                 <div class="modal-body">
                     <div class="form-group">
