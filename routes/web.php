@@ -102,3 +102,4 @@ Route::post('/changeSuscription', 'SuscripcionController@cambiarSuscripcion')->n
 
 Route::post('/checkLogin', 'ExternoController@comprobarConexion')->name('comprobarConexion');
 Route::post('/getLoginHTML', 'ExternoController@getLoginHTML')->name('getLoginHTML');
+Route::post('/loginExt', 'ExternoController@login')->name('loginExt');
