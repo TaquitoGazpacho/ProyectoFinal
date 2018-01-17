@@ -7,11 +7,11 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Register</div>
                     <div class="panel-body">
-                        <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+                        <form id="registerForm" class="form-horizontal" method="POST" action="{{ route('register') }}">
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                <label for="name" class="col-md-4 control-label">Name</label>
+                                <label for="name" class="col-md-4 control-label">Name *</label>
 
                                 <div class="col-md-6">
                                     <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" autofocus>
@@ -25,7 +25,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('surname') ? ' has-error' : '' }}">
-                                <label for="surname" class="col-md-4 control-label">Surname</label>
+                                <label for="surname" class="col-md-4 control-label">Surname *</label>
 
                                 <div class="col-md-6">
                                     <input id="surname" type="text" class="form-control" name="surname" value="{{ old('surname') }}" autofocus>
@@ -39,10 +39,10 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
-                                <label for="surname" class="col-md-4 control-label">Phone</label>
+                                <label for="surname" class="col-md-4 control-label">Phone *</label>
 
                                 <div class="col-md-6">
-                                    <input id="phone" type="number" class="form-control" name="phone" value="{{ old('phone') }}" autofocus>
+                                    <input id="phone" type="text" class="form-control" name="phone" value="{{ old('phone') }}" autofocus>
 
                                     @if ($errors->has('phone'))
                                         <span class="help-block">
@@ -57,9 +57,9 @@
 
                                 <div class="col-md-6">
                                     {{--<input id="sex" type="text" class="form-control" name="sex" value="{{ old('sex') }}" autofocus>--}}
-                                    <label><input type="radio" name="sex" value="Masculino"> Masculino</label><br>
-                                    <label><input type="radio" name="sex" value="Femenino"> Femenino</label><br>
-                                    <label><input type="radio" name="sex" value="Otro"> Otro</label>
+                                    <label><input id="check1" type="radio" name="sex" value="Masculino" > Masculino</label><br>
+                                    <label><input id="check2" type="radio" name="sex" value="Femenino"> Femenino</label><br>
+                                    <label><input id="check3" type="radio" name="sex" value="Otro" checked> Otro</label>
                                     @if ($errors->has('sex'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('sex') }}</strong>
@@ -69,7 +69,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                                <label for="email" class="col-md-4 control-label">E-Mail Address *</label>
 
                                 <div class="col-md-6">
                                     <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
@@ -83,7 +83,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                <label for="password" class="col-md-4 control-label">Password</label>
+                                <label for="password" class="col-md-4 control-label">Password *</label>
 
                                 <div class="col-md-6">
                                     <input id="password" type="password" class="form-control" name="password">
@@ -97,7 +97,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+                                <label for="password-confirm" class="col-md-4 control-label">Confirm Password *</label>
 
                                 <div class="col-md-6">
                                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation">
@@ -120,10 +120,84 @@
                                     </button>
                                 </div>
                             </div>
+
+                            <div id="erroresRegister"></div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <script>
+        window.onload = addEv;
+        function addEv() {
+            document.getElementById("registerForm").addEventListener('submit', validateRegister);
+        }
+        function validateRegister(event) {
+            var elementos = document.getElementById("registerForm").elements;
+            var errores = "";
+            for (var i=0;i<elementos.length;i++){
+                var eInput = elementos[i];
+                if (eInput.name === "name"){
+                    if (eInput.value.length === 0) {
+                        errores += "<p>Debe introcucir su Nombre</p>";
+                    }
+                }
+                if (eInput.name === "surname"){
+                    if (eInput.value.length === 0) {
+                        errores += "<p>Debe introcucir su Apellido</p>";
+                    }
+                }
+                if (eInput.name === "phone"){
+                    if (eInput.value.length === 0 ){
+                        errores += "<p>Introduzca un número de teléfono</p>";
+                    }
+                    else if (eInput.value.length != 9 ){
+                        errores += "<p>Introduzca un número de teléfono correcto</p>";
+                    }
+                }
+                if (eInput.name === "email"){
+                    if (eInput.value.length === 0) {
+                        errores += "<p>Debe introcucir su Email</p>";
+                    }
+                }
+                if (eInput.name === "password"){
+
+                    if (eInput.value.length === 0 ){
+                        errores += "<p>Debe introducir su constraseña</p>";
+                    }else if(eInput.value.length < 6){
+                        errores += "<p>La contraseña debe tener un mínimo de 6 caracteres</p>";
+                    }
+                }
+                if (eInput.name === "password_confirmation"){
+                    if (eInput.value.length === 0 ){
+                        errores += "<p>Debe repetir su contraseña</p>";
+                    }else if(document.getElementsByName("password")[0].value !== document.getElementsByName("password_confirmation")[0].value){
+                        errores += "<p>Las contraseñas deben coincidir</p>";
+                    }
+                }
+
+                if(errores!=""){
+                    event.preventDefault();
+                    document.getElementById('erroresRegister').innerHTML="<div class='alert alert-danger'>"+errores+"</div>";
+                }
+
+
+            }
+
+        }
+
+
+
+
+
+
+    </script>
+
+
+
+
+
 @endsection
