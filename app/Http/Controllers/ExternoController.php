@@ -9,12 +9,13 @@ class ExternoController extends Controller
 {
     public function comprobarConexion(){
         if(Auth::guard('web')->check()) {
-            return "hola";
+            return Auth::guard('web')->user();
         } else {
-            return "dola";
+            return "";
         }
-//        $datos = User::get();
-//
-//        return $datos;
+    }
+
+    public function getLoginHTML() {
+        return view("auth.login");
     }
 }

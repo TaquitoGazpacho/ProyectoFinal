@@ -101,3 +101,4 @@ Route::get('/verifyemail/{token}', 'Auth\User\RegisterController@verify');
 Route::post('/changeSuscription', 'SuscripcionController@cambiarSuscripcion')->name('cambiarSuscripcion');
 
 Route::post('/checkLogin', 'ExternoController@comprobarConexion')->name('comprobarConexion');
+Route::post('/getLoginHTML', 'ExternoController@getLoginHTML')->name('getLoginHTML');
