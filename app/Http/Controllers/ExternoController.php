@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Models\Oficina;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -9,7 +10,7 @@ class ExternoController extends Controller
 {
     public function comprobarConexion(){
         if(Auth::guard('web')->check()) {
-            return Auth::guard('web')->user();
+            return [ 'usuario' => Auth::guard('web')->user(), 'oficinas' => $this->getOficinas()];
         } else {
             return "";
         }
@@ -36,11 +37,15 @@ class ExternoController extends Controller
 
         Auth::attempt($credential, $request->member);
         if(Auth::check() && Auth::user()->verified) {
-            return Auth::guard('web')->user();
+            return [ 'usuario' => Auth::guard('web')->user(), 'oficinas' => $this->getOficinas()];
         } elseif (Auth::check()) {
             Auth::logout();
             return "FALSE";
         }
         return $this->sendFailedLoginResponse($request);
+    }
+
+    public function getOficinas(){
+        return Oficina::getOficinas();
     }
 }
