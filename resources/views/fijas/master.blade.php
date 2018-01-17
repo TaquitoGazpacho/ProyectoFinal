@@ -1,7 +1,9 @@
-
+<html>
+    <head>
+        @include('fijas.head')
         @yield('cssExtra')
     </head>
-
+    <body>
         <!--Pantalla principal-->
         @yield('principal')
 
@@ -16,10 +18,10 @@
         {{--Request::url() === 'http://localhost/proyectoFinal/admin/login' ||--}}
         {{--Request::url() === 'http://localhost/proyectoFinal/home' ||--}}
         {{--Request::url() === 'http://localhost/proyectoFinal/admin')--}}
-            {{--<!-- Si es login o register, no mostramos footer -->--}}
+        {{--<!-- Si es login o register, no mostramos footer -->--}}
         {{--@else--}}
-            {{--<!--Footer-->--}}
-            @include('fijas.footer')
+        {{--<!--Footer-->--}}
+        @include('fijas.footer')
         {{--@endif--}}
     </body>
 </html>
