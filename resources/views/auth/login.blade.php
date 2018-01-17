@@ -1,6 +1,7 @@
 @extends('fijas.master')
 
 @section('section')
+
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -81,7 +82,45 @@
             sweetAlertSimple("{!! alert()->message() !!}", "{!! alert()->option('text') !!}", "{!! alert()->type() !!}");
         </script>
     @endif
+
+
+    <script>
+        window.onload = addEv;
+        function addEv() {
+            document.getElementById("loginForm").addEventListener('submit', validateLogin);
+        }
+        function validateLogin(event) {
+            var elementos = document.getElementById("loginForm").elements;
+            var errores = "";
+            for (var i=0;i<elementos.length;i++){
+                var eInput = elementos[i];
+                if (eInput.name === "email"){
+                    if (eInput.value.length === 0) {
+                        errores += "<p>Debe introcucir su Email</p>";
+                    }
+                }
+                if (eInput.name === "password"){
+                    if (eInput.value.length === 0 ){
+                        errores += "<p>Debe introducir su constraseña</p>";
+                    }
+                }
+
+                if(errores!=""){
+                    event.preventDefault();
+                    document.getElementById('erroresLogin').innerHTML="<div class='alert alert-danger'>"+errores+"</div>";
+                }
+
+
+            }
+
+        }
+    </script>
+
+
+
+
 @endsection
+
 
 
 
