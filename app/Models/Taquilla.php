@@ -19,4 +19,11 @@ class Taquilla extends Model
     {
         return $this->hasMany('App\Models\Reparto');
     }
+
+    public static function getTaquilla($oficina_id){
+        return Taquilla::select('id')->where([
+            ['ocupada', 0],
+            ['oficina_id', $oficina_id]
+        ])->first();
+    }
 }
