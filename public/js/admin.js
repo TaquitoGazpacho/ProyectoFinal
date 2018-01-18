@@ -65,6 +65,66 @@ $( document ).ready( function() {
 });
 
 
+// Validacion registrar empresa
+
+function addEv() {
+    document.getElementById("formRegistroEmpresa").addEventListener('submit', validateRegisterEmpresa);
+    limpiar();
+}
+
+function limpiar() {
+   var error = document.getElementById("erroresRegisterEmpresa");
+   error.removeChild(error.childNodes[0]);
+
+}
+
+function validateRegisterEmpresa(event) {
+
+    var elementos = document.getElementById("formRegistroEmpresa").elements;
+    var errores = "";
+
+    for (var i=0;i<elementos.length;i++) {
+        var eInput = elementos[i];
+        if (eInput.name === "nombre") {
+            if (eInput.value.length === 0) {
+                errores += "<p>Debe introcucir su Nombre</p>";
+            }
+        }
+        if (eInput.name === "email") {
+            if (eInput.value.length === 0) {
+                errores += "<p>Debe introcucir su Email</p>";
+            }
+        }
+        if (eInput.name === "telefono") {
+            if (eInput.value.length !== 9 ) {
+                errores += "<p>Introduzca un teléfono de 9 caracteres</p>";
+            }
+        }
+        if (eInput.name === "nif") {
+            if (eInput.value.length !== 9 ) {
+                errores += "<p>Introduzca un nif correcto</p>";
+            }
+        }
+        if (eInput.name === "password") {
+            if (eInput.value.length < 9 ) {
+                errores += "<p>La contraseña debe tener mínimo 6 caracteres</p>";
+            }
+        }
+
+
+        if(errores!=""){
+            event.preventDefault();
+            document.getElementById('erroresRegisterEmpresa').innerHTML="<div id='error' class='alert alert-danger'>"+errores+"</div>";
+        }
+
+
+    }
+
+    
+}
+
+
+
 // *********************************** Vista Admin cambio de parametros de usuario ********************************************
 
 // function editarUsuario(event) {

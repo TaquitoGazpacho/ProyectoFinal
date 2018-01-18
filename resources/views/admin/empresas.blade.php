@@ -65,7 +65,7 @@ $empresas = Empresa_reparto::getEmpresas();
             @endforeach
             </tbody>
         </table>
-        <a class="btn btn-warning" data-toggle="modal" data-target="#modalEmpresa">Registrar Empresa</a>
+        <a onclick="addEv()" class="btn btn-warning" data-toggle="modal" data-target="#modalEmpresa">Registrar Empresa</a>
         @include('admin.registroEmpresaReparto')
         {{--Modal--}}
         @include('admin.editarEmpresaReparto')
