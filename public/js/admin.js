@@ -62,15 +62,13 @@ $( document ).ready( function() {
             $('#modalEditarEmpresa').modal('toggle');
         });
     });
+
+    document.getElementById("formRegistroEmpresa").addEventListener('submit', validateRegisterEmpresa);
+
 });
 
 
 // Validacion registrar empresa
-
-function addEv() {
-    document.getElementById("formRegistroEmpresa").addEventListener('submit', validateRegisterEmpresa);
-    limpiar();
-}
 
 function limpiar() {
    var error = document.getElementById("erroresRegisterEmpresa");
