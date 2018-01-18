@@ -68,7 +68,7 @@ class ExternoController extends Controller
 
         $this->ocuparTaquilla($idTaquilla->id);
 
-        return "asd";
+        return "TRUE";
     }
 
     public function anadirPedido($user_id, $oficina_id, $taquilla_id){

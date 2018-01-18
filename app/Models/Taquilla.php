@@ -23,6 +23,7 @@ class Taquilla extends Model
     public static function getTaquilla($oficina_id){
         return Taquilla::select('id')->where([
             ['ocupada', 0],
+            ['estado','Funcionando'],
             ['oficina_id', $oficina_id]
         ])->first();
     }
