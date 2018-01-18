@@ -18,8 +18,11 @@ class Reparto extends Model
 
         $repartos = Reparto::where('empresa_id', $empresa_id)->get();
 
-
         return $repartos;
+    }
+
+    public static function getRepartosUsuario($user_id){
+        return Reparto::where('usuario_id', $user_id)->get();
     }
 
     public function usuario()
