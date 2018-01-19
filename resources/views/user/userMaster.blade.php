@@ -14,11 +14,13 @@
     <link rel="stylesheet" href={{asset("adminLTE/css/AdminLTE.min.css")}}>
     <!-- responsive tables-->
     <link rel="stylesheet" href={{asset("css/complementos/dataTables.bootstrap.css")}}>
-
+    <!--Mapbox-->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.css' rel='stylesheet' />
+    <!--Select2-->
+    <link rel="stylesheet" href={{ asset("css/complementos/select2.min.css") }}>
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     <!-- Nuestro Css -->
-    <link rel="stylesheet" href={{ asset("css/complementos/select2.min.css") }}>
     <link rel="stylesheet" href={{ asset("css/style.css") }}>
 </head>
 
@@ -124,8 +126,14 @@
                         </a>
                     </li>
                     <li>
+                        <a href="{{ route('home.oficinas') }}">
+                            <span class="sidebar-icon"><i class="fa fa-globe"></i></span>
+                            <span class="sidebar-title">Oficinas</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="{{ route('home.pedidos') }}">
-                            <span class="sidebar-icon"><i class="fa fa-usd"></i></span>
+                            <span class="sidebar-icon"><i class="fa fa-paper-plane"></i></span>
                             <span class="sidebar-title">Pedidos</span>
                         </a>
                     </li>
@@ -182,6 +190,8 @@
 <!-- Responsive Tables-->
 <script src={{asset("js/complementos/jquery.dataTables.js")}}></script>
 <script src={{asset("js/complementos/dataTables.bootstrap.js")}}></script>
+<!--Mapbox-->
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.js'></script>
 <!-- AdminLTE App -->
 {{--<script src={{asset("adminLTE/js/adminlte.min.js")}}></script>--}}
 <!-- Js de Select2 -->

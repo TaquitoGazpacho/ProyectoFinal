@@ -38,4 +38,7 @@ class HomeController extends Controller
     public function pedidos(){
         return view('user.pedidos');
     }
+    public function oficinas(){
+        return view('user.oficinas');
+    }
 }
