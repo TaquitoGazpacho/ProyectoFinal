@@ -17,21 +17,19 @@ function getOficinasJson(){
             },
             "properties":
             {
-                //"title": oficina.calle+", "+oficina.num_calle,
-                'marker-color': '#3bb2d0',
-                'marker-size': 'large',
-                'marker-symbol': 'rocket'
+                "name": oficina.calle+", "+oficina.num_calle,
             }
         };
 
         var markerElement = document.createElement("i");
         markerElement.className = "fa fa-3x fa-map-marker text-primary";
+        markerElement.style.color="#3C8DBC";
 
         let marker = new mapboxgl.Marker(markerElement)
             .setLngLat(ofi.geometry.coordinates)
             .setPopup(
                 new mapboxgl.Popup({offset: 25})
-                    .setHTML("<h5>asdasdasdasdasdasdasdasd</h5>")
+                    .setHTML("<h3>"+ofi.properties.name+"</h3>")
             )
             .addTo(map);
 
