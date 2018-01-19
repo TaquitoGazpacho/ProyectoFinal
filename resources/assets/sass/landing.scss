@@ -148,7 +148,7 @@ a {
       line-height: 42px;
       margin: 10px 15px;
       vertical-align: middle;
-      color: $azul;
+      color: $azulNav;
     }
     i.fa-envelope{
       font-size: 17px;
@@ -204,7 +204,7 @@ a {
       border-radius: 2px;
 
       font-size: 20px;
-      color: $azul;
+      color: $azulNav;
       /*color: $white;*/
       text-align: center;
       line-height: 35px;
@@ -246,89 +246,6 @@ a {
     }
 
 }
-
-
-/* -------------------------------------NAVBAR STYLE-------------------------------------------- */
-/*---- perfil----*/
-.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
-
-small {
-    display: block;
-    line-height: 1.428571429;
-    color: #999;
-}
-.well-sm {
-    width: 400px;
-    margin: 5px;
-}
-
-.navbar {
-    margin-bottom: 0px;
-}
-
-.navbar-form input, .form-inline input {
-    width:auto;
-}
-
-.navbar-inverse{
-  border: 0px;
-  background-color: $white;
-  .navbar-nav > .active > a:hover,
-  .navbar-nav > li > a:hover,
-  .navbar-brand:hover{
-    color: $naranja;
-  }
-  .navbar-nav > li > a {
-    color: $negro2;
-  }
-  .navbar-toggle {
-    border-color: rgba(0, 0, 0, 0.3);
-  }
-  .navbar-toggle:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-    .icon-bar {
-      background-color: $naranja;
-    }
-  }
-  .navbar-toggle:focus {
-    background-color: $negro2;
-  }
-  .navbar-nav > .active > a:hover,
-  .navbar-nav > .active > a:focus{
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  .navbar-nav > .active > a{
-    background-color: $negro2;
-  }
-  .container {
-    padding-top: 8px;
-  }
-} //end of navbar-inverse
-
-.navbar-toggle{
-    background-color: $negro2;
-}
-
-#nav.affix {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index:10;
-}
-.navbar-dropdown {
-    margin-top: 12px;
-    text-decoration: none;
-    list-style-type: none;
-    margin-right: 20px;
-    a {
-      color: $negro2;
-    }
-    a:hover {
-      color: $naranja;
-      text-decoration: none;
-    }
-}
-
 
 /* -------------------------------------SECTIONS-------------------------------------------- */
 
@@ -664,3 +581,7 @@ PRICING STYLES
   margin-right:10px; }
 
 }
+
+
+
+/* ------------------------------------- animaciones -------------------------------------------- */

@@ -1,202 +1,84 @@
 <div id="nav">
     <div class="navbar navbar-inverse navbar-static-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header dropup">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{{ route('index') }}">LockBox</a>
-            </div>
+        <nav class="navbar navbar-default navbar-static-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a id="menu-toggle" href="#" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="navbar-brand text-center" href="{{ route('index') }}">Lock<span>Box</span></a>
+                </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="{{ Route::current()->getName() == 'index' ? 'active' : null }}"><a href="{{ route('index') }}">Home <span class="sr-only">(current)</span></a></li>
-                    <li><a href="{{ route('index') }}#servicios">Servicios</a></li>
-                    <li><a href="{{ route('index') }}#opiniones">Opiniones</a></li>
-                    <li><a href="{{ route('index') }}#sobreLaEmpresa">Sobre la empresa</a></li>
-                    <li><a href="{{ route('index') }}#contactanos">Contáctanos</a></li>
-                </ul>
-                @if(Auth::guard('empresa')->check() || Auth::guard('web')->check() || Auth::guard('admin')->check())
-                    @auth('empresa')
-                        <ul class="nav navbar-nav navbar-right">
-                            <div id="droup" class="dropup">
-                                <li class="dropdown navbar-right navbar-dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                        {{ Auth::guard('empresa')->user()->nombre }}
-                                        <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li>
-                                            <div class="row">
-                                                <div class="col-xs-12 col-sm-6 col-md-6">
-                                                    <div class="well well-sm">
-                                                        <div class="row">
-                                                            <div class="col-sm-6 col-md-8">
-                                                                <h4>{{ Auth::guard('empresa')->user() -> name }}</h4>
-                                                                <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker">
-                                                                        </i></cite></small>
-                                                                <p>
-                                                                    <i class="glyphicon glyphicon-envelope"></i>email@example.com
-                                                                    <br />
-                                                                    <i class="glyphicon glyphicon-globe"></i><a href="http://www.jquery2dotnet.com">www.jquery2dotnet.com</a>
-                                                                    <br />
-                                                                    <i class="glyphicon glyphicon-gift"></i>June 02, 1988</p>
-                                                                <!-- Split button -->
-                                                                <div class="btn-group">
-                                                                    <a href="{{ route('empresa.home') }}" type="button" class="btn btn-primary">
-                                                                        Perfil</a>
-                                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                                        {{ csrf_field() }}
-                                                                    </form>
-                                                                    <a href="{{ route('logout') }}"
-                                                                    onclick="event.preventDefault();
-                                                                    document.getElementById('logout-form').submit();"  type="button" class="btn btn-primary">
-                                                                        Logout</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--<a href="{{ route('logout') }}"
-                                               onclick="event.preventDefault();
-                                                             document.getElementById('logout-form').submit();">
-                                                Logout
-                                            </a>
-
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                {{ csrf_field() }}
-                                            </form>-->
-                                        </li>
-                                    </ul>
-                                </li>
-                            </div>
-                        </ul>
-                    @endauth
-                    @auth('web')
-                        <ul class="nav navbar-nav navbar-right">
-                            <div id="droup" class="dropup">
-                                <li class="dropdown navbar-right navbar-dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                        {{ Auth::guard('web')->user()->name }}
-                                        <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li>
-                                            <div class="row">
-                                                <div class="col-xs-12 col-sm-6 col-md-6">
-                                                    <div class="well well-sm">
-                                                        <div class="row">
-                                                            <div class="col-sm-6 col-md-8">
-                                                                <h4>{{ Auth::guard('web')->user() -> name }} {{ Auth::guard('web')->user() -> surname }}</h4>
-                                                                <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker">
-                                                                        </i></cite></small>
-                                                                <p>
-                                                                    <i class="glyphicon glyphicon-envelope"></i>email@example.com
-                                                                    <br />
-                                                                    <i class="glyphicon glyphicon-globe"></i><a href="http://www.jquery2dotnet.com">www.jquery2dotnet.com</a>
-                                                                    <br />
-                                                                    <i class="glyphicon glyphicon-gift"></i>June 02, 1988</p>
-                                                                <!-- Split button -->
-                                                                <div class="btn-group">
-                                                                    <a href="{{ route('home.pedidos') }}" type="button" class="btn btn-primary">
-                                                                        Tu Cuenta</a>
-                                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                                        {{ csrf_field() }}
-                                                                    </form>
-                                                                    <a href="{{ route('logout') }}"
-                                                                       onclick="event.preventDefault();
-                                                                    document.getElementById('logout-form').submit();"  type="button" class="btn btn-primary">
-                                                                        Logout</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        <!--<a href="{{ route('logout') }}"
-                                               onclick="event.preventDefault();
-                                                             document.getElementById('logout-form').submit();">
-                                                Logout
-                                            </a>
-
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                {{ csrf_field() }}
-                                                </form>-->
-                                        </li>
-                                    </ul>
-                                </li>
-                            </div>
-                        </ul>
-                    @endauth
-                        @auth('admin')
-                            <ul class="nav navbar-nav navbar-right">
-                                <div id="droup" class="dropup">
-                                    <li class="dropdown navbar-right navbar-dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                            {{ Auth::guard('admin')->user()->name }}
-                                            <span class="caret"></span>
-                                        </a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li>
-                                                <div class="row">
-                                                    <div class="col-xs-12 col-sm-6 col-md-6">
-                                                        <div class="well well-sm">
-                                                            <div class="row">
-                                                                <div class="col-sm-6 col-md-8">
-                                                                    <h4>{{ Auth::guard('admin')->user() -> name }}</h4>
-                                                                    <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker">
-                                                                            </i></cite></small>
-                                                                    <p>
-                                                                        <i class="glyphicon glyphicon-envelope"></i>email@example.com
-                                                                        <br />
-                                                                        <i class="glyphicon glyphicon-globe"></i><a href="http://www.jquery2dotnet.com">www.jquery2dotnet.com</a>
-                                                                        <br />
-                                                                        <i class="glyphicon glyphicon-gift"></i>June 02, 1988</p>
-                                                                    <!-- Split button -->
-                                                                    <div class="btn-group">
-                                                                        <a href="{{ route('home') }}" type="button" class="btn btn-primary">
-                                                                            Perfil</a>
-                                                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                                            {{ csrf_field() }}
-                                                                        </form>
-                                                                        <a href="{{ route('logout') }}"
-                                                                           onclick="event.preventDefault();
-                                                                    document.getElementById('logout-form').submit();"  type="button" class="btn btn-primary">
-                                                                            Logout</a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            <!--<a href="{{ route('logout') }}"
-                                               onclick="event.preventDefault();
-                                                             document.getElementById('logout-form').submit();">
-                                                Logout
-                                            </a>
-
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                {{ csrf_field() }}
-                                                    </form>-->
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </div>
-                            </ul>
-                        @endauth
-                @else
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="{{ Route::current()->getName() === 'login' ? 'active' : null }}"><a href="{{ route('login') }}">Login</a></li>
-                        <li class="{{ Route::current()->getName() === 'register' ? 'active' : null }}"><a href="{{ route('register') }}">Regístrate</a></li>
+                <div id="navbar-collapse" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="color"><a href="{{ route('index') }}">Home<span class="animacion-linea"></span></a></li>
+                        <li class="color"><a href="{{ route('index') }}#servicios">Servicios<span class="animacion-linea"></span></a></li>
+                        <li class="color"><a href="{{ route('index') }}#opiniones">Opiniones<span class="animacion-linea"></span></a></li>
+                        <li class="color"><a href="{{ route('index') }}#sobreLaEmpresa">Sobre la empresa<span class="animacion-linea"></span></a></li>
+                        <li class="color"><a href="{{ route('index') }}#contactanos">Contáctanos<span class="animacion-linea"></span></a></li>
                     </ul>
-                @endif
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+
+                    @if(Auth::guard('web')->check())
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown user user-menu">
+                                <!-- Menu Toggle Button -->
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <!-- The user image in the navbar-->
+                                    <img src="{{ asset(Auth::guard('web')->user()->image) }}" class="user-image " alt="User Image">
+                                    <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                    <span class="hidden-xs">{{ Auth::guard('web')->user()->name }}</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- The user image in the menu -->
+                                    <li class="user-header hide-mobile">
+                                        <img src="{{ asset(Auth::guard('web')->user()->image) }}" class="img-circle" alt="User Image">
+
+                                        <p>
+                                            {{ Auth::guard('web')->user()->name }}
+                                            <small>Member since Nov. 2012</small>
+                                        </p>
+                                    </li>
+                                    <!-- Menu Body -->
+                                    <li class="user-body">
+                                        <div class="row ">
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">Followers</a>
+                                            </div>
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">Sales</a>
+                                            </div>
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">Friends</a>
+                                            </div>
+                                        </div>
+                                        <!-- /.row -->
+                                    </li>
+                                    <!-- Menu Footer-->
+                                    <li class="user-footer">
+                                        <div class="pull-left">
+                                            <a href="{{ route('home.pedidos') }}" class="btn btn-default btn-flat">Tu cuenta</a>
+                                        </div>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                        <div class="pull-right">
+                                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-default btn-flat">Sign out</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    @else
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="{{ Route::current()->getName() === 'login' ? 'active' : null }}"><a href="{{ route('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+                            <li class="{{ Route::current()->getName() === 'register' ? 'active' : null }}"><a href="{{ route('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i> Regístrate</a></li>
+                        </ul>
+                    @endif
+                </div>
+            </div>
+        </nav>
     </div>
 </div>

@@ -1,0 +1,147 @@
+/* -------------------------------------Fuentes-------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+/* -------------------------------------NAVBAR STYLE-------------------------------------------- */
+/*---- perfil----*/
+.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+
+small {
+  display: block;
+  line-height: 1.428571429;
+  color: #999;
+}
+.well-sm {
+  width: 400px;
+  margin: 5px;
+}
+
+.navbar {
+  margin-bottom: 0px;
+  background-color: $azulNav;
+
+  ::after {
+    background: $azulNav;
+  }
+
+  .navbar-header {
+    //font-family: 'Montserrat', sans-serif; a {
+      color: $white;
+    }
+  .navbar-collapse ul>li>a{
+    font-family: 'Comfortaa', cursive;
+    font-size: 14px;
+    color: $white;
+  }
+  .navbar-collapse ul>li>a::first-letter{
+    color: $naranja;
+  }
+}
+
+.navbar-form input, .form-inline input {
+  width:auto;
+}
+
+.navbar-inverse{
+  border: 0px;
+  background-color: $white;
+
+  .navbar-default {
+    border-bottom: 0px;
+  }
+
+  .navbar-nav > li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: $naranja;
+    transition: width .8s;
+  }
+
+  .navbar-nav > li:hover::after {
+    width: 100%;
+  }
+
+  .navbar-brand {
+    min-width: 200px;
+    font-family: 'Poiret One', cursive;
+    color: $white;
+    font-size: 40px;
+    span {
+      color: $naranja;
+    }
+
+
+  }
+
+  .navbar-nav > .active > a:hover,
+  .navbar-nav > li > a:hover,
+  .navbar-brand:hover{
+    color: $naranja;
+    span {
+      color: $white;
+    }
+  }
+
+  .navbar-nav > li > a:hover::first-letter {
+    color: $white;
+  }
+
+  .navbar-nav > li > a {
+    color: $negro2;
+  }
+  .navbar-toggle {
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+  .navbar-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    .icon-bar {
+      background-color: $naranja;
+    }
+  }
+  .navbar-toggle:focus {
+    background-color: $negro2;
+  }
+  .navbar-nav > .active > a:hover,
+  .navbar-nav > .active > a:focus{
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .navbar-nav > .active > a{
+    background-color: $negro2;
+  }
+  .container {
+    padding-top: 8px;
+  }
+} //end of navbar-inverse
+
+
+.navbar-toggle{
+  background-color: $negro2;
+}
+
+#nav.affix {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:10;
+}
+.navbar-dropdown {
+  margin-top: 12px;
+  text-decoration: none;
+  list-style-type: none;
+  margin-right: 20px;
+  a {
+    color: $negro2;
+  }
+  a:hover {
+    color: $naranja;
+    text-decoration: none;
+  }
+}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover {
+  background: $azulNav;
+}
+
