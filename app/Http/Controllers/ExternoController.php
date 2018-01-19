@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 class ExternoController extends Controller
 {
+
     public function comprobarConexion(){
         if(Auth::guard('web')->check()) {
             return [ 'usuario' => Auth::guard('web')->user(), 'oficinas' => $this->getOficinas()];
@@ -24,7 +25,6 @@ class ExternoController extends Controller
 
     public function login(Request $request)
     {
-
         $this->validate($request, [
             'email' => 'required|min:1',
             'password' => 'required|min:6',

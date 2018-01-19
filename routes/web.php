@@ -30,11 +30,14 @@ Route::post('/register', 'Auth\User\RegisterController@register');
 Route::get('/register', 'Auth\User\RegisterController@showRegistrationForm')->name('register');
 Route::post('/editarUsuario', 'Auth\User\EditUserController@ejecutar')->name('editarUsuario');
 Route::post('/editarUsuario/oficina', 'Auth\User\EditUserController@cambiarOficina')->name('editarUsuario.oficina');
-Route::get('/perfil', 'HomeController@index')->name('home');
-Route::get('/perfil/suscripcion', 'HomeController@suscripcion')->name('home.suscripcion');
-Route::get('perfil/ajustes', 'HomeController@ajustes')->name('home.ajustes');
-Route::get('perfil/pedidos', 'HomeController@pedidos')->name('home.pedidos');
 
+Route::prefix('perfil')->group(function() {
+    Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/suscripcion', 'HomeController@suscripcion')->name('home.suscripcion');
+    Route::get('/oficinas', 'HomeController@oficinas')->name('home.oficinas');
+    Route::get('/ajustes', 'HomeController@ajustes')->name('home.ajustes');
+    Route::get('/pedidos', 'HomeController@pedidos')->name('home.pedidos');
+});
 
 
 Route::prefix('empresa')->group(function() {

@@ -171,8 +171,8 @@
 
 
 
-
             </div>
+
         </div>
     @php
         $sex = Auth::guard('web')->user()->sex;
@@ -233,5 +233,6 @@
     function cambOficiReset(){
         //reset FORM
     }
+
     </script>
 @endsection
