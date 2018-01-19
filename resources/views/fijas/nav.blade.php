@@ -1,7 +1,7 @@
 <div id="nav">
     <div class="navbar navbar-inverse navbar-static-top">
         <nav class="navbar navbar-default navbar-static-top" role="navigation">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="navbar-header">
                     <a id="menu-toggle" href="#" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
