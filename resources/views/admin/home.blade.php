@@ -136,7 +136,7 @@
             },
             markerStyle      : {
                 initial: {
-                    fill  : '#00a65a',
+                    fill  : '#3C8DBC',
                     stroke: '#111'
                 }
             },
