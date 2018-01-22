@@ -71,7 +71,7 @@ class ExternoController extends Controller
         return "TRUE";
     }
 
-    public function anadirPedido($user_id, $oficina_id, $taquilla_id){
+    protected function anadirPedido($user_id, $oficina_id, $taquilla_id){
         Reparto::insertGetId([
             'clave_usuario' => $this->generarCodigo(),
             'clave_repartidor' => $this->generarCodigo(),
@@ -82,13 +82,14 @@ class ExternoController extends Controller
         ]);
     }
 
-    public function ocuparTaquilla($id){
+    protected function ocuparTaquilla($id){
         Taquilla::where('id', $id)->update(['ocupada' => 1]);
     }
 
-    public function generarCodigo() {
+    protected function generarCodigo() {
         $clave = "".rand(0,9).rand(0,9).rand(0,9).rand(0,9);
 
         return $clave;
     }
+
 }

@@ -66,6 +66,13 @@ class RegisterController extends Controller
 
     protected function create(array $data)
     {
+        if (strtolower($data['sex']) == "femenino"){
+            $imagen="img/userImg/avatares/chica".rand(1,6).".png";
+        }elseif (strtolower($data['sex']) == "masculino"){
+            $imagen="img/userImg/avatares/chico".rand(1,6).".png";
+        }else{
+            $imagen="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png";
+        }
         $suscripcion = Suscripcion::where('name', 'Gratis')->value('id');
         return User::create([
             'name' => $data['name'],
@@ -76,6 +83,7 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
             'email_token' => base64_encode($data['email']),
             'suscripcion_id' => $suscripcion,
+            'image' => $imagen
         ]);
     }
 

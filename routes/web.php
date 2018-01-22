@@ -103,6 +103,7 @@ Route::get('/verifyemail/{token}', 'Auth\User\RegisterController@verify');
 
 Route::post('/changeSuscription', 'SuscripcionController@cambiarSuscripcion')->name('cambiarSuscripcion');
 
+//usadas para la conexión con la libreria
 Route::post('/checkLogin', 'ExternoController@comprobarConexion')->name('comprobarConexion');
 Route::post('/getLoginHTML', 'ExternoController@getLoginHTML')->name('getLoginHTML');
 Route::post('/loginExt', 'ExternoController@login')->name('loginExt');
