@@ -84,4 +84,3 @@ function sweetAlertSimple(titulo, texto, icono) {
 
 
 
-
