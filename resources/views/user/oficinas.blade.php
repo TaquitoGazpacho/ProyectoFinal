@@ -6,7 +6,7 @@
     @endphp
     <div class="row">
         <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
-            <div id='map' style="width:80%; min-height: 400px; max-height: 600px;"></div>
+            <div id='map' style="width:100%; min-height: 400px; max-height: 600px;"></div>
         </div>
     </div>
 @endsection

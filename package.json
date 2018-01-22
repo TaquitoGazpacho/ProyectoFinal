@@ -62,6 +62,7 @@
     "jvectormap": "^2.0.4",
     "moment": "^2.20.1",
     "morris.js": "^0.5.0",
+    "notifyjs-browser": "^0.4.2",
     "pace": "0.0.4",
     "raphael": "^2.2.7",
     "select2": "^4.0.6-rc.1",

@@ -47,7 +47,7 @@ mix.copy('node_modules/fastclick/lib/fastclick.js', 'public/js/complementos');
 mix.copy('node_modules/datatables.net/js/jquery.dataTables.js', 'public/js/complementos');
 mix.copy('node_modules/datatables.net-bs/js/dataTables.bootstrap.js', 'public/js/complementos');
 mix.copy('node_modules/select2/dist/js/select2.min.js', 'public/js/complementos');
-
+mix.copy('node_modules/notifyjs-browser/dist/notify.js', 'public/js/complementos');
 
 
 //mix.js('resources/assets/js/app.js', 'public/js')

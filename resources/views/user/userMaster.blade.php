@@ -117,6 +117,8 @@
 {{--<script src={{asset("adminLTE/js/adminlte.min.js")}}></script>--}}
 <!-- Js de Select2 -->
 <script src={{asset("js/complementos/select2.min.js")}}></script>
+<!-- Notify.js -->
+<script src={{asset("js/complementos/notify.js")}}></script>
 
 @yield('js')
 

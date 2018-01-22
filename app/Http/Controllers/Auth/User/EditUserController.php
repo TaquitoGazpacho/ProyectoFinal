@@ -61,8 +61,7 @@ class EditUserController extends Controller
     }
 
     public function cambiarOficina(Request $request){
-        $oficina = $request->ciudad;
-        Auth::guard('web')->user()->cambiarOficina($oficina);
+        Auth::guard('web')->user()->cambiarOficina($request->ciudad);
 
         return redirect()->route('home');
     }

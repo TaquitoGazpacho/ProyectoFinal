@@ -29,7 +29,7 @@ function getOficinasJson(){
             .setLngLat(ofi.geometry.coordinates)
             .setPopup(
                 new mapboxgl.Popup({offset: 25})
-                    .setHTML("<h3>"+ofi.properties.name+"</h3>")
+                    .setHTML("<h3>"+ofi.properties.name+"</h3><h4>CP: "+oficina.cp+"</h4><button onclick='cambiarOficina("+oficina.id+")' class='btn btn-warning btn-sm'>Selecionar mi oficina</button>")
             )
             .addTo(map);
 
@@ -74,3 +74,9 @@ map.on('load', function () {
         }
     });
 });
+
+function cambiarOficina(id){
+    $.post('http://'+window.location.hostname+'/editarUsuario/oficina', {"_token": $("[name='_token']")[0].value ,'ciudad': id},function(returnedData){
+        $.notify("Hello World");
+    });
+}

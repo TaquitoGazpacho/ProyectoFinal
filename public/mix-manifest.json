@@ -20,5 +20,6 @@
     "/js/complementos/fastclick.js": "/js/complementos/fastclick.js",
     "/js/complementos/jquery.dataTables.js": "/js/complementos/jquery.dataTables.js",
     "/js/complementos/dataTables.bootstrap.js": "/js/complementos/dataTables.bootstrap.js",
-    "/js/complementos/select2.min.js": "/js/complementos/select2.min.js"
+    "/js/complementos/select2.min.js": "/js/complementos/select2.min.js",
+    "/js/complementos/notify.js": "/js/complementos/notify.js"
 }
