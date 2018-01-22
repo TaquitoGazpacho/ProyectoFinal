@@ -103,13 +103,13 @@ body {
   transition: all .5s ease;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1023px) {
   #wrapper {
     padding-left: 225px;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1023px) {
   #wrapper #sidebar-wrapper {
     width: 225px;
   }
@@ -206,7 +206,7 @@ body {
 }
 
 
-@media (max-width: 992px) {
+@media (max-width: 1023px) {
   #wrapper #sidebar-wrapper {
     width: 45px;
     #sidebar #sidemenu li ul {
@@ -228,6 +228,18 @@ body {
   }
   .hide-mobile {
     display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+  #sidebar-wrapper{
+    top: 110px;
+  }
+}
+
+@media (max-width: 768px){
+  #sidebar-wrapper{
+    top: 58px;
   }
 }
 
