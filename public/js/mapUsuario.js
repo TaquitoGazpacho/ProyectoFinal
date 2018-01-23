@@ -51,7 +51,7 @@ var map = new mapboxgl.Map({
     style: 'mapbox://styles/mapbox/streets-v10',
     renderWorldCopies: true,
     center: posicion,
-    minZoom: 1.0
+    minZoom: 3.5
 });
 map.addControl(new mapboxgl.NavigationControl());
 map.on('load', function () {
@@ -77,6 +77,6 @@ map.on('load', function () {
 
 function cambiarOficina(id){
     $.post('http://'+window.location.hostname+'/editarUsuario/oficina', {"_token": $("[name='_token']")[0].value ,'ciudad': id},function(returnedData){
-        $.notify("Hello World");
+        $.notify("Oficina Cambiada!", "success");
     });
 }
