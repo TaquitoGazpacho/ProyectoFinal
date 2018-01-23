@@ -1,55 +1,57 @@
 @extends('user.userMaster')
 
 @section('contenido')
+    <form  action="{{route('cambiarSuscripcion')}}" method="post">
+        {{ csrf_field() }}
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-5 col-xs-10 col-xs-offset-1 col-sm-offset-1 col-lg-offset-0 col-md-offset-0">
                 <div class="pricingTable azul1">
                     <div class="pricingTable-header">
-                        <span class="price-value">10<span class="currency">$</span></span>
-                        <h3 class="title">Standard</h3>
+                        <span class="price-value">10<span class="currency">€/mes</span></span>
+                        <h3 class="title">Básico</h3>
                     </div>
                     <ul class="pricing-content">
-                        <li>50GB Disk Space</li>
-                        <li>50 Email Accounts</li>
-                        <li>50GB Monthly Bandwidth</li>
-                        <li>10 Subdomains</li>
-                        <li>15 Domains</li>
+                        <li>Entregas ilimitadas</li>
+                        <li>Taquillas pequeñas y medianas</li>
+                        <li>Acceso a cualquier oficina de tu país</li>
+                        <li>Transporte estandar</li>
+                        <li>Servicio de asistencia</li>
                     </ul>
-                    <a href="#" class="pricingTable-signup">Sign Up</a>
+                    <input type="submit" name="button1" class="pricingTable-signup" value="Contrata Plan" />
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-5 col-xs-10 col-xs-offset-1 col-sm-offset-0 col-md-offset-0">
                 <div class="pricingTable azul2">
                     <div class="pricingTable-header">
-                        <span class="price-value">20<span class="currency">$</span></span>
-                        <h3 class="title">Business</h3>
+                        <span class="price-value">20<span class="currency">€/mes</span></span>
+                        <h3 class="title">Premium</h3>
                     </div>
                     <ul class="pricing-content">
-                        <li>60GB Disk Space</li>
-                        <li>60 Email Accounts</li>
-                        <li>60GB Monthly Bandwidth</li>
-                        <li>15 Subdomains</li>
-                        <li>20 Domains</li>
+                        <li>Entregas ilimitadas</li>
+                        <li>Taquilllas pequeñas y medianas</li>
+                        <li>Acceso a cualquier oficina de 3 paises</li>
+                        <li>Transporte estandar y premium</li>
+                        <li>Servicio de asistencia</li>
                     </ul>
-                    <a href="#" class="pricingTable-signup">Sign Up</a>
+                    <input type="submit" name="button2" class="pricingTable-signup" value="Contrata Plan" />
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-5 col-xs-10 col-xs-offset-1 col-sm-offset-1 col-lg-offset-0 col-md-offset-0">
                 <div class="pricingTable azul3">
                     <div class="pricingTable-header">
-                        <span class="price-value">20<span class="currency">$</span></span>
-                        <h3 class="title">Business</h3>
+                        <span class="price-value">50<span class="currency">€/mes</span></span>
+                        <h3 class="title">Empresa</h3>
                     </div>
                     <ul class="pricing-content">
-                        <li>60GB Disk Space</li>
-                        <li>60 Email Accounts</li>
-                        <li>60GB Monthly Bandwidth</li>
-                        <li>15 Subdomains</li>
-                        <li>20 Domains</li>
+                        <li>Entregas ilimitadas</li>
+                        <li>Taquillas pequeñas, medianas y grandes</li>
+                        <li>Acceso a oficinas de cualquier país</li>
+                        <li>Transporte estandar y premium</li>
+                        <li>Servicio de asistencia</li>
                     </ul>
-                    <a href="#" class="pricingTable-signup">Sign Up</a>
+                    <input type="submit" name="button3" class="pricingTable-signup" value="Contrata Plan" />
                 </div>
             </div>
         </div>
-    {{--</div>--}}
+    </form>
 @endsection
