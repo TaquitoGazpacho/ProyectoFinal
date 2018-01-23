@@ -51,7 +51,8 @@ var map = new mapboxgl.Map({
     style: 'mapbox://styles/mapbox/streets-v10',
     renderWorldCopies: true,
     center: posicion,
-    minZoom: 3.5
+    zoom: 3.5,
+    minZoom: 1.0
 });
 map.addControl(new mapboxgl.NavigationControl());
 map.on('load', function () {

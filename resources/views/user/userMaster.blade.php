@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>LockBox - Panel de {{ Auth::guard('web')->user()->name }}</title>
+    <title>LockBox @if (Auth::guard('web')->check()) - Panel de {{ Auth::guard('web')->user()->name }}@endif</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -31,6 +31,7 @@
         </header>
     </div>
     <div id="wrapper">
+        @if (Auth::guard('web')->check())
         <div id="sidebar-wrapper">
             <aside id="sidebar">
                 <ul id="sidemenu" class="sidebar-nav">
@@ -78,6 +79,7 @@
                 </ul>
             </aside>
         </div>
+        @endif
         <main id="page-content-wrapper" role="main">
 
             <section class="content container-fluid mobile-area">
