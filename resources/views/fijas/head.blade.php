@@ -46,5 +46,4 @@
 </script>
 
 <!-- Favicon -->
-<!-- <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}"> -->
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/favicon.ico') }}">
