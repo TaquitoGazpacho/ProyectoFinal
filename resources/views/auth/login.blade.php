@@ -1,6 +1,6 @@
-@extends('fijas.master')
+@extends('user.userMaster')
 
-@section('section')
+@section('contenido')
 
     <div class="container">
         <div class="row">
