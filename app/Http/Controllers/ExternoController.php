@@ -79,6 +79,7 @@ class ExternoController extends Controller
             'clave_repartidor' => $this->generarCodigo(),
             'usuario_id' => $user_id,
             'empresa_id' => 1,
+            'estado' => 'Procesando',
             'oficina_id' => $oficina_id,
             'taquilla_id' => $taquilla_id,
         ]);

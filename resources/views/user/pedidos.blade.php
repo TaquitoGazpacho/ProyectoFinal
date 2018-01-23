@@ -25,15 +25,13 @@
                     <td id="pedido_{{$pedido->id}}_numero">{{$pedido->id}}</td>
                     <td id="pedido_{{$pedido->id}}_estado">
                         @php
-                            $estado=['Procesando','Enviado', 'Depositado', 'Recogido'];
-                            $i=rand(0,3);
-                            if ($estado[$i]=="Enviado"){
+                            if ($pedido->estado=="Procesando"){
                                 $std="25";
                             }
-                            elseif($estado[$i]=="Enviado")
+                            elseif($pedido->estado=="Enviado")
                             {
                                 $std="50";
-                            }elseif($estado[$i]=="Depositado"){
+                            }elseif($pedido->estado=="Depositado"){
                                 $std="75";
 
                             }else{
@@ -42,7 +40,7 @@
                         @endphp
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{$std}}%;">
-                                {{$estado[$i]}}
+                                {{$pedido->estado}}
                             </div>
                         </div>
                     </td>
