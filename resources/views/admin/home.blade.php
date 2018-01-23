@@ -1,7 +1,7 @@
 @extends('fijas.adminMaster')
 
 @section('pageHeader', 'Admin Home')
-@section('pageDescription', "D'oh!")
+@section('pageDescription', "Datos")
 
 @section('contenido')
     <br/>
