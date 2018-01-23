@@ -31,6 +31,7 @@
         </header>
     </div>
     <div id="wrapper">
+        @if (Auth::guard('web')->check())
         <div id="sidebar-wrapper">
             <aside id="sidebar">
                 <ul id="sidemenu" class="sidebar-nav">
@@ -78,6 +79,7 @@
                 </ul>
             </aside>
         </div>
+        @endif
         <main id="page-content-wrapper" role="main">
 
             <section class="content container-fluid mobile-area">
