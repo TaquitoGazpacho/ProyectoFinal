@@ -1,5 +1,13 @@
 @extends('user.userMaster')
 
+@section('css')
+    <style>
+        #wrapper{
+            padding-left: 0px;
+        }
+    </style>
+@endsection
+
 @section('contenido')
     <div class="container">
         <div class="row">
