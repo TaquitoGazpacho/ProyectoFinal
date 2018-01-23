@@ -1,8 +1,69 @@
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  //@media(max-width: 768px){
+  //  max-width: 500px;
+  //  margin: auto;
+  //}
+}
+
 #cambiarOficina{
   .select2{
     width: 200px;
   }
 }
+
+.sombras
+{
+  position:relative;
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.sombras:before, .sombras:after
+{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+  -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+  box-shadow:0 0 20px rgba(0,0,0,0.8);
+  top:10px;
+  bottom:10px;
+  left:0;
+  right:0;
+  -moz-border-radius:100px / 10px;
+  border-radius:100px / 10px;
+}
+.sombras:after
+{
+  right:10px;
+  left:auto;
+  -webkit-transform:skew(8deg) rotate(3deg);
+  -moz-transform:skew(8deg) rotate(3deg);
+  -ms-transform:skew(8deg) rotate(3deg);
+  -o-transform:skew(8deg) rotate(3deg);
+  transform:skew(8deg) rotate(3deg);
+}
+
+.fondo-user {
+  padding: 10px;
+  background-color: white;
+  img {
+    background-color: $azulPrice1;
+    border-radius: 10px;
+  }
+}
+.borde-user-iz {
+  border-radius: 10px 0px 0px 10px;
+}
+
+.borde-user-dr {
+  border-radius: 0px 10px 10px 0px;
+}
+
 
 .sidebar-nav .dropdown-menu {
   position: relative;
@@ -62,12 +123,6 @@
     left: 200px;
   }
 }
-
-
-
-
-
-
 
 body {
   //background: lightgray;
@@ -215,6 +270,10 @@ body {
   }
   .mobile-area {
     margin-left: 30px;
+    @media(min-width: 768px) and (max-width: 991px){
+      max-width: 600px;
+      margin: auto;
+    }
   }
   .mobile-img {
     max-width: 200px;
@@ -243,11 +302,11 @@ body {
 }
 
 .col-xs-8{
- .usu-nombre{
-   border-bottom:1px solid black !important;
-   max-width:300px;
-   margin:auto;
- }
+  .usu-nombre{
+    border-bottom:1px solid black !important;
+    max-width:300px;
+    margin:auto;
+  }
 
 }
 .details{
