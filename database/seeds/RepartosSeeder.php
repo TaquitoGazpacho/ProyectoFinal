@@ -11,76 +11,23 @@ class RepartosSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('repartos')->insert([
-            'clave_repartidor' => '1234',
-            'clave_usuario' => '4321',
-            'usuario_id' => '1',
-            'empresa_id' => '3',
-            'oficina_id' => '3',
-            'taquilla_id' => '6',
-        ]);
+        $estado=['Depositado', 'Recogido'];
+        //Loop para recorrer Usuarios
+        for($i = 1; $i <= 4; ++$i) {
+            //loop para crear pedidos
+            for($j = 1; $j <= 3 ; ++$j) {
+                DB::table('repartos')->insert([
+                    'clave_repartidor' => ''.rand(0,9).rand(0,9).rand(0,9).rand(0,9),
+                    'clave_usuario' => ''.rand(0,9).rand(0,9).rand(0,9).rand(0,9),
+                    'estado' => $estado[rand(0,1)],
+                    'usuario_id' => $i,
+                    'empresa_id' => rand(1,3),
+                    'oficina_id' => rand(1,12),
+                    'taquilla_id' => $j,
+                ]);
+            }
+        }
 
-        DB::table('repartos')->insert([
-            'clave_repartidor' => '5678',
-            'clave_usuario' => '8765',
-            'usuario_id' => '2',
-            'empresa_id' => '2',
-            'oficina_id' => '2',
-            'taquilla_id' => '4',
-        ]);
 
-        DB::table('repartos')->insert([
-            'clave_repartidor' => '9012',
-            'clave_usuario' => '2109',
-            'usuario_id' => '3',
-            'empresa_id' => '1',
-            'oficina_id' => '1',
-            'taquilla_id' => '2',
-        ]);
-
-        DB::table('repartos')->insert([
-            'clave_repartidor' => '3456',
-            'clave_usuario' => '6543',
-            'usuario_id' => '4',
-            'empresa_id' => '2',
-            'oficina_id' => '2',
-            'taquilla_id' => '5',
-        ]);
-
-        DB::table('repartos')->insert([
-            'clave_repartidor' => '3456',
-            'clave_usuario' => '6543',
-            'usuario_id' => '4',
-            'empresa_id' => '2',
-            'oficina_id' => '2',
-            'taquilla_id' => '5',
-        ]);
-
-        DB::table('repartos')->insert([
-            'clave_repartidor' => '3456',
-            'clave_usuario' => '6543',
-            'usuario_id' => '4',
-            'empresa_id' => '3',
-            'oficina_id' => '2',
-            'taquilla_id' => '5',
-        ]);
-
-        DB::table('repartos')->insert([
-            'clave_repartidor' => '3456',
-            'clave_usuario' => '6543',
-            'usuario_id' => '4',
-            'empresa_id' => '1',
-            'oficina_id' => '2',
-            'taquilla_id' => '5',
-        ]);
-
-        DB::table('repartos')->insert([
-            'clave_repartidor' => '3456',
-            'clave_usuario' => '6543',
-            'usuario_id' => '4',
-            'empresa_id' => '2',
-            'oficina_id' => '2',
-            'taquilla_id' => '5',
-        ]);
     }
 }

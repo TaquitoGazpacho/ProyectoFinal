@@ -17,6 +17,7 @@ class CreateRepartosTable extends Migration
             $table->increments('id');
             $table->string('clave_repartidor');
             $table->string('clave_usuario');
+            $table->string('estado');
             $table->timestamps();
         });
     }
