@@ -20,6 +20,11 @@ class SuscripcionController extends Controller
         $suscripcion = Suscripcion::where('name', $plan)->first();
         $user_id = Auth::guard('web')->user()->id;
         User::where('id', $user_id)->update(['suscripcion_id' => $suscripcion->id]);
+
+        //Sesión para el NotifyJs
+
+        session()->put('successSuscripcion','Tu suscripción se ha cambiado a '.$plan.' correctamente');
+
         return redirect()->route('home');
     }
 }

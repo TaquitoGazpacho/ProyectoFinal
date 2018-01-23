@@ -120,7 +120,25 @@
 <!-- Js de Select2 -->
 <script src={{asset("js/complementos/select2.min.js")}}></script>
 
+<script src={{asset("js/complementos/notify.js")}}></script>
+
 @yield('js')
+
+    <script>
+        @if(Session::has('successSuscripcion'))
+            $.notify("{{ Session::get('successSuscripcion') }}", "success");
+            @php
+                Session::forget('successSuscripcion');
+            @endphp
+        @endif
+
+        @if(Session::has('successPedido'))
+            $.notify("{{ Session::get('successPedido') }}", "success");
+            @php
+                Session::forget('successPedido');
+            @endphp
+        @endif
+    </script>
 
 {{--Nuestro JS--}}
 <script src={{asset("js/user.js")}}></script>

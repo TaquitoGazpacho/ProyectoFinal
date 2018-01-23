@@ -1,6 +1,7 @@
 @extends('user.userMaster')
 
 @section('contenido')
+
     <div class="row">
         <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4 col-lg-offset-2 col-md-offset-2">
             <img src="{{Auth::guard('web')->user()->image}}" alt="stack photo" class="img img-responsive mobile-img img-centrada">
@@ -225,9 +226,7 @@
         });
     });
 
-    function cambOficiReset(){
-        //reset FORM
-    }
+
 
     </script>
 @endsection
