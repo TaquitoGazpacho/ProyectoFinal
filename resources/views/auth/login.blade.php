@@ -90,7 +90,8 @@
         </script>
     @endif
 
-
+@endsection
+@section('js')
     <script>
         window.onload = addEv;
         function addEv() {
@@ -121,10 +122,14 @@
             }
 
         }
+
+        @if(Session::has('infoSinVerify'))
+        $.notify("{{ Session::get('infoSinVerify') }}", "info");
+        @php
+            Session::forget('infoSinVerify');
+        @endphp
+        @endif
     </script>
-
-
-
 
 @endsection
 

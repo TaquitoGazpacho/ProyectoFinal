@@ -62,17 +62,14 @@ class LoginController extends Controller
             return redirect()->intended(route('home'));
         } elseif (Auth::check()) {
             Auth::logout();
-            alert()->flash('Email no verificado', 'warning', [
-                    'text' => 'Tendrás un email de verificación en tu correo'
-            ]);
+//            alert()->flash('Email no verificado', 'warning', [
+//                    'text' => 'Tendrás un email de verificación en tu correo'
+//            ]);
+            //para usar notifyjs en la lantilla
+            session()->put('infoSinVerify','Tu cuenta está sin verificar, por favor revisa tu correo');
             return redirect()->back()->withInput();
         }
         return $this->sendFailedLoginResponse($request);
-        //}
-        //return redirect()->back()->withInput($request->only('email', 'remember'));
 
-
-        // If Unsuccessful, then redirect back to the login with the form data
-        //return redirect()->back()->withInput($request->only('email', 'remember'));
     }
 }
