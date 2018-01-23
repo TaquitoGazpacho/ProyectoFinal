@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>LockBox - Panel de {{ Auth::guard('web')->user()->name }}</title>
+    <title>LockBox @if (Auth::guard('web')->check()) - Panel de {{ Auth::guard('web')->user()->name }}@endif</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -24,6 +24,8 @@
     <link rel="stylesheet" href={{ asset("css/style.css") }}>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/favicon.ico') }}">
+
+    @yield('css')
 </head>
 
 <body>
@@ -33,53 +35,55 @@
         </header>
     </div>
     <div id="wrapper">
-        <div id="sidebar-wrapper">
-            <aside id="sidebar">
-                <ul id="sidemenu" class="sidebar-nav">
-                    <li>
-                        <a href="{{ route('home') }}">
-                            <span class="sidebar-icon"><i class="fa fa-home"></i></span>
-                            <span class="sidebar-title">Perfil</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('home.suscripcion') }}">
-                            <span class="sidebar-icon"><i class="fa fa-usd"></i></span>
-                            <span class="sidebar-title">Suscripción</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('home.oficinas') }}">
-                            <span class="sidebar-icon"><i class="fa fa-globe"></i></span>
-                            <span class="sidebar-title">Oficinas</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('home.pedidos') }}">
-                            <span class="sidebar-icon"><i class="fa fa-paper-plane"></i></span>
-                            <span class="sidebar-title">Pedidos</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('home.ajustes') }}">
-                            <span class="sidebar-icon"><i class="fa fa-cog"></i></span>
-                            <span class="sidebar-title">Ajustes</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="accordion-toggle collapsed toggle-switch" data-toggle="collapse" href="#submenu-2">
-                            <span class="sidebar-icon"><i class="fa fa-users"></i></span>
-                            <span class="sidebar-title">Management</span>
-                            <b class="caret"></b>
-                        </a>
-                        <ul id="submenu-2" class="panel-collapse collapse panel-switch" role="menu">
-                            <li><a href="#"><i class="fa fa-caret-right"></i>Users</a></li>
-                            <li><a href="#"><i class="fa fa-caret-right"></i>Roles</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </aside>
-        </div>
+        @if (Auth::guard('web')->check())
+            <div id="sidebar-wrapper">
+                <aside id="sidebar">
+                    <ul id="sidemenu" class="sidebar-nav">
+                        <li>
+                            <a href="{{ route('home') }}">
+                                <span class="sidebar-icon"><i class="fa fa-home"></i></span>
+                                <span class="sidebar-title">Perfil</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('home.suscripcion') }}">
+                                <span class="sidebar-icon"><i class="fa fa-usd"></i></span>
+                                <span class="sidebar-title">Suscripción</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('home.oficinas') }}">
+                                <span class="sidebar-icon"><i class="fa fa-globe"></i></span>
+                                <span class="sidebar-title">Oficinas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('home.pedidos') }}">
+                                <span class="sidebar-icon"><i class="fa fa-paper-plane"></i></span>
+                                <span class="sidebar-title">Pedidos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('home.ajustes') }}">
+                                <span class="sidebar-icon"><i class="fa fa-cog"></i></span>
+                                <span class="sidebar-title">Ajustes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="accordion-toggle collapsed toggle-switch" data-toggle="collapse" href="#submenu-2">
+                                <span class="sidebar-icon"><i class="fa fa-users"></i></span>
+                                <span class="sidebar-title">Management</span>
+                                <b class="caret"></b>
+                            </a>
+                            <ul id="submenu-2" class="panel-collapse collapse panel-switch" role="menu">
+                                <li><a href="#"><i class="fa fa-caret-right"></i>Users</a></li>
+                                <li><a href="#"><i class="fa fa-caret-right"></i>Roles</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+        @endif
         <main id="page-content-wrapper" role="main">
 
             <section class="content container-fluid mobile-area">
