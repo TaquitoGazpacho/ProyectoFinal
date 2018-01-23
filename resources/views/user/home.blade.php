@@ -37,7 +37,7 @@
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                             <h4 class="modal-title">Editar Perfil</h4>
                         </div>
-                        <form enctype="multipart/form-data" action="{{ route('editarUsuario') }}" method="post">
+                        <form enctype="multipart/form-data" id="editUsua" action="{{ route('editarUsuario') }}" method="post">
                             {{ csrf_field() }}
                             <div class="modal-body">
                                 <div class="form-group">

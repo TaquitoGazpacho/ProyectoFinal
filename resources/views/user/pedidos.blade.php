@@ -25,13 +25,16 @@
                     <td id="pedido_{{$pedido->id}}_numero">{{$pedido->id}}</td>
                     <td id="pedido_{{$pedido->id}}_estado">
                         @php
-                            $estado=['Enviado', 'Depositado', 'Recogido'];
-                            $i=rand(0,2);
-                            if($estado[$i]=="Enviado")
+                            $estado=['Procesando','Enviado', 'Depositado', 'Recogido'];
+                            $i=rand(0,3);
+                            if ($estado[$i]=="Enviado"){
+                                $std="25";
+                            }
+                            elseif($estado[$i]=="Enviado")
                             {
-                                $std="33";
+                                $std="50";
                             }elseif($estado[$i]=="Depositado"){
-                                $std="66";
+                                $std="75";
 
                             }else{
                                 $std="100";
