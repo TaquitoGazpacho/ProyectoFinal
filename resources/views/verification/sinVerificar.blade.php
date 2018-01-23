@@ -1,5 +1,11 @@
 @extends('user.userMaster')
-
+@section('css')
+    <style>
+        #wrapper{
+            padding-left: 0px;
+        }
+    </style>
+@endsection
 @section('contenido')
     <header>
         <div class="container">

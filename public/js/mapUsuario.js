@@ -77,7 +77,7 @@ map.on('load', function () {
 });
 
 function cambiarOficina(id){
-    $.post('http://'+window.location.hostname+'/editarUsuario/oficina', {"_token": $("[name='_token']")[0].value ,'ciudad': id},function(returnedData){
+    $.post('http://'+window.location.hostname+'/taquitoGazpacho/editarUsuario/oficina', {"_token": $("[name='_token']")[0].value ,'ciudad': id},function(returnedData){
         $.notify("Oficina Cambiada satisfactoriamente!", "success");
     });
 }
