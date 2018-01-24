@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Empresa_reparto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use \Validator;
 
@@ -62,6 +63,16 @@ class EmpresaRepartoController extends Controller
             ]);
 
         //return redirect()->route('admin.home');
+    }
+
+
+    //cambiar en la vista de empresas el estado del pedido
+    public function cambiarEstado(Request $request){
+
+        DB::table('repartos')->where([
+            ['id', $request->reparto_id],
+            ['empresa_id', Auth::guard('empresa')->user()->id]
+        ])->update(['estado' => $request->estado]);
     }
 
 }
