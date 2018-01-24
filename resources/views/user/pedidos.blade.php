@@ -7,7 +7,7 @@
 @extends('user.userMaster')
 @section('contenido')
 
-    <h2>Pedidos</h2>
+    <h2 class="text-center">Pedidos</h2>
     <div class="box-body table-responsive">
         <table id="tablaPedidos" class="table table-hover">
             <thead>
@@ -52,4 +52,19 @@
             </tbody>
         </table>
     </div>
+@endsection
+
+@section('js')
+    <script>
+        $(function () {
+            $('#tablaPedidos').DataTable({
+                'paging'      : true,
+                'lengthChange': false,
+                'searching'   : true,
+                'ordering'    : true,
+                'info'        : true,
+                'autoWidth'   : false
+            })
+        });
+    </script>
 @endsection
