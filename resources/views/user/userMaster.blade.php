@@ -36,7 +36,7 @@
     </div>
     <div id="wrapper">
         @if (Auth::guard('web')->check())
-            <div id="sidebar-wrapper">
+            <div id="sidebar-wrapper" @if( \Request::route()->getName() == 'empresa.home' || \Request::route()->getName() == 'empresa.login') style="display: none" @else style="display: block" @endif>
                 <aside id="sidebar">
                     <ul id="sidemenu" class="sidebar-nav">
                         <li>
@@ -124,17 +124,10 @@
 @yield('js')
 
     <script>
-        @if(Session::has('successSuscripcion'))
+        @if(Session::has('success'))
             $.notify("{{ Session::get('successSuscripcion') }}", "success");
             @php
                 Session::forget('successSuscripcion');
-            @endphp
-        @endif
-
-        @if(Session::has('successPedido'))
-            $.notify("{{ Session::get('successPedido') }}", "success");
-            @php
-                Session::forget('successPedido');
             @endphp
         @endif
     </script>

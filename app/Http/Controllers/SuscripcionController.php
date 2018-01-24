@@ -23,7 +23,7 @@ class SuscripcionController extends Controller
 
         //Sesión para el NotifyJs
 
-        session()->put('successSuscripcion','Tu suscripción se ha cambiado a '.$plan.' correctamente');
+        session()->put('success','Tu suscripción se ha cambiado a '.$plan.' correctamente');
 
         return redirect()->route('home');
     }

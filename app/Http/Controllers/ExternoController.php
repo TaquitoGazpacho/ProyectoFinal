@@ -68,7 +68,7 @@ class ExternoController extends Controller
 
         $this->ocuparTaquilla($idTaquilla->id);
 
-        session()->put('successPedido','Pedido realizado correctamente');
+        session()->put('success','Pedido realizado correctamente');
 
         return "TRUE";
     }

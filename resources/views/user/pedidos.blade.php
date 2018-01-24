@@ -53,3 +53,18 @@
         </table>
     </div>
 @endsection
+
+@section('js')
+    <script>
+        $(function () {
+            $('#tablaPedidos').DataTable({
+                'paging'      : true,
+                'lengthChange': false,
+                'searching'   : true,
+                'ordering'    : true,
+                'info'        : true,
+                'autoWidth'   : false
+            })
+        });
+    </script>
+@endsection

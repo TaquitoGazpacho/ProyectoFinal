@@ -44,6 +44,7 @@ Route::prefix('empresa')->group(function() {
     Route::get('/', 'EmpresaRepartoController@index')->name('empresa.home');
     Route::get('/login','Auth\Empresa\LoginController@showLoginForm')->name('empresa.login');
     Route::post('/login', 'Auth\Empresa\LoginController@login')->name('empresa.login.submit');
+    Route::post('/editarEmpresa', 'EmpresaRepartoController@cambiarEstado')->name('empresa.cambiarEstado');
 });
 
 //Admin Routes
