@@ -17,7 +17,7 @@
                         <li>Transporte estandar</li>
                         <li>Servicio de asistencia</li>
                     </ul>
-                    <input type="submit" name="button1" class="pricingTable-signup" value="Contrata Plan" />
+                    <button type="submit" name="button1" class="pricingTable-signup" value="Contrata Plan">Contrata Plan</button>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-5 col-xs-10 col-xs-offset-1 col-sm-offset-0 col-md-offset-0">
@@ -33,7 +33,7 @@
                         <li>Transporte estandar y premium</li>
                         <li>Servicio de asistencia</li>
                     </ul>
-                    <input type="submit" name="button2" class="pricingTable-signup" value="Contrata Plan" />
+                    <button type="submit" name="button2" class="pricingTable-signup" value="Contrata Plan">Contrata Plan</button>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-5 col-xs-10 col-xs-offset-1 col-sm-offset-1 col-lg-offset-0 col-md-offset-0">
@@ -49,7 +49,7 @@
                         <li>Transporte estandar y premium</li>
                         <li>Servicio de asistencia</li>
                     </ul>
-                    <input type="submit" name="button3" class="pricingTable-signup" value="Contrata Plan" />
+                    <button type="submit" name="button3" class="pricingTable-signup" value="Contrata Plan">Contrata Plan</button>
                 </div>
             </div>
         </div>
