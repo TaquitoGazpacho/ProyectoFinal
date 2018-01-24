@@ -129,17 +129,10 @@
 @yield('js')
 
     <script>
-        @if(Session::has('successSuscripcion'))
+        @if(Session::has('success'))
             $.notify("{{ Session::get('successSuscripcion') }}", "success");
             @php
                 Session::forget('successSuscripcion');
-            @endphp
-        @endif
-
-        @if(Session::has('successPedido'))
-            $.notify("{{ Session::get('successPedido') }}", "success");
-            @php
-                Session::forget('successPedido');
             @endphp
         @endif
     </script>
