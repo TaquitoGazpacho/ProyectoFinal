@@ -11,73 +11,76 @@
 @section('contenido')
 
     <div class="container">
+        <div class="text-center">
+            <h1>Login Usuarios</h1>
+        </div>
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Login</div>
 
-                    <div class="panel-body">
+                    <div class="panel-body sombras">
                         <form id="loginForm" class="form-horizontal" method="POST" action="{{ route('login') }}">
                             {{ csrf_field() }}
+                            <div class="panel-form">
+                                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                    <label for="email" class="col-md-12 control-label">E-Mail Address</label>
 
-                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                                    <div class="col-md-12 text-center">
+                                        <input id="email" type="email" class="form-control inputText" name="email" value="{{ old('email') }}" required autofocus>
 
-                                <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
-
-                                    @if ($errors->has('email'))
-                                        <span class="help-block">
-                                            <strong>{{ $errors->first('email') }}</strong>
-                                        </span>
-                                    @endif
-                                </div>
-                            </div>
-
-                            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                <label for="password" class="col-md-4 control-label">Password</label>
-
-                                <div class="col-md-6">
-                                    <input id="password" type="password" class="form-control" name="password">
-
-                                    @if ($errors->has('password'))
-                                        <span class="help-block">
-                                            <strong>{{ $errors->first('password') }}</strong>
-                                        </span>
-                                    @endif
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-md-6 col-md-offset-4">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                        </label>
+                                        @if ($errors->has('email'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('email') }}</strong>
+                                            </span>
+                                        @endif
                                     </div>
                                 </div>
-                            </div>
-                            {{--<div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">--}}
-                                {{--<div class="col-md4">--}}
-                                    {{--{!! Recaptcha::render() !!}--}}
-                                    {{--@if ($errors->has('g-recaptcha-response'))--}}
-                                        {{--<span class="help-block">--}}
-                                                {{--<strong>{{ $errors->first('g-recaptcha-response') }}</strong>--}}
-                                            {{--</span>--}}
-                                    {{--@endif--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                            <div class="form-group">
-                                <div class="col-md-8 col-md-offset-4">
-                                    <input type="submit" class="btn btn-primary" value="Login">
 
+                                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                                    <label for="password" class="col-md-12 control-label">Password</label>
 
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        Forgot Your Password?
-                                    </a>
+                                    <div class="col-md-12 text-center">
+                                        <input id="password" type="password" class="form-control inputText" name="password">
+
+                                        @if ($errors->has('password'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('password') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
                                 </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-6 col-md-offset-4">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{--<div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">--}}
+                                    {{--<div class="col-md4">--}}
+                                        {{--{!! Recaptcha::render() !!}--}}
+                                        {{--@if ($errors->has('g-recaptcha-response'))--}}
+                                            {{--<span class="help-block">--}}
+                                                    {{--<strong>{{ $errors->first('g-recaptcha-response') }}</strong>--}}
+                                                {{--</span>--}}
+                                        {{--@endif--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                <div class="form-group">
+                                    <div class="col-md-8 col-md-offset-4">
+                                        <input type="submit" class="btn btn-primary" value="Login">
+
+
+                                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                                            Forgot Your Password?
+                                        </a>
+                                    </div>
+                                </div>
+                                <div id="erroresLogin"></div>
                             </div>
-                            <div id="erroresLogin"></div>
                         </form>
                     </div>
                 </div>

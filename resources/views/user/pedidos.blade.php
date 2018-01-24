@@ -8,7 +8,7 @@
 @section('contenido')
 
     <h2>Pedidos</h2>
-    <div class="box-body table-responsive">
+    <div class="box-body table-responsive sombras">
         <table id="tablaPedidos" class="table table-hover">
             <thead>
             <tr>

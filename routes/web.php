@@ -108,3 +108,8 @@ Route::post('/checkLogin', 'ExternoController@comprobarConexion')->name('comprob
 Route::post('/getLoginHTML', 'ExternoController@getLoginHTML')->name('getLoginHTML');
 Route::post('/loginExt', 'ExternoController@login')->name('loginExt');
 Route::post('/crearPedido', 'ExternoController@crearPedido')->name('crearPedido');
+
+
+Route::get('/pruebatmp', function(){
+    return view('tmp');
+});

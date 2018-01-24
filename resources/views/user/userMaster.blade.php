@@ -88,12 +88,7 @@
 
             <section class="content container-fluid mobile-area">
 
-                <!--------------------------
-                  | Your Page Content Here |
-                  -------------------------->
-
                 @yield('contenido')
-
 
             </section>
 
