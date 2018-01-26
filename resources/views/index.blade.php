@@ -204,7 +204,7 @@
             <a href="#">Contact</a>
         </p>-->
 
-        <p class="footer-company-name">ServiceBox &copy; 2017</p>
+        <p class="footer-company-name">LockBox &copy; 2017</p>
     </div>
 
     <div class="footer-center">
