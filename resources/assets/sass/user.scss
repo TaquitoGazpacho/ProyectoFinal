@@ -492,6 +492,29 @@ BACKGROUND COLORS
   }
 }
 
-#editUsua{
+
+//home de usuarios, la parte de editar el perfil
+#editProfile{
   text-align: left;
+  .form-group {
+    input[type=radio] {
+      display: inline;
+    }
+    #avatar{
+      text-align: center;
+      .avatar{
+        width:75px;
+        height: 92.81px;
+        display: inline-block;
+        text-align: center;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .avatar.seleccionada{
+        border:2px solid black;
+      }
+    }
+  }
 }

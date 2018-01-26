@@ -60,6 +60,11 @@
                                     <label><input name="sexo" class="form-check-input" type="radio" value="Otro" id="userOtro" checked> Otro</label>
                                 </div>
                                 <div class="form-group">
+                                    <label for="avatar">Usar Avatar:</label>
+                                    <div id="avatar"></div>
+                                    <input type="radio" class="hidden" id="avatarForm" name="avatar" value="none" checked/>
+                                </div>
+                                <div class="form-group">
                                     <label for="imagen">Imagen de Perfil:</label>
                                     <input type="file" name="imagen" id="imagen">
                                     <p class="help-block">Imagen de perfil</p>
@@ -167,8 +172,12 @@
 @endsection
 
 @section('js')
+    <script src="{{asset('js/user.js')}}"></script>
+
     <script>
         $('.select2').select2();
+
+        ensenarImagenes(chicoOChica("{{Auth::guard('web')->user()->sex}}"));
 
         var oficinas;
         $('#editarPerfil').on('click', function(){
@@ -216,6 +225,7 @@
                 }
             });
         });
+
 
 
 

@@ -21,6 +21,9 @@ class EditUserController extends Controller
     }
     public function actualizar(Request $request)
     {
+        if ($request->avatar != "none"){
+            Auth::guard('web')->user()->changeImage('avatares/'.$request->avatar.'.png');
+        }
         DB::table('users')
             ->where('id', Auth::guard('web')->user()->id)
             ->update([
@@ -42,6 +45,7 @@ class EditUserController extends Controller
     {
         $this->validator($request->all())->validate();
 
+        $this->actualizar($request);
 
         if ($request->file('imagen')){
             $image = $request->file('imagen');
@@ -54,8 +58,6 @@ class EditUserController extends Controller
 
             Auth::guard('web')->user()->changeImage($input['imagename']);
         }
-
-        $this->actualizar($request);
 
         return redirect()->route('home');
     }
