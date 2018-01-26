@@ -1,11 +1,11 @@
-<div id="editarUsuario" class="#245682modal fade" role="dialog">
+<div id="editarUsuario" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Registrar Empresa</h4>
+                <h4 class="modal-title">Editar usuario</h4>
             </div>
             <form method="post" action="{{ route('admin.editarUsuario') }}">
                 {{ csrf_field() }}
