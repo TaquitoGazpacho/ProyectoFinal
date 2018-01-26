@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\DB;
 
 class TaquillasController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
     public function getMaxTaquilla($oficina_id){
         $max_taquilla= DB::table('taquillas')->where('oficina_id', $oficina_id)->max('numero_taquilla');
         if ($max_taquilla==""){

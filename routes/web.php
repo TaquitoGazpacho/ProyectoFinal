@@ -15,9 +15,6 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
-
-Route::get('/admin/registroEmpresaReparto', 'EmpresaRepartoController@index')->name('registroEmpresa');
-
 //Auth::routes();
 Route::get('/login', 'Auth\User\LoginController@showLoginForm')->name('login');
 Route::post('/login', 'Auth\User\LoginController@login');
@@ -78,9 +75,9 @@ Route::prefix('admin')->group(function() {
         Route::get('/','AdminController@empresas')->name('admin.empresa');
         Route::prefix('editarEmpresa')->group(function () {
 
-            Route::post('/', 'EmpresaRepartoController@index')->name('editarEmpresa');
-            Route::post('/registrar', 'EmpresaRepartoController@store')->name('registrarEmpresaReparto');
-            Route::post('/actualizar', 'EmpresaRepartoController@actualizar')->name('editarEmpresa.actualizarEmpresaReparto');
+            Route::post('/', 'AdminController@index')->name('editarEmpresa');
+            Route::post('/registrar', 'AdminController@storeEmpresa')->name('registrarEmpresaReparto');
+            Route::post('/actualizar', 'AdminController@actualizarEmpresa')->name('editarEmpresa.actualizarEmpresaReparto');
             Route::get('/mostrarDatos', 'AdminController@mostrarDatosEmpresa')->name('mostrarDatos');
 
         });

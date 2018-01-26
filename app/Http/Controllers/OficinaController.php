@@ -9,6 +9,12 @@ use Illuminate\Http\Request;
 
 class OficinaController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
+
     public function oficinas()
     {
         return view('admin.oficinas');

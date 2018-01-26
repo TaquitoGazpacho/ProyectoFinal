@@ -8,6 +8,7 @@ use App\Models\Oficina;
 use App\Models\Empresa_reparto;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
+use \Validator;
 
 class AdminController extends Controller
 {
@@ -34,17 +35,6 @@ class AdminController extends Controller
 
     public function usuarios(){
         return view('admin.usuarios');
-    }
-
-    public function mostrarDatosEmpresa(Request $request) {
-
-        $nombre = $request->empresa;
-
-        $datos = DB::table('empresa_repartos')
-            ->where('nombre', $nombre)
-            ->get();
-
-        return $datos;
     }
 
     public function editUser(Request $request){
@@ -89,5 +79,51 @@ class AdminController extends Controller
     public function cogerDatosOficinas(){
         $oficinas = DB::table('oficinas')->select('calle','alt','lat')->get();
         return response()->json([$oficinas]);
+    }
+
+    //LAS FUNCIONES DE EMPRESAS DE REPARTO
+    public function storeEmpresa(Request $request)
+    {
+        $this->validatorEmpresa($request->all())->validate();
+        $empresaReparto=$this->create($request->all());
+        $empresaReparto->save();
+
+
+        return redirect()->route('admin.home');
+    }
+
+    public function actualizarEmpresa(Request $request)
+    {
+        DB::table('empresa_repartos')
+            ->where('id', $request->id)
+            ->update([  'nombre' => $request->nombre,
+                'email' => $request->email,
+                'telefono' => $request->telefono,
+                'nif' => $request->nif,
+            ]);
+
+        //return redirect()->route('admin.home');
+    }
+
+    public function mostrarDatosEmpresa(Request $request) {
+
+        $nombre = $request->empresa;
+
+        $datos = DB::table('empresa_repartos')
+            ->where('nombre', $nombre)
+            ->get();
+
+        return $datos;
+    }
+
+    protected function validatorEmpresa(array $data)
+    {
+        return Validator::make($data, [
+            'nombre' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:empresa_repartos',
+            'telefono' => 'required|integer',
+            'nif' => 'required|string|max:255',
+            'password'=> 'required|min:6'
+        ]);
     }
 }

@@ -9,6 +9,12 @@ use App\Models\User;
 
 class SuscripcionController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function cambiarSuscripcion(Request $request){
         if ($request->button1 != ""){
             $plan="Básico";
