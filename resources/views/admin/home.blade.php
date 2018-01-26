@@ -25,12 +25,10 @@
         <section class="col-lg-8 col-lg-offset-2">
             <div class="box box-success">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Visitors Report</h3>
+                    <h3 class="box-title">Informe de visitas</h3>
 
                     <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                        </button>
-                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                     </div>
                 </div>
                 <!-- /.box-header -->
@@ -46,23 +44,29 @@
                         <div class="col-md-3 col-sm-4">
                             <div class="pad box-pane-right bg-green" style="min-height: 280px">
                                 <div class="description-block margin-bottom">
-                                    <div class="sparkbar pad" data-color="#fff">90,70,90,70,75,80,70</div>
-                                    <h5 class="description-header">8390</h5>
-                                    <span class="description-text">Visits</span>
+                                    <h5 class="description-header">Visitas totales</h5>
+                                    <span class="description-text">461.252</span>
+                                </div>
+                                <div class="description-block margin-bottom">
+                                    <h5 class="description-header">Últimos 30 días</h5>
+                                    <span class="description-text">59.527</span>
                                 </div>
                                 <!-- /.description-block -->
                                 <div class="description-block margin-bottom">
-                                    <div class="sparkbar pad" data-color="#fff">90,50,90,70,61,83,63</div>
-                                    <h5 class="description-header">30%</h5>
-                                    <span class="description-text">Referrals</span>
+                                    <h5 class="description-header">Mayoría de visitas</h5>
+                                    <span class="description-text">España</span><br/>
+                                    <span class="description-text">78,34%</span>
                                 </div>
                                 <!-- /.description-block -->
                                 <div class="description-block">
-                                    <div class="sparkbar pad" data-color="#fff">90,50,90,70,61,83,63</div>
-                                    <h5 class="description-header">70%</h5>
-                                    <span class="description-text">Organic</span>
+                                    <h5 class="description-header">Duración media de visitas</h5>
+                                    <span class="description-text">00:06:42</span>
                                 </div>
                                 <!-- /.description-block -->
+                                <div class="description-block">
+                                    <h5 class="description-header">Porcentaje de rebote</h5>
+                                    <span class="description-text">68,12%</span>
+                                </div>
                             </div>
                         </div>
                         <!-- /.col -->
