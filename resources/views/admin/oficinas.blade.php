@@ -53,7 +53,7 @@
                 </tbody>
             </table>
             <a class="btn btn-warning" data-toggle="modal" data-target="#modalOficina">Registrar Oficina</a>
-            <input type="submit" value="Eliminar" class="btn btn-error pull-right"/>
+            <input type="submit" value="Eliminar" class="btn btn-danger pull-right"/>
         </form>
 
         @include('admin.registroOficinas')

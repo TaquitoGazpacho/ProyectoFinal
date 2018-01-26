@@ -37,7 +37,7 @@
                         <label><input type="radio" name="userSex" value="Otro" id="user_otro" checked>Otro</label>
                     </div>
                     <div class="form-group">
-                        <label for="suscripcion">Select list (select one):</label>
+                        <label for="suscripcion">Seleccionar plan:</label>
                         <select class="form-control" id="userSuscripcion" name="suscripcion">
                             <option value="1">Gratis</option>
                             <option value="2">Básico</option>

@@ -60,7 +60,7 @@ $empresas = Empresa_reparto::getEmpresas();
                     <td id="{{$empresa->id}}_telefono">{{$empresa->telefono}}</td>
                     <td id="{{$empresa->id}}_nif">{{$empresa->nif}}</td>
 {{--                <td><button name="{{$empresa->nombre}}" class="btn btn-default" onclick="mostrarEmpresa(event)" data-toggle="modal" data-target="#modalEditarEmpresa">Editar</button></td>--}}
-                    <td><button name="{{$empresa->id}}" class="btn btn-default" onclick="mostrarEmpresa(event)" data-toggle="modal" data-target="#modalEditarEmpresa">Editar</button></td>
+                    <td><button name="{{$empresa->id}}" class="btn btn-warning" onclick="mostrarEmpresa(event)" data-toggle="modal" data-target="#modalEditarEmpresa">Editar</button></td>
                 </tr>
             @endforeach
             </tbody>
