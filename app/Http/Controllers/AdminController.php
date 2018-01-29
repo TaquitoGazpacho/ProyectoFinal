@@ -22,6 +22,7 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         $taquillas = $this->cogerDatosTaquillas();

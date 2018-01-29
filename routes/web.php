@@ -100,6 +100,7 @@ Route::prefix('admin')->group(function() {
 Route::get('/verifyemail/{token}', 'Auth\User\RegisterController@verify');
 
 Route::post('/changeSuscription', 'SuscripcionController@cambiarSuscripcion')->name('cambiarSuscripcion');
+Route::post('/enviarMailContacto', 'HomeController@sendContactMail')->name('contactanos');
 
 //usadas para la conexión con la libreria
 Route::post('/checkLogin', 'ExternoController@comprobarConexion')->name('comprobarConexion');

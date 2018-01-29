@@ -157,20 +157,21 @@
     </div>
 </section>
 <section class="sectionHeight form">
-    <form class="well form-width" id="contactanos">
+    <form class="well form-width" id="contactanos" action="{{ route('contactanos') }}" method="post">
+        {{csrf_field()}}
         <h3>Si tiene alguna duda sobre nuestro servicio, no dude en contactarnos.</h3>
         <div class="form-group">
             <label for="nombre">Nombre</label>
             <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp" placeholder="Tu nombre">
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+            <label for="email">Email de contacto</label>
+            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" required>
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
             <label for="texto">Problema o pregunta</label>
-            <textarea class="form-control" id="texto" name="textarea" aria-describedby="emailHelp" placeholder="Problema o pregunta" required></textarea>
+            <textarea class="form-control" id="texto" name="texto" aria-describedby="emailHelp" placeholder="Problema o pregunta" required></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
         <input type="reset" id="clear" class="btn btn-error" value="Clear"/>

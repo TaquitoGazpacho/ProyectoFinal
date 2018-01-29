@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Contacto;
 use Illuminate\Http\Request;
 use App\Models\Oficina;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -14,7 +16,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('sendContactMail');
     }
 
     /**
@@ -40,5 +42,10 @@ class HomeController extends Controller
     }
     public function oficinas(){
         return view('user.oficinas');
+    }
+
+    public function sendContactMail(Request $request){
+        Mail::to(env('MAIL_USERNAME'))->send(new Contacto($request->texto, $request->email));
+        return redirect(route('index'));
     }
 }
