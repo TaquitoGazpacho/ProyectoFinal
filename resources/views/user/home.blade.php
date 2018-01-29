@@ -3,7 +3,7 @@
 @section('contenido')
 
     <div class="row row-eq-height">
-        <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4 col-lg-offset-2 col-md-offset-2 fondo-user borde-user-iz sombras">
+        <div class="col-md-4 col-xs-8 col-sm-6 col-lg-4 col-xs-offset-2 col-lg-offset-2 col-md-offset-2 fondo-user borde-user-iz sombras">
             <img src="{{Auth::guard('web')->user()->image}}" alt="Foto" class="img img-responsive mobile-img img-centrada"/>
 
         </div>
@@ -43,21 +43,32 @@
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="nombre">Nombre:</label>
-                                    <input type="text" class="form-control" name="nombre" id="nombre" value="{{Auth::guard('web')->user()->name}}">
+                                    <input type="text" class="form-control inputText" name="nombre" id="nombre" value="{{Auth::guard('web')->user()->name}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="apellido">Apellido:</label>
-                                    <input type="text" class="form-control" name="apellido" id="apellido" value="{{Auth::guard('web')->user()->surname}}">
+                                    <input type="text" class="form-control inputText" name="apellido" id="apellido" value="{{Auth::guard('web')->user()->surname}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="telefono">Teléfono:</label>
-                                    <input type="number" class="form-control" name="telefono" id="telefono" placeholder="Teléfono" value="{{Auth::guard('web')->user()->phone}}">
+                                    <input type="number" class="form-control inputText" name="telefono" id="telefono" placeholder="Teléfono" value="{{Auth::guard('web')->user()->phone}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="sexo">Sexo:</label><br/>
-                                    <label><input name="sexo" class="form-check-input" type="radio" value="Masculino" id="userMasculino"> Masculino</label> <br/>
-                                    <label><input name="sexo" class="form-check-input" type="radio" value="Femenino" id="userFemenino"> Femenino</label> <br/>
-                                    <label><input name="sexo" class="form-check-input" type="radio" value="Otro" id="userOtro" checked> Otro</label>
+                                    <div>
+                                        <input type="radio" class="radio-btn" id="check1" value="Masculino" name="sexo"/>
+                                        <label for="check1"><span><i class="fa fa-circle" aria-hidden="true"></i></span>Masculino</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" class="radio-btn" id="check2" value="Femenino" name="sexo"/>
+                                        <label for="check2"><span><i class="fa fa-circle" aria-hidden="true"></i></span>Femenino</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" class="radio-btn" id="check3" value="Otro" name="sexo" checked/>
+                                        <label for="check3"><span><i class="fa fa-circle" aria-hidden="true"></i></span>Otro</label>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="avatar">Usar Avatar:</label>
@@ -67,7 +78,6 @@
                                 <div class="form-group">
                                     <label for="imagen">Imagen de Perfil:</label>
                                     <input type="file" name="imagen" id="imagen">
-                                    <p class="help-block">Imagen de perfil</p>
                                 </div>
                             </div>
                             <div class="modal-footer">

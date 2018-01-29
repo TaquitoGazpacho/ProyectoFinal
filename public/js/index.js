@@ -1,4 +1,14 @@
+var documentReady = false;
+
+
+if(documentReady === false) {
+    $("body").css("display", "none");
+}
+
+
 $( document ).ready( function() {
+    documentReady = true;
+    $("body").css("display", "block");
     var altura = parseInt(window.innerHeight) - parseInt(window.getComputedStyle(nav, null).getPropertyValue('height'));
     $('#nav').affix({
         offset: {

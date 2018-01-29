@@ -1,7 +1,7 @@
 $("input[name=sexo]").on("change",function(event){
     var img = chicoOChica(event.target.value);
     ensenarImagenes(img);
-    $("#editProfile #avatar .avatar").on("click", seleccionarAvatar);seleccionarAvatar();
+    $("#editProfile #avatar .avatar").on("click", seleccionarAvatar);
 });
 
 function chicoOChica(sexo){
@@ -25,6 +25,11 @@ function ensenarImagenes(img){
                 class: "avatar"
             }).appendTo("#avatar");
         }
+    } else {
+        $('<p/>', {
+            text: "No existen avatares para el sexo 'Otro'",
+            class: "inputText"
+        }).appendTo("#avatar");
     }
 }
 
@@ -41,7 +46,14 @@ function seleccionarAvatar(){
     }
 }
 
+function quitarSombrasMovil() {
+    if ($(window).width() <= 768) {
+        $(".sombras").removeClass("sombras");
+    }
+}
 
 function cambOficiReset(){
     //reset FORM
 }
+
+$(document).ready(quitarSombrasMovil());

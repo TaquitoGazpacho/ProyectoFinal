@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class RepartosSeeder extends Seeder
 {
@@ -24,6 +25,7 @@ class RepartosSeeder extends Seeder
                     'empresa_id' => rand(1,3),
                     'oficina_id' => rand(1,12),
                     'taquilla_id' => $j,
+                    'created_at' => Carbon::now(),
                 ]);
             }
         }

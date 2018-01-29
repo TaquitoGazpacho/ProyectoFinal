@@ -1,0 +1,137 @@
+.modal-content {
+  border-radius: 14px 14px 14px 14px;
+
+  .modal-header{
+    background: $azulPrice4;
+    border-bottom-color: $naranja;
+   border-radius: 12px 12px 0px 0px;
+
+    .modal-title {
+      color: $white;
+      font-family: 'Comfortaa', cursive;
+    }
+    .close {
+      color: $white;
+      text-shadow: 0 1px 0 $white;
+      opacity: 1;
+    }
+    .close:hover {
+      color: $naranja;
+      text-shadow: 0 1px 0 $naranja;
+    }
+  }
+
+  .modal-body {
+    background: $azulNav;
+  }
+
+  .modal-footer {
+    background: $azulPrice4;
+    border-top-color: $naranja;
+    border-radius: 0px 0px 12px 12px;
+
+    .btn-warning {
+      border-color: $naranja;
+      background: $naranja;
+    }
+    .btn-error {
+      background: $azulPrice6;
+      border-color: $azulPrice6;
+      color: $white;
+    }
+    .btn-warning:hover {
+      background-color: $naranja2;
+      border-color: $naranja2;
+    }
+    .btn-error:hover{
+      background-color: $azulPrice2;
+      border-color: $azulPrice2;
+    }
+  }
+
+  .form-group {
+    label{
+      text-align: left;
+      font-family: 'Comfortaa', cursive;
+      color: $white;
+    }
+    input[type="radio"] {
+      display:none;
+    }
+    input[type="radio"] + label {
+      color: $white;
+      font-family: 'Comfortaa', cursive;
+      padding-left: 20px;
+    }
+    input[type="radio"] + label span {
+      display:inline-block;
+      width:19px;
+      height:19px;
+      margin:-1px 4px 0 0;
+      vertical-align:middle;
+      cursor:pointer;
+      -moz-border-radius:  50%;
+      border-radius:  50%;
+      background-color:transparent;
+      border: 2px solid $white;
+      i{
+        color:transparent;
+      }
+    }
+
+
+    input[type="radio"]:checked + label span{
+      background-color:$azulNav;
+      padding: 5px;
+      position: relative;
+      i{
+        top: 2px;
+        left: 3px;
+        position: absolute;
+        color: $naranja;
+        font-size: 12px;
+      }
+    }
+
+    input[type="radio"] + label span,
+    input[type="radio"]:checked + label span {
+      -webkit-transition:background-color 0.4s linear;
+      -o-transition:background-color 0.4s linear;
+      -moz-transition:background-color 0.4s linear;
+      transition:background-color 0.4s linear;
+    }
+    button {
+      width: 200px;
+    }
+  }
+
+  .inputText {
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid $white;
+    outline: 0;
+    font-size: 16px;
+    color: $white;
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  .inputText:focus {
+    border-bottom: 3px solid $naranja;
+  }
+}
+
+/*------------- T-O-D-O ESTO PARA QUE NO SALGA EL SPINNER DE SELECTOR DE NUMERO ---------------*/
+// Webkit:
+// Hide number picker
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+// Firefox:
+// Hide number picker
+input[type=number] {
+  -moz-appearance:textfield;
+}

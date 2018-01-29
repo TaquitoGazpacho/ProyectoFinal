@@ -83,7 +83,7 @@ class ExternoController extends Controller
             'estado' => 'Procesando',
             'oficina_id' => $oficina_id,
             'taquilla_id' => $taquilla_id,
-            'created_at' => Carbon::now()->format('d-m-Y H:i:s'),
+            'created_at' => Carbon::now(),
         ]);
     }
 
