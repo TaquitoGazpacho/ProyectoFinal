@@ -30,6 +30,7 @@
                         <th>Cliente</th>
                         <th>Clave Repartidor</th>
                         <th>Estado</th>
+                        <th>Fecha</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -52,6 +53,7 @@
                                     <option @if($reparto->estado=="Recogido") selected @endif>Recogido</option>
                                 </select>
                             </td>
+                            <td>{{ $reparto->created_at }}</td>
                         </tr>
                     @endforeach
                 </tbody>

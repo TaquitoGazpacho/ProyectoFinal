@@ -7,6 +7,7 @@ use App\Models\Taquilla;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 
 class ExternoController extends Controller
 {
@@ -82,6 +83,7 @@ class ExternoController extends Controller
             'estado' => 'Procesando',
             'oficina_id' => $oficina_id,
             'taquilla_id' => $taquilla_id,
+            'created_at' => Carbon::now()->format('d-m-Y H:i:s'),
         ]);
     }
 
