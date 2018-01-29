@@ -18,6 +18,9 @@
     <!-- JQuery -->
     <script src={{asset("js/complementos/jquery.min.js")}}></script>
 
+    <!-- Notifyjs -->
+    <script src={{asset("js/complementos/notify.js")}}></script>
+
     <!-- JavaScript -->
     <script src={{asset("bootstrap/js/bootstrap.min.js")}}></script>
     <script src="{{ asset('js/index.js') }}"></script>
@@ -43,6 +46,15 @@
                 addEvent();
             } catch (e) {}
         }
+
+        $(document).ready(function(){
+            @if(Session::has('success'))
+                $.notify("{{ Session::get('success') }}", "success");
+                @php
+                    Session::forget('success');
+                @endphp
+            @endif
+        });
     </script>
 
     <!-- Favicon -->

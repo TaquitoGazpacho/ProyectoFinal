@@ -125,9 +125,9 @@
 
     <script>
         @if(Session::has('success'))
-            $.notify("{{ Session::get('successSuscripcion') }}", "success");
+            $.notify("{{ Session::get('success') }}", "success");
             @php
-                Session::forget('successSuscripcion');
+                Session::forget('success');
             @endphp
         @endif
     </script>
