@@ -63,8 +63,6 @@ $( document ).ready( function() {
         });
     });
 
-    document.getElementById("formRegistroEmpresa").addEventListener('submit', validateRegisterEmpresa);
-
 });
 
 

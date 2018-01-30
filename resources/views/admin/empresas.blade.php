@@ -44,6 +44,9 @@ $empresas = Empresa_reparto::getEmpresas();
 
 @section('js')
     <script>
+
+        document.getElementById("formRegistroEmpresa").addEventListener('submit', validateRegisterEmpresa);
+
         $(function () {
             $('#tablaEmpresa').DataTable({
                 'paging'      : true,

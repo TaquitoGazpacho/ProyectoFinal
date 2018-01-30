@@ -301,6 +301,9 @@
 <!-- NotifyJs-->
 <script src="{{asset("js/complementos/notify.js")}}"></script>
 
+{{--Nuestro JS--}}
+<script src={{asset("js/admin.js")}}></script>
+
 @yield('js')
 
 <script>
@@ -312,7 +315,7 @@
     @endif
 </script>
 
-{{--Nuestro JS--}}
-<script src={{asset("js/admin.js")}}></script>
+
+
 </body>
 </html>
