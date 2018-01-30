@@ -246,6 +246,25 @@ body {
       background: #17436b !important;
       color: #fff !important;
     }
+    li.active {
+      border-left: 3px solid $naranja;
+    }
+    //li:hover {
+    //  border-left: 3px solid $naranja;
+    //  transition: border-left .1s;
+    //}
+    li::before {
+      width: 3px;
+      height: 0;
+      background: $naranja;
+      display: block;
+      content: '';
+      transition: height .5s;
+      float: left;
+    }
+    li:not(.active):hover::before {
+      height: 45px;
+    }
   }
 }
 

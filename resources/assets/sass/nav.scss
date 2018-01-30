@@ -70,7 +70,6 @@ small {
   .navbar-default {
     border-bottom: 0px;
   }
-
   .navbar-nav > li::after {
     content: '';
     display: block;
@@ -79,11 +78,9 @@ small {
     background: $naranja;
     transition: width .8s;
   }
-
   .navbar-nav > li:hover::after {
     width: 100%;
   }
-
   .navbar-brand {
     min-width: 200px;
     font-family: 'Poiret One', cursive;
@@ -93,10 +90,7 @@ small {
       color: $naranja;
       font-weight: 500;
     }
-
-
   }
-
   .navbar-nav > .active > a:hover,
   .navbar-nav > li > a:hover,
   .navbar-brand:hover{

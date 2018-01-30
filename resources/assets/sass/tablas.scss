@@ -1,0 +1,36 @@
+.table-responsive {
+  background: $azulPrice3;
+  color: $white;
+  .input-sm {
+    background: $azulPrice5;
+    color: $white;
+    border-radius: 5px;
+  }
+  thead > tr > th {
+    border-color: $azulPrice1;
+  }
+  tbody > tr:hover {
+    background: $azulPrice2;
+  }
+  tbody > tr > td {
+    border-color: $azulPrice1;
+  }
+  .progress {
+    border-radius: 5px;
+    background: $azulPrice1;
+    .progress-bar {
+      background: $naranja;
+      border-radius: 5px;
+    }
+  }
+  .pagination >li >a{
+    background: $azulPrice4;
+    border: 1px solid $white;
+    color: $white;
+  }
+  .pagination >li >a:hover{
+    background: $azulPrice2;
+    border: 1px solid $white;
+    color: $naranja;
+  }
+}

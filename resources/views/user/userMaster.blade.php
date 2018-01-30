@@ -39,25 +39,25 @@
             <div id="sidebar-wrapper" @if( \Request::route()->getName() == 'empresa.home' || \Request::route()->getName() == 'empresa.login' || \Request::route()->getName() == 'admin.login') style="display: none" @else style="display: block" @endif>
                 <aside id="sidebar">
                     <ul id="sidemenu" class="sidebar-nav">
-                        <li>
+                        <li @if(\Request::route()->getName()=="home") class="active" @endif>
                             <a href="{{ route('home') }}">
                                 <span class="sidebar-icon"><i class="fa fa-home"></i></span>
                                 <span class="sidebar-title">Perfil</span>
                             </a>
                         </li>
-                        <li>
+                        <li @if(\Request::route()->getName()=="home.suscripcion") class="active" @endif>
                             <a href="{{ route('home.suscripcion') }}">
                                 <span class="sidebar-icon"><i class="fa fa-usd"></i></span>
                                 <span class="sidebar-title">Suscripción</span>
                             </a>
                         </li>
-                        <li>
+                        <li @if(\Request::route()->getName()=="home.oficinas") class="active" @endif>
                             <a href="{{ route('home.oficinas') }}">
                                 <span class="sidebar-icon"><i class="fa fa-globe"></i></span>
                                 <span class="sidebar-title">Oficinas</span>
                             </a>
                         </li>
-                        <li>
+                        <li @if(\Request::route()->getName()=="home.pedidos") class="active" @endif>
                             <a href="{{ route('home.pedidos') }}">
                                 <span class="sidebar-icon"><i class="fa fa-paper-plane"></i></span>
                                 <span class="sidebar-title">Pedidos</span>
