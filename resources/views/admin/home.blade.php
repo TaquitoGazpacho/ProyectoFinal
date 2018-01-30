@@ -102,7 +102,6 @@
        * Create a world map with markers
        */
         var oficinas = @json($oficinas).original[0];
-        console.log(oficinas);
 
         var objetoOficina=[];
         for (var i = 0; i < oficinas.length; i++){
