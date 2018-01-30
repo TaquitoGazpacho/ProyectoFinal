@@ -23,6 +23,23 @@
 
   .modal-body {
     background: $azulNav;
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .input-file-custom {
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      display: inline-block;
+      padding: 6px 12px;
+      cursor: pointer;
+      margin-left: 30px;
+    }
+    .input-file-custom:hover {
+      color: $naranja;
+      border-color: $naranja;
+    }
   }
 
   .modal-footer {
