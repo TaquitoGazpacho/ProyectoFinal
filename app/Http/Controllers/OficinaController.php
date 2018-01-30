@@ -79,9 +79,9 @@ class OficinaController extends Controller
             DB::table('oficinas')->where('id',$request->delete[$i])->delete();
         }
 
-        $oficinaBorrada = true;
+        session()->put('success','oficinas eliminadas correctamente');
 
-        return redirect()->route('admin.home.swal',['oficinaBorrada'=>$oficinaBorrada]);
+        return redirect()->route('admin.oficinas');
     }
 
     public function showTaquillas($oficina_id){

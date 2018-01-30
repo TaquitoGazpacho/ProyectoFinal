@@ -298,10 +298,19 @@
 <script src={{asset("adminLTE/js/adminlte.min.js")}}></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src={{asset("adminLTE/js/pages/dashboard.js")}}></script>
-<!-- AdminLTE for demo purposes -->
-{{--<script src={{asset("adminLTE/js/demo.js")}}></script>--}}
+<!-- NotifyJs-->
+<script src="{{asset("js/complementos/notify.js")}}"></script>
 
 @yield('js')
+
+<script>
+    @if(Session::has('success'))
+        $.notify("{{ Session::get('success') }}", "success");
+        @php
+            Session::forget('success');
+        @endphp
+    @endif
+</script>
 
 {{--Nuestro JS--}}
 <script src={{asset("js/admin.js")}}></script>
