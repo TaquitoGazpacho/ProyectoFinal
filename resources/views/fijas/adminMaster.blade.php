@@ -44,7 +44,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/favicon.ico') }}">
 </head>
 
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-purple sidebar-mini">
 <div class="wrapper">
 
     <!-- Main Header -->
@@ -123,10 +123,10 @@
             <!-- Sidebar Menu -->
             <ul class="sidebar-menu" data-widget="tree">
                 <!-- Optionally, you can add icons to the links -->
-                <li class="active"><a href="{{ route('admin.home') }}"><i class="fa fa-home"></i> <span>Home</span></a></li>
-                <li><a href="{{ route('admin.usuarios') }}"><i class="fa fa-users"></i> <span>Usuarios</span></a></li>
-                <li><a href="{{ route('admin.empresa') }}"><i class="fa fa-truck"></i> <span>Transporte</span></a></li>
-                <li><a href="{{ route('admin.oficinas') }}"><i class="fa fa-building"></i> <span>Oficinas</span></a></li>
+                <li @if(\Request::route()->getName()=="admin.home") class="active" @endif><a href="{{ route('admin.home') }}"><i class="fa fa-home"></i> <span>Home</span></a></li>
+                <li @if(\Request::route()->getName()=="admin.usuarios") class="active" @endif><a href="{{ route('admin.usuarios') }}"><i class="fa fa-users"></i> <span>Usuarios</span></a></li>
+                <li @if(\Request::route()->getName()=="admin.empresa") class="active" @endif><a href="{{ route('admin.empresa') }}"><i class="fa fa-truck"></i> <span>Transporte</span></a></li>
+                <li @if(\Request::route()->getName()=="admin.oficinas") class="active" @endif><a href="{{ route('admin.oficinas') }}"><i class="fa fa-building"></i> <span>Oficinas</span></a></li>
                 <li class="treeview">
                     <a href="#"><i class="fa fa-link"></i> <span>Página Web</span>
                         <span class="pull-right-container">
