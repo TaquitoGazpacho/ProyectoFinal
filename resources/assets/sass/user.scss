@@ -75,14 +75,7 @@
 
 
 #sidebar-wrapper {
-  top: 60px;
-  left: -200px;
-  width: 200px;
-  background-color: $azulNav;
-  color: black;
-  position: fixed;
-  height: 100%;
-  z-index: 1;
+
 }
 .sidebar-nav {
   position: absolute;
@@ -164,7 +157,7 @@ body {
 #sidebar-wrapper {
   border-right: 1px solid #e7e7e7;
   z-index: 1000;
-  position: fixed;
+  position: absolute;
   left: 225px;
   width: 0;
   height: 100%;
@@ -175,6 +168,11 @@ body {
   -moz-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease;
+  top: 60px;
+  color: black;
+  overflow-x: hidden;
+
+
   .sidebar-nav {
     position: absolute;
     top: 0;

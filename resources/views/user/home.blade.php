@@ -26,7 +26,7 @@
                     </p></li>
             </ul>
             <button id="editarPerfil" type="button" class="btn btn-warning" data-toggle="modal" data-target="#editProfile">Editar Perfil</button>
-            <button onclick="cambOficiReset()" type="button" class="btn btn-warning" data-toggle="modal" data-target="#cambiarOficina">Cambiar Oficina</button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#cambiarOficina">Cambiar Oficina</button>
 
             <!-- Modal -->
             <div id="editProfile" class="modal fade" role="dialog">
@@ -78,6 +78,7 @@
                                 <div class="form-group">
                                     <label for="imagen">Imagen de Perfil:</label>
                                     <label for="imagen" class="input-file-custom"><i class="fa fa-cloud-upload"></i>Elegir Imagen</label>
+                                    <label id="nombreArchivo"></label>
                                     <input type="file" name="imagen" id="imagen">
                                 </div>
                             </div>
@@ -119,24 +120,26 @@
                             {{ csrf_field() }}
                             <div class="modal-body">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        {{--<div class="form-group">--}}
-                                        <select id="paisOficinas" class="form-control select2">
-                                            {{ $pais="" }}
-                                            <option selected disabled> -- Elige País -- </option>
-                                            @foreach($oficinas as $oficina)
-                                                @if($pais != $oficina->pais)
-                                                    {{$pais=$oficina->pais}}
-                                                    <option value="{{$oficina->pais}}">{{$oficina->pais}}</option>
-                                                @endif
-                                            @endforeach
-                                        </select>
+                                    <div class="col-md-6 select-custom">
+                                        <div class="select-custom">
+                                            <select id="paisOficinas" class="form-control select2">
+                                                {{ $pais="" }}
+                                                <option selected disabled> -- Elige País -- </option>
+                                                @foreach($oficinas as $oficina)
+                                                    @if($pais != $oficina->pais)
+                                                        {{$pais=$oficina->pais}}
+                                                        <option value="{{$oficina->pais}}">{{$oficina->pais}}</option>
+                                                    @endif
+                                                @endforeach
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <select id="ciudadOficinas" class="form-control select2" disabled="">
-                                            <option selected disabled> -- Elige Ciudad -- </option>
-                                        </select>
-                                        {{--</div>--}}
+                                    <div class="col-md-6 select-custom">
+                                        <div class="select-custom">
+                                            <select id="ciudadOficinas" class="form-control select2" disabled="">
+                                                <option selected disabled> -- Elige Ciudad -- </option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -158,7 +161,6 @@
                             </div>
                             <div class="modal-footer">
                                 <input type="submit" value="Submit" class="btn btn-warning"/>
-                                <input type="reset" name="reset" value="Reset" class="btn btn-error" />
                                 <button type="button" class="btn btn-error" data-dismiss="modal">Close</button>
                             </div>
                         </form>
@@ -192,9 +194,20 @@
 
         var oficinas;
         $('#editarPerfil').on('click', function(){
-            var sex="#user";
-            sex += "@php Print(Auth::guard('web')->user()->sex); @endphp";
-            $(sex).prop('checked', true);
+            var sex = "@php Print(Auth::guard('web')->user()->sex); @endphp";
+            var id;
+            switch (sex) {
+                case "Masculino":
+                    id = "#check1";
+                    break;
+                case "Femenino":
+                    id = "#check2";
+                    break;
+                default:
+                    id="#check3";
+                    break;
+            }
+            $(id).prop('checked', true);
         });
 
         $('#paisOficinas').change(function(event){

@@ -40,6 +40,28 @@
       color: $naranja;
       border-color: $naranja;
     }
+    #nombreArchivo {
+      margin-left: 20px;
+    }
+    .select2-selection--single {
+      background: $azulPrice2;
+      border-color: $white;
+      border: none;
+    }
+    #select2-ciudadOficinas-container,
+    #select2-paisOficinas-container {
+      color: $white;
+    }
+    .select2-selection__arrow{
+      background: $azulPrice6;
+      border-radius: 0 3px 3px 0;
+      height: 28px;
+      top: 0;
+      right: 0;
+      b {
+        border-color: $white transparent transparent transparent;
+      }
+    }
   }
 
   .modal-footer {

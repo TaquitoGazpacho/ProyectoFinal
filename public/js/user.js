@@ -46,14 +46,17 @@ function seleccionarAvatar(){
     }
 }
 
+$("input[type=file]").change(function () {
+    var i = $(this).prev('label').clone();
+    var file = $(this)[0].files[0].name;
+    $("#nombreArchivo").text(file);
+});
+
+// ------------------------ //
 function quitarSombrasMovil() {
     if ($(window).width() <= 768) {
         $(".sombras").removeClass("sombras");
     }
-}
-
-function cambOficiReset(){
-    //reset FORM
 }
 
 $(document).ready(quitarSombrasMovil());
