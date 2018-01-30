@@ -14,8 +14,8 @@
             <br/>
             <ul class="details text-left">
                 <li><p><span class="fa fa-envelope-o text-center" style="width:50px;"></span>Email: {{Auth::guard('web')->user()->email}}</p></li>
-                <li><p><span class="fa fa-phone text-center" style="width:50px;"></span>Phone: {{Auth::guard('web')->user()->phone}}</p></li>
-                <li><p><span class="fa fa-venus-mars text-center" style="width:50px;"></span>Sex: {{Auth::guard('web')->user()->sex}}</p></li>
+                <li><p><span class="fa fa-phone text-center" style="width:50px;"></span>Tfno.: {{Auth::guard('web')->user()->phone}}</p></li>
+                <li><p><span class="fa fa-venus-mars text-center" style="width:50px;"></span>Sexo: {{Auth::guard('web')->user()->sex}}</p></li>
                 <li><p><span class="fa fa-usd text-center" style="width:50px;"></span>Suscripción: {{Auth::guard('web')->user()->suscripcion->name }}</p></li>
                 <li><p><span class="fa fa-map-marker text-center" style="width:50px;"></span>Oficina:
                         @if(Auth::guard('web')->user()->oficina_id)
@@ -26,6 +26,8 @@
                     </p></li>
             </ul>
             <button id="editarPerfil" type="button" class="btn btn-warning" data-toggle="modal" data-target="#editProfile">Editar Perfil</button>
+            <br/>
+            <br/>
             <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#cambiarOficina">Cambiar Oficina</button>
 
             <!-- Modal -->

@@ -51,6 +51,12 @@
     background-color: $azulPrice1;
     border-radius: 10px;
   }
+  button {
+    background: $naranja;
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
+    min-width: 125px;
+  }
 }
 .borde-user-iz {
   border-radius: 10px 0px 0px 10px;
@@ -332,8 +338,10 @@ body {
 
 }
 .details{
-  //padding: 0;
   list-style-type: none;
+  @media(max-width: 550px) {
+    margin-left: -45px;
+  }
 }
 
 
