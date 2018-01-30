@@ -23,7 +23,7 @@
         </section>
 
         <section class="col-lg-8 col-lg-offset-2">
-            <div class="box box-success">
+            <div class="box">
                 <div class="box-header with-border">
                     <h3 class="box-title">Informe de visitas</h3>
 
@@ -42,7 +42,7 @@
                         </div>
                         <!-- /.col -->
                         <div class="col-md-3 col-sm-4">
-                            <div class="pad box-pane-right bg-green" style="min-height: 280px">
+                            <div class="pad box-pane-right bg-blue" style="min-height: 280px">
                                 <div class="description-block margin-bottom">
                                     <h5 class="description-header">Visitas totales</h5>
                                     <span class="description-text">461.252</span>
@@ -88,7 +88,7 @@
         var donut = new Morris.Donut({
             element  : 'graficoTaquillas',
             resize   : true,
-            colors   : ['#3c8dbc', '#f56954', '#00a65a'],
+            colors   : ['#605ca8', '#0079FF', '#ebbd30'],
             data     : [
                 { label: 'Libres', value: @json($taquillas).original.libres  },
                 { label: 'Ocupadas', value: @json($taquillas).original.ocupadas },
