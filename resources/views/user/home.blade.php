@@ -77,6 +77,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="imagen">Imagen de Perfil:</label>
+                                    <label for="imagen" class="input-file-custom"><i class="fa fa-cloud-upload"></i>Elegir Imagen</label>
                                     <input type="file" name="imagen" id="imagen">
                                 </div>
                             </div>
