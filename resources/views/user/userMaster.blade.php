@@ -64,9 +64,9 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('home.ajustes') }}">
+                            <a href="{{ route('home.tiendas') }}">
                                 <span class="sidebar-icon"><i class="fa fa-cog"></i></span>
-                                <span class="sidebar-title">Ajustes</span>
+                                <span class="sidebar-title">Tiendas asociadas</span>
                             </a>
                         </li>
                         <li>

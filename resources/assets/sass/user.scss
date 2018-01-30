@@ -541,3 +541,12 @@ BACKGROUND COLORS
     }
   }
 }
+
+// ESTILO TIENDAS RELACIONADAS
+.tiendas.contenido{
+  max-width: 1024px;
+  margin: auto;
+  .row{
+    margin-bottom: 10px;
+  }
+}

@@ -34,8 +34,8 @@ class HomeController extends Controller
         return view('user.suscripcion');
     }
 
-    public function ajustes() {
-        return view('user.ajustes');
+    public function tiendas() {
+        return view('user.tiendas');
     }
     public function pedidos(){
         return view('user.pedidos');

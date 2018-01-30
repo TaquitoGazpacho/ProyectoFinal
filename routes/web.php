@@ -32,7 +32,7 @@ Route::prefix('perfil')->group(function() {
     Route::get('/', 'HomeController@index')->name('home');
     Route::get('/suscripcion', 'HomeController@suscripcion')->name('home.suscripcion');
     Route::get('/oficinas', 'HomeController@oficinas')->name('home.oficinas');
-    Route::get('/ajustes', 'HomeController@ajustes')->name('home.ajustes');
+    Route::get('/tiendas', 'HomeController@tiendas')->name('home.tiendas');
     Route::get('/pedidos', 'HomeController@pedidos')->name('home.pedidos');
 });
 
