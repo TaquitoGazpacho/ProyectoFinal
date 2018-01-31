@@ -20,6 +20,7 @@ class UserTableSeeder extends Seeder
             'password' => bcrypt('zubiri'),
             'verified' => true,
             'suscripcion_id' => 1,
+            'oficina_id' =>1
         ]);
 
         DB::table('users')->insert([
@@ -31,6 +32,7 @@ class UserTableSeeder extends Seeder
             'password' => bcrypt('zubiri'),
             'verified' => true,
             'suscripcion_id' => 2,
+            'oficina_id' =>1
         ]);
 
         DB::table('users')->insert([
@@ -42,6 +44,7 @@ class UserTableSeeder extends Seeder
             'password' => bcrypt('zubiri'),
             'verified' => true,
             'suscripcion_id' => 3,
+            'oficina_id' =>1
         ]);
 
         DB::table('users')->insert([
@@ -53,6 +56,7 @@ class UserTableSeeder extends Seeder
             'password' => bcrypt('zubiri'),
             'verified' => true,
             'suscripcion_id' => 4,
+            'oficina_id' =>1
         ]);
     }
 }

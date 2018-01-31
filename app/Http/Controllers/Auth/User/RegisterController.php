@@ -83,11 +83,12 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
             'email_token' => base64_encode($data['email']),
             'suscripcion_id' => $suscripcion,
-            'image' => $imagen
+            'image' => $imagen,
+            'oficina_id' => 1
         ]);
     }
 
-    protected function register(Request $request)
+    public function register(Request $request)
     {
         $this->validator($request->all())->validate();
         event(new Registered($user = $this->create($request->all())));
