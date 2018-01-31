@@ -12,6 +12,7 @@
                 <p class="text-right"><a href="http://electricsheep.es/libreria">acceder</a></p>
             </div>
         </div>
+        <br/>
         <div class="row">
             <div class="col-xs-8 col-sm-6 col-md-4 col-lg-4 col-xs-offset-2 col-sm-offset-0">
                 <img class="img img-responsive" src="{{asset('img/tiendas/amazon.png')}}"/>
@@ -22,6 +23,7 @@
                 <p class="text-right"><a href="https://amazon.es">acceder</a></p>
             </div>
         </div>
+        <br/>
         <div class="row">
             <div class="col-xs-8 col-sm-6 col-md-4 col-lg-4 col-xs-offset-2 col-sm-offset-0">
                 <img class="img img-responsive" src="{{asset('img/tiendas/fnac.png')}}"/>

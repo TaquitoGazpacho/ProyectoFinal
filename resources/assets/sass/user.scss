@@ -552,5 +552,11 @@ BACKGROUND COLORS
   margin: auto;
   .row{
     margin-bottom: 10px;
+    div {
+      img {
+        border: 10px solid $azulPrice2;
+        border-radius: 50px;
+      }
+    }
   }
 }
