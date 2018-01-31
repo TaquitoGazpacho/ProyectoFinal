@@ -4,7 +4,7 @@
     <div class="tiendas contenido">
         <div class="row">
             <div class="col-xs-8 col-sm-6 col-md-4 col-lg-4 col-xs-offset-2 col-sm-offset-0">
-                <img class="img img-responsive" src="{{asset('img/tiendas/libreria.jpg')}}"/>
+                <img class="img img-responsive" src="{{asset('img/tiendas/libreria.png')}}"/>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
                 <h1>Librería Electricsheep</h1>
