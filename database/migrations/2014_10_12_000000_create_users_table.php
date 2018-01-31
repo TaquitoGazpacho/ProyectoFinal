@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('surname');
             $table->integer('phone')->default(000000000);
-            $table->string('sex')->default('androgino');
+            $table->string('sex')->default('Otro');
             $table->string('email')->unique();
             $table->string('password');
             $table->string('image')->default("https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png");
