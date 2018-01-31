@@ -8,7 +8,7 @@
 @section('css')
     <style>
         #wrapper{
-            padding-left: 0px;
+            padding-left: 0;
         }
     </style>
 @endsection
@@ -44,9 +44,8 @@
                                 {{ "(".$reparto->usuario->phone.")" }}
                             </td>
                             <td>{{ $reparto->clave_repartidor }}</td>
-                            {{--<td>{{ $reparto->estado }}</td>--}}
                             <td>
-                                <select name="{{$reparto->id}}" id="selectEstado" onchange='cambiarEstado(event,"{{route('empresa.cambiarEstado')}}", "{{csrf_token()}}")'>
+                                <select class="select2" name="{{$reparto->id}}" id="selectEstado" onchange='cambiarEstado(event,"{{route('empresa.cambiarEstado')}}", "{{csrf_token()}}")'>
                                     <option @if($reparto->estado=="Procesando") selected @endif>Procesando</option>
                                     <option @if($reparto->estado=="Enviado") selected @endif>Enviado</option>
                                     <option @if($reparto->estado=="Depositado") selected @endif>Depositado</option>
@@ -64,6 +63,7 @@
 
 @section('js')
     <script>
+        console.log($(".select2"));
         $(function () {
             $('#tablaEmpresa').DataTable({
                 'paging'      : true,
