@@ -1,6 +1,14 @@
 .panel-form {
   max-width: 360px;
   margin: auto;
+  a.btn.btn-link {
+    color: $naranja;
+    text-shadow: 0px 1px $naranja2;
+    &:hover {
+      text-decoration: none;
+      color: $white;
+    }
+  }
 }
 
 .inputText {

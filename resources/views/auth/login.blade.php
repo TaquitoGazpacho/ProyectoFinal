@@ -5,6 +5,9 @@
         #wrapper{
             padding-left: 0px;
         }
+        .mobile-area{
+            margin: 0;
+        }
     </style>
 @endsection
 
@@ -49,23 +52,14 @@
                                         @endif
                                     </div>
                                 </div>
-
                                 <div class="form-group">
-                                    <div class="col-md-6 col-md-offset-4">
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-md-8 col-md-offset-4">
-                                        <input type="submit" class="btn btn-primary" value="Login">
-
-
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn btn-primary">
+                                            Login
+                                        </button>
+                                        <br/>
                                         <a class="btn btn-link" href="{{ route('password.request') }}">
-                                            Forgot Your Password?
+                                            ¿Has olvidado la contraseña?
                                         </a>
                                     </div>
                                 </div>
