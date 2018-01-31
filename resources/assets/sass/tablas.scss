@@ -33,22 +33,23 @@
     border: 1px solid $white;
     color: $naranja;
   }
-  //select {
-  //  background-color: $azulPrice2;
-  //  border: 1px solid $white;
-  //  border-radius: 5px;
-  //}
-  //select::after {
-  //  border: 1px solid red;
-  //}
-  //.select2-selection__arrow{
-  //  background: $azulPrice6;
-  //  border-radius: 0 3px 3px 0;
-  //  height: 28px;
-  //  top: 0;
-  //  right: 0;
-  //  b {
-  //    border-color: $white transparent transparent transparent;
-  //  }
-  //}
+  .select2-selection--single {
+    background: $azulPrice4;
+    border-color: $white;
+    border: 1px solid $white;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: white;
+    line-height: 22px;
+  }
+  .select2-selection__arrow{
+    background: $azulPrice3;
+    border-radius: 0 3px 3px 0;
+    height: 28px;
+    top: 0;
+    right: 0;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: $white transparent transparent transparent;
+  }
 }

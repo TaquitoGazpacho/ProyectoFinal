@@ -34,7 +34,9 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {{ $inc=0 }}
                     @foreach($repartos as $reparto)
+                        {{ $inc++ }}
                         <tr>
                             <td>{{ $reparto->oficina->pais }}</td>
                             <td>{{ $reparto->oficina->calle.", ".$reparto->oficina->num_calle }}</td>
@@ -45,7 +47,7 @@
                             </td>
                             <td>{{ $reparto->clave_repartidor }}</td>
                             <td>
-                                <select class="select2" name="{{$reparto->id}}" id="selectEstado" onchange='cambiarEstado(event,"{{route('empresa.cambiarEstado')}}", "{{csrf_token()}}")'>
+                                <select id="select2-{{ $inc }}" class="select2" name="{{$reparto->id}}" id="selectEstado" onchange='cambiarEstado(event,"{{route('empresa.cambiarEstado')}}", "{{csrf_token()}}")'>
                                     <option @if($reparto->estado=="Procesando") selected @endif>Procesando</option>
                                     <option @if($reparto->estado=="Enviado") selected @endif>Enviado</option>
                                     <option @if($reparto->estado=="Depositado") selected @endif>Depositado</option>
@@ -63,7 +65,7 @@
 
 @section('js')
     <script>
-        console.log($(".select2"));
+        $("tbody .select2").select2();
         $(function () {
             $('#tablaEmpresa').DataTable({
                 'paging'      : true,
