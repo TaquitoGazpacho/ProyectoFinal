@@ -65,7 +65,7 @@
                         </li>
                         <li>
                             <a href="{{ route('home.tiendas') }}">
-                                <span class="sidebar-icon"><i class="fa fa-cog"></i></span>
+                                <span class="sidebar-icon"><i class="fa fa-shopping-bag"></i></span>
                                 <span class="sidebar-title">Tiendas asociadas</span>
                             </a>
                         </li>
