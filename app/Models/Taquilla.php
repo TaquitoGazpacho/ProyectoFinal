@@ -31,4 +31,5 @@ class Taquilla extends Model
     public static function cambiarAOcupada($id){
         Taquilla::where('id', $id)->update(['ocupada' => true]);
     }
+
 }
