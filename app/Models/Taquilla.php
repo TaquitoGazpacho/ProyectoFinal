@@ -27,4 +27,8 @@ class Taquilla extends Model
             ['oficina_id', $oficina_id]
         ])->first();
     }
+
+    public static function cambiarAOcupada($id){
+        Taquilla::where('id', $id)->update(['ocupada' => true]);
+    }
 }
