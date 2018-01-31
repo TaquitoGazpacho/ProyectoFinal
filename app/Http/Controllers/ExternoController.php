@@ -84,6 +84,7 @@ class ExternoController extends Controller
             'oficina_id' => $oficina_id,
             'taquilla_id' => $taquilla_id,
             'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
         ]);
     }
 

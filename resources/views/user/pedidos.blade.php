@@ -15,6 +15,7 @@
                 <th>Numero Taquilla</th>
                 <th>Oficina</th>
                 <th>Clave</th>
+                <th>Hora de actualización</th>
             </tr>
             </thead>
             <tbody>
@@ -45,6 +46,7 @@
                     <td id="pedido_{{$pedido->id}}_taquilla">{{$pedido->taquilla->numero_taquilla}}</td>
                     <td id="pedido_{{$pedido->id}}_recogido">{{$pedido->oficina->calle.", ".$pedido->oficina->num_calle." (".$pedido->oficina->pais.")"}}</td>
                     <td id="pedido_{{$pedido->id}}_clave">{{$pedido->clave_usuario}}</td>
+                    <td id="pedido_{{$pedido->id}}_hora">{{$pedido->updated_at}}</td>
                 </tr>
             @endforeach
             </tbody>

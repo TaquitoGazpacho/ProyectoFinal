@@ -30,6 +30,7 @@ class RepartosSeeder extends Seeder
                     'oficina_id' => $oficina_id,
                     'taquilla_id' => $taquilla_id,
                     'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now(),
                 ]);
                 if ($estadoTabla == 'Depositado'){
                     \App\Models\Taquilla::cambiarAOcupada($j);
