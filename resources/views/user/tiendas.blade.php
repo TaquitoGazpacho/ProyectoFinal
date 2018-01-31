@@ -28,7 +28,7 @@
             </div>
             <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
                 <h1>Fnac</h1>
-                <p>Si estas buscando aparatos tecnológicos, </p>
+                <p>Si estas buscando aparatos tecnológicos, libros, objetos de papelería... Cualquier cosa de uso doméstico o recreacional, podrás encontrarla fácilmente en esta tienda.</p>
                 <p class="text-right"><a href="http://electricsheep.es/libreria">acceder</a></p>
             </div>
         </div>
