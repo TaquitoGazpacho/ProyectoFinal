@@ -42,7 +42,7 @@
                         </div>
                         <!-- /.col -->
                         <div class="col-md-3 col-sm-4">
-                            <div class="pad box-pane-right bg-blue" style="min-height: 280px">
+                            <div class="pad box-pane-right bg-purple" style="min-height: 280px">
                                 <div class="description-block margin-bottom">
                                     <h5 class="description-header">Visitas totales</h5>
                                     <span class="description-text">461.252</span>
@@ -134,7 +134,7 @@
             },
             markerStyle      : {
                 initial: {
-                    fill  : '#3C8DBC',
+                    fill  : '#605ca8',
                     stroke: '#111'
                 }
             },
