@@ -25,10 +25,10 @@
                         @endif
                     </p></li>
             </ul>
-            <button id="editarPerfil" type="button" class="btn btn-warning" data-toggle="modal" data-target="#editProfile">Editar Perfil</button>
+            <button id="editarPerfil" type="button" class="btn btn-warning btn-lockbox" data-toggle="modal" data-target="#editProfile">Editar Perfil</button>
             <br/>
             <br/>
-            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#cambiarOficina">Cambiar Oficina</button>
+            <button type="button" class="btn btn-warning btn-lockbox" data-toggle="modal" data-target="#cambiarOficina">Cambiar Oficina</button>
 
             <!-- Modal -->
             <div id="editProfile" class="modal fade" role="dialog">
@@ -85,9 +85,8 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <input type="submit" value="Submit" class="btn btn-warning"/>
-                                <input type="reset" name="reset" value="Reset" class="btn btn-error" />
-                                <button type="button" class="btn btn-error" data-dismiss="modal">Close</button>
+                                <input type="submit" value="Aplicar" class="btn btn-warning"/>
+                                <button type="button" class="btn btn-error" data-dismiss="modal">Cerrar</button>
                             </div>
                         </form>
                         @if ($errors->any())
@@ -162,8 +161,8 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <input type="submit" value="Submit" class="btn btn-warning"/>
-                                <button type="button" class="btn btn-error" data-dismiss="modal">Close</button>
+                                <input type="submit" value="Aplicar" class="btn btn-warning"/>
+                                <button type="button" class="btn btn-error" data-dismiss="modal">Cerrar</button>
                             </div>
                         </form>
                         @if ($errors->any())

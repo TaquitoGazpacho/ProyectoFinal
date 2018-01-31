@@ -51,7 +51,7 @@
     background-color: $azulPrice1;
     border-radius: 10px;
   }
-  button {
+  .btn-lockbox {
     background: $naranja;
     border: none;
     font-family: 'Ubuntu', sans-serif;
@@ -255,17 +255,13 @@ body {
     li.active {
       border-left: 3px solid $naranja;
     }
-    //li:hover {
-    //  border-left: 3px solid $naranja;
-    //  transition: border-left .1s;
-    //}
     li::before {
       width: 3px;
       height: 0;
       background: $naranja;
       display: block;
       content: '';
-      transition: height .5s;
+      transition: height .3s;
       float: left;
     }
     li:not(.active):hover::before {
