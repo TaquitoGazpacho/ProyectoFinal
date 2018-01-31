@@ -1,6 +1,13 @@
-@extends('layouts.app')
+@extends('user.userMaster')
+@section('css')
+    <style>
+        #wrapper{
+            padding-left: 0;
+        }
+    </style>
+@endsection
+@section('contenido')
 
-@section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

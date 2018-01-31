@@ -34,9 +34,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {{ $inc=0 }}
+                    @php $inc=0 @endphp
                     @foreach($repartos as $reparto)
-                        {{ $inc++ }}
+                        @php $inc++ @endphp
                         <tr>
                             <td>{{ $reparto->oficina->pais }}</td>
                             <td>{{ $reparto->oficina->calle.", ".$reparto->oficina->num_calle }}</td>

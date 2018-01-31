@@ -36,7 +36,7 @@
     </div>
     <div id="wrapper">
         @if (Auth::guard('web')->check())
-            <div id="sidebar-wrapper" @if( \Request::route()->getName() == 'empresa.home' || \Request::route()->getName() == 'empresa.login' || \Request::route()->getName() == 'admin.login') style="display: none" @else style="display: block" @endif>
+            <div id="sidebar-wrapper" @if( \Request::route()->getName() == 'empresa.home' || \Request::route()->getName() == 'empresa.login' || \Request::route()->getName() == 'admin.login' || \Request::route()->getName() == 'password.request' || \Request::route()->getName() == 'password.reset') style="display: none" @else style="display: block" @endif>
                 <aside id="sidebar">
                     <ul id="sidemenu" class="sidebar-nav">
                         <li @if(\Request::route()->getName()=="home") class="active" @endif>

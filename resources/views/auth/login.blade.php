@@ -59,16 +59,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                {{--<div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">--}}
-                                    {{--<div class="col-md4">--}}
-                                        {{--{!! Recaptcha::render() !!}--}}
-                                        {{--@if ($errors->has('g-recaptcha-response'))--}}
-                                            {{--<span class="help-block">--}}
-                                                    {{--<strong>{{ $errors->first('g-recaptcha-response') }}</strong>--}}
-                                                {{--</span>--}}
-                                        {{--@endif--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
                                 <div class="form-group">
                                     <div class="col-md-8 col-md-offset-4">
                                         <input type="submit" class="btn btn-primary" value="Login">
