@@ -34,7 +34,7 @@
                 </div>
                 <div class="modal-footer">
                     <input type="submit" class="btn btn-warning" value="Actualizar"/>
-                    <button type="button" class="btn btn-error" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
                 </div>
 
             </form>

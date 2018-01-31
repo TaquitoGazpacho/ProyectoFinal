@@ -8,7 +8,7 @@
     border: 1px solid #222D32;
     .modal-header{
       background: #222D32;
-      border-radius: 12px 12px 0px 0px;
+      border-radius: 12px 12px 0 0;
       border-bottom: 1px solid #4F5559;
     }
     .modal-body{
@@ -19,22 +19,43 @@
         box-sizing: border-box;
         background-color: #4F5559;
         color: white;
-        border: 0px;
+        border: 0;
         border-radius: 5px;
       }
     }
     .modal-footer{
       background: #222D32;
       border-top: 1px solid #4F5559;
-      border-radius: 0px 0px 12px 12px;
+      border-radius: 0 0 12px 12px;
 
       .btn.btn-warning{
         background-color: #222D32;
         border-color: #4F5559;
+        &:hover {
+          background: #4F5559;
+        }
       }
-      .btn.btn-error{
-        background-color: #222D32 ;
-        border-color: #4F5559;
+    }
+  }
+}
+
+
+.table {
+  tbody {
+    .btn.btn-warning {
+      background: #e3d9fa;
+      color: black;
+      border-color: #605CA8;
+      &:hover {
+        background: #b094ff;
+      }
+    }
+    .btn.btn-default {
+      background: #37337F;
+      color: $white;
+      border-color: #1B1940;
+      &:hover {
+        background: #b997ff;
       }
     }
   }
