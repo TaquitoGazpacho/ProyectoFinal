@@ -289,6 +289,9 @@ body {
       max-width: 600px;
       margin: auto;
     }
+    @media (min-width: 991px){
+      max-width: 1400px;
+    }
   }
   .mobile-img {
     max-width: 200px;
