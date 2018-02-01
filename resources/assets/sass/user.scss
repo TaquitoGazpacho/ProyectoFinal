@@ -63,6 +63,12 @@
   border-left: 1px solid $azulPrice2;
   border-top: 1px solid $azulPrice2;
   border-bottom: 1px solid $azulPrice2;
+  @media (max-width: 768px){
+    border-left: 1px solid $azulPrice2;
+    border-top: 1px solid $azulPrice2;
+    border-right: 1px solid $azulPrice2;
+    border-bottom: 0px solid $azulPrice2;
+  }
 }
 
 .borde-user-dr {
@@ -70,6 +76,12 @@
   border-right: 1px solid $azulPrice2;
   border-top: 1px solid $azulPrice2;
   border-bottom: 1px solid $azulPrice2;
+  @media (max-width: 768px){
+    border-left: 1px solid $azulPrice2;
+    border-bottom: 1px solid $azulPrice2;
+    border-right: 1px solid $azulPrice2;
+    border-top: 0px solid $azulPrice2;
+  }
 }
 
 
