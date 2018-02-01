@@ -270,7 +270,11 @@ body {
   }
 }
 
-
+@media (min-width: 991px){
+  .mobile-area {
+    max-width: 1400px;
+  }
+}
 @media (max-width: 992px) {
   #wrapper #sidebar-wrapper {
     width: 45px;
@@ -288,9 +292,6 @@ body {
     @media(min-width: 768px) and (max-width: 991px){
       max-width: 600px;
       margin: auto;
-    }
-    @media (min-width: 991px){
-      max-width: 1400px;
     }
   }
   .mobile-img {
