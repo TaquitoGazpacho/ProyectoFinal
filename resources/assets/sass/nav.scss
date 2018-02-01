@@ -39,6 +39,11 @@ small {
       width: 100%;
     }
   }
+  @media (max-width: 767px){
+    .nav.navbar-nav li a{
+      margin-left: 40px;
+    }
+  }
 
   ::after {
     background: $azulNav;
