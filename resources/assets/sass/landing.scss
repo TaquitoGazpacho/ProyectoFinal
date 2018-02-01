@@ -5,6 +5,10 @@ header{
   background-size: cover;
   /*padding-top: 8%;*/
   .centrado {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
     text-align: center;
     font-weight: bold;
     /*background-color: rgba(0, 154, 178, 0.81);*/
@@ -304,26 +308,33 @@ a {
 .parallax{
     padding-left: 10px;
     padding-right: 10px;
-    /* The image used */
     background-image: url("../img/1-carretera.jpeg");
-
-    /* Set a specific height */
-    height: 500px;
-
+    min-height: 500px;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
     .descripcionServicio{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+
       max-width: 800px;
       margin: auto;
       text-align: center;
       color: white;
       text-shadow: 1px 1px $naranja;
-      padding-top: 10%;
       h1,h2{
         font-weight: bold;
+      }
+    }
+    @media (max-width: 590px){
+      .descripcionServicio{
+        left:5%;
+        transform: translateX(-5%) translateY(-50%);
       }
     }
 }
