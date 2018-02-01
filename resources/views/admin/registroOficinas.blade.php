@@ -37,7 +37,7 @@
 
                 <div class="modal-footer">
                     <input type="submit" class="btn btn-warning" value="Nueva oficina"/>
-                    <button type="button" onclick="sw()" class="btn btn-error" data-dismiss="modal">Close</button>
+                    <button type="button" onclick="sw()" class="btn btn-error" data-dismiss="modal">Cerrar</button>
                 </div>
 
             </form>

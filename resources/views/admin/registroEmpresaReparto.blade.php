@@ -35,7 +35,7 @@
                 </div>
                 <div class="modal-footer">
                     <input type="submit" class="btn btn-warning" value="Registrar"/>
-                    <button type="button" class="btn btn-error" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-error" data-dismiss="modal">Cerrar</button>
                 </div>
                 <div id="erroresRegisterEmpresa"></div>
             </form>
