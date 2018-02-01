@@ -60,6 +60,28 @@
     }
   }
 }
+.box-body {
+  .btn.btn-warning {
+    background: #37337F;
+    border:2px solid #b997ff;
+    border-radius: 10px;
+  }
+  .btn.btn-danger{
+    background: #c13b60;
+    border: 2px solid #841a46;
+    border-radius: 10px;
+  }
+}
+
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover{
+  background-color: #37337F;
+  border: 1px solid #1B1940;
+}
 
 /*------------- T-O-D-O ESTO PARA QUE NO SALGA EL SPINNER DE SELECTOR DE NUMERO ---------------*/
 // Webkit:
