@@ -15,6 +15,17 @@
         <br/>
         <div class="row">
             <div class="col-xs-8 col-sm-6 col-md-4 col-lg-4 col-xs-offset-2 col-sm-offset-0">
+                <img class="img img-responsive" src="{{asset('img/tiendas/comidaParaMariposas.gif')}}"/>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+                <h1>Comida Para Mariposas</h1>
+                <p>Ven a encontrar ofertas para alimentar a tus bichitos más queridos y adorables.</p>
+                <p class="text-right"><a href="http://fnac.es">acceder</a></p>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-xs-8 col-sm-6 col-md-4 col-lg-4 col-xs-offset-2 col-sm-offset-0">
                 <img class="img img-responsive" src="{{asset('img/tiendas/amazon.png')}}"/>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
