@@ -60,10 +60,16 @@
 }
 .borde-user-iz {
   border-radius: 10px 0px 0px 10px;
+  border-left: 1px solid $azulPrice2;
+  border-top: 1px solid $azulPrice2;
+  border-bottom: 1px solid $azulPrice2;
 }
 
 .borde-user-dr {
   border-radius: 0px 10px 10px 0px;
+  border-right: 1px solid $azulPrice2;
+  border-top: 1px solid $azulPrice2;
+  border-bottom: 1px solid $azulPrice2;
 }
 
 
