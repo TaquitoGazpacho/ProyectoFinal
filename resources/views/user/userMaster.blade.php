@@ -64,7 +64,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('home.tiendas') }}">
+                            <a @if(\Request::route()->getName()=="home.tiendas") class="active" @endif href="{{ route('home.tiendas') }}">
                                 <span class="sidebar-icon"><i class="fa fa-shopping-bag"></i></span>
                                 <span class="sidebar-title">Tiendas asociadas</span>
                             </a>
