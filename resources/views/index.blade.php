@@ -54,6 +54,16 @@
                     Session::forget('success');
                 @endphp
             @endif
+
+            @if (alert()->ready())
+                {{--sweetAlertSimple("{!! alert()->message() !!}", "{!! alert()->option('text') !!}", "{!! alert()->type() !!}");--}}
+                swal({
+                    title: "{!! alert()->message() !!}",
+                    text: "{!! alert()->option('text') !!}",
+                    type: "{!! alert()->type() !!}"
+                });
+            @endif
+
         });
     </script>
 
@@ -191,11 +201,6 @@
         <div id="errores"></div>
     </form>
 </section>
-@if (alert()->ready())
-    <script>
-        sweetAlertSimple("{!! alert()->message() !!}", "{!! alert()->option('text') !!}", "{!! alert()->type() !!}");
-    </script>
-@endif
 
 
 <footer class="footer-distributed">

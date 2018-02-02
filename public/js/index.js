@@ -70,17 +70,11 @@ $( document ).ready( function() {
         //var re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
         return re.test(email);
     }
-
-
-    function sweetAlertSimple(titulo, texto, icono) {
-        swal({
-            title: titulo,
-            text: texto,
-            type: icono
-        });
-    }
-
-
-
-
 }); //fin document ready
+function sweetAlertSimple(titulo, texto, icono) {
+    swal({
+        title: titulo,
+        text: texto,
+        type: icono
+    });
+}
