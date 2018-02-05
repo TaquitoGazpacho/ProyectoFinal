@@ -1,4 +1,7 @@
 <footer id="mainFooter">
+    <div class="container-fluid fondo-footer">
+        <img src="{{ asset("img/footer.png") }}"/>
+    </div>
     <div class="footer-left">
         <a class="vertical-logo-container" href="{{env('APP_URL')}}">
             <img class="vertical-logo" src="{{asset('img/logo.png')}}">

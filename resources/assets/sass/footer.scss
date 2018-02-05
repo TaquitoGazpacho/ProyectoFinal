@@ -1,10 +1,14 @@
 #mainFooter {
   background: $azulNav;
-  padding:2.2em;
+  padding-left: 2.2em;
+  padding-bottom: 2.2em;
+  padding-right: 2.2em;
   display:flex;
   align-items:center;
   z-index:8000;
   flex:none;
+  margin-top: 55px;
+  position: relative;
 }
 #mainFooter .footer-left {
   width: 126px;
@@ -93,7 +97,7 @@
 .social-nav li a, .legal-nav li a {
   color: black;
   text-decoration: none;
-  padding-bottom: 1em;
+  padding-bottom: 7px;
 }
 .hidden {
   display: none !important;
@@ -107,8 +111,8 @@
   color:#221f1f;
 }
 .social-nav li:hover a, .legal-nav li:hover a {
-  color: $naranja;
-  border-bottom: 1px solid $naranja;
+  color: black;
+  border-bottom: 2px solid $naranja;
 }
 .legal-nav li:last-child:hover a {
   color: $naranja;
@@ -156,5 +160,15 @@
   .legal-nav li:last-child {
     border-left: none;
     padding-left: 0;
+  }
+}
+
+.container-fluid.fondo-footer {
+  img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    top: -55px;
   }
 }
