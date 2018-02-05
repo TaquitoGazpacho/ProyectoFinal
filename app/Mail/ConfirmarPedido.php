@@ -31,7 +31,7 @@ class ConfirmarPedido extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name')->with([
+        return $this->view('mail.ConfirmarPedido')->with([
             'user' => $this->user,
         ]);
     }
