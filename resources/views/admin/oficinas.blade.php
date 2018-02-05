@@ -12,8 +12,7 @@
 @section('pageDescription', 'Edición y registro de oficinas')
 
 @section('contenido')
-
-    <div class="box-body table-responsive">
+    <div class="box-body table-responsive marginless">
         <form action="{{route('eliminarOficinas')}}" method="post">
             {{ csrf_field() }}
             <table id="tablaOficina" class="table table-hover">
@@ -47,7 +46,7 @@
                         <td>{{ sizeof($ofi->taquilla) }}</td>
                         <td><a href="{{ route( 'listarTaquillas', ['id' => $oficina->id]) }}" class="btn btn-default">Listar taquillas</a></td>
                         <td><a data-toggle="modal" name="{{ $oficina->id }}" data-target="#editarOficinaDiv" class="btn btn-warning" onclick="mostrarOficina(event)">Editar</a></td>
-                        <td><input type="checkbox" name="delete[]" value="{{$oficina->id}}" /></td>
+                        <td><input type="checkbox" name="delete[]" value="{{$oficina->id}}"/></td>
                     </tr>
                 @endforeach
                 </tbody>
@@ -134,6 +133,4 @@
             }
         }
     </script>
-
-
 @endsection

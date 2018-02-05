@@ -54,7 +54,7 @@ var map = new mapboxgl.Map({
     zoom: 3.5,
     minZoom: 1.0
 });
-map.addControl(new mapboxgl.NavigationControl());
+// map.addControl(new mapboxgl.NavigationControl());
 map.on('load', function () {
     map.addLayer({
         "id": "points",

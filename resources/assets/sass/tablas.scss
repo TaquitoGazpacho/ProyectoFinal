@@ -56,3 +56,19 @@
     border-color: $white transparent transparent transparent;
   }
 }
+.bordes-redondeados-tabla {
+  border-radius: 5px;
+  border: 3px solid $azulPrice1;
+}
+
+.btn-default{
+  background: $naranja;
+  color: $white;
+  border-radius: 5px;
+  border: none;
+  font-family: Ubuntu, sans-serif;
+  &:hover {
+    background: $naranja2;
+    color: $white;
+  }
+}

@@ -6,7 +6,7 @@
 
 @extends('user.userMaster')
 @section('contenido')
-    <div class="box-body table-responsive sombras">
+    <div class="box-body table-responsive sombras bordes-redondeados-tabla">
         <table id="tablaPedidos" class="table table-hover">
             <thead>
             <tr>

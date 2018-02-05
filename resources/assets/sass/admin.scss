@@ -53,7 +53,8 @@
     .btn.btn-default {
       background: #37337F;
       color: $white;
-      border-color: #1B1940;
+      border:2px solid #605CA8;
+      border-radius: 10px;
       &:hover {
         background: #b997ff;
       }
@@ -63,13 +64,24 @@
 .box-body {
   .btn.btn-warning {
     background: #37337F;
-    border:2px solid #b997ff;
+    border:2px solid #605CA8;
     border-radius: 10px;
+    &:hover {
+      background: #b094ff;
+    }
   }
   .btn.btn-danger{
     background: #c13b60;
     border: 2px solid #841a46;
     border-radius: 10px;
+    &:hover {
+      background: #8d2c46;
+    }
+  }
+  &.marginless {
+    .row {
+      margin: 0;
+    }
   }
 }
 

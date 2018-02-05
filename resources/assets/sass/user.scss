@@ -64,27 +64,27 @@ body {
 }
 .borde-user-iz {
   border-radius: 10px 0px 0px 10px;
-  border-left: 1px solid $azulPrice2;
-  border-top: 1px solid $azulPrice2;
-  border-bottom: 1px solid $azulPrice2;
+  border-left: 3px solid $azulPrice2;
+  border-top: 3px solid $azulPrice2;
+  border-bottom: 3px solid $azulPrice2;
   @media (max-width: 768px){
-    border-left: 1px solid $azulPrice2;
-    border-top: 1px solid $azulPrice2;
-    border-right: 1px solid $azulPrice2;
+    border-left: 3px solid $azulPrice2;
+    border-top: 3px solid $azulPrice2;
+    border-right: 3px solid $azulPrice2;
     border-bottom: 0px solid $azulPrice2;
   }
 }
 
 .borde-user-dr {
-  border-radius: 0px 10px 10px 0px;
-  border-right: 1px solid $azulPrice2;
-  border-top: 1px solid $azulPrice2;
-  border-bottom: 1px solid $azulPrice2;
+  border-radius: 0 10px 10px 0;
+  border-right: 3px solid $azulPrice2;
+  border-top: 3px solid $azulPrice2;
+  border-bottom: 3px solid $azulPrice2;
   @media (max-width: 768px){
-    border-left: 1px solid $azulPrice2;
-    border-bottom: 1px solid $azulPrice2;
-    border-right: 1px solid $azulPrice2;
-    border-top: 0px solid $azulPrice2;
+    border-left: 3px solid $azulPrice2;
+    border-bottom: 3px solid $azulPrice2;
+    border-right: 3px solid $azulPrice2;
+    border-top: 0 solid $azulPrice2;
   }
 }
 
@@ -565,7 +565,7 @@ BACKGROUND COLORS
         margin-bottom: 5px;
       }
       .avatar.seleccionada{
-        border:2px solid black;
+        border:2px solid $naranja;
       }
     }
   }
@@ -584,4 +584,9 @@ BACKGROUND COLORS
       }
     }
   }
+}
+
+.mapboxgl-map {
+  border-radius: 10px;
+  border: 2px solid $azulPrice2;
 }

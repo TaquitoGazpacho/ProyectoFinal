@@ -19,7 +19,7 @@
             <h3 class="text-center">Repartos de {{ Auth::guard('empresa')->user()->nombre }}</h3>
         </div>
         <!-- Table -->
-        <div class="box-body table-responsive">
+        <div class="box-body table-responsive bordes-redondeados-tabla sombras">
             <table id="tablaEmpresa" class="table table-hover">
                 <thead>
                     <tr>
@@ -60,6 +60,16 @@
                 </tbody>
             </table>
         </div>
+        <br/>
+        <br/>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            {{ csrf_field() }}
+        </form>
+        <div class="pull-right">
+            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-default boton-custom text-center">Cerrar Sesión</a>
+        </div>
+        {{--<a class="btn btn-default pull-right boton-custom" href="">Cerrar Sesión</a>--}}
+        {{--<button class="btn btn-default pull-right boton-custom">Cerrar Sesión</button>--}}
     </div>
 @endsection
 
