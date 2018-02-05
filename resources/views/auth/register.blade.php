@@ -21,7 +21,7 @@
                             {{ csrf_field() }}
                             <div class="panel-form">
                                 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                    <label for="name" class="col-md-12 control-label">Name <label id="asterisco">*</label></label>
+                                    <label for="name" class="col-md-12 control-label">Nombre <label id="asterisco">*</label></label>
                                     <br/>
                                     <div class="col-md-12 text-center">
                                         <input id="name" type="text" class="inputText" name="name" value="{{ old('name') }}" autofocus>
@@ -35,7 +35,7 @@
                                 </div>
 
                                 <div class="form-group{{ $errors->has('surname') ? ' has-error' : '' }}">
-                                    <label for="surname" class="col-md-12 control-label">Surname <label id="asterisco">*</label></label>
+                                    <label for="surname" class="col-md-12 control-label">Apellido <label id="asterisco">*</label></label>
                                     <br/>
                                     <div class="col-md-12 text-center">
                                         <input id="surname" type="text" class="inputText" name="surname" value="{{ old('surname') }}" autofocus>
@@ -49,7 +49,7 @@
                                 </div>
 
                                 <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
-                                    <label for="surname" class="col-md-12 control-label">Phone <label id="asterisco">*</label></label>
+                                    <label for="surname" class="col-md-12 control-label">Teléfono <label id="asterisco">*</label></label>
                                     <br/>
                                     <div class="col-md-12 text-center">
                                         <input id="phone" type="text" class="inputText" name="phone" value="{{ old('phone') }}" autofocus>
@@ -63,7 +63,7 @@
                                 </div>
 
                                 <div class="form-group{{ $errors->has('sex') ? ' has-error' : '' }}">
-                                    <label for="sex" class="col-md-12 control-label">Sex</label>
+                                    <label for="sex" class="col-md-12 control-label">Género</label>
                                     <br/>
                                     <br/>
                                     <div class="col-md-12">
@@ -91,7 +91,7 @@
                                 </div>
 
                                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                    <label for="email" class="col-md-12 control-label">E-Mail Address <label id="asterisco">*</label></label>
+                                    <label for="email" class="col-md-12 control-label">Email <label id="asterisco">*</label></label>
                                     <br/>
                                     <div class="col-md-12 text-center">
                                         <input id="email" type="email" class="inputText" name="email" value="{{ old('email') }}">
@@ -105,7 +105,7 @@
                                 </div>
 
                                 <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                    <label for="password" class="col-md-12 control-label">Password <label id="asterisco">*</label></label>
+                                    <label for="password" class="col-md-12 control-label">Contraseña <label id="asterisco">*</label></label>
                                     <br/>
                                     <div class="col-md-12 text-center">
                                         <input id="password" type="password" class="inputText" name="password">
@@ -119,7 +119,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="password-confirm" class="col-md-12 control-label">Confirm Password <label id="asterisco">*</label></label>
+                                    <label for="password-confirm" class="col-md-12 control-label">Confirmar Contraseña <label id="asterisco">*</label></label>
 
                                     <div class="col-md-12 text-center">
                                         <input id="password-confirm" type="password" class="inputText" name="password_confirmation">
