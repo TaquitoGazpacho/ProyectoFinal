@@ -139,7 +139,7 @@
                                 <div class="form-group">
                                     <div class="col-md-12 text-center">
                                         <button type="submit" class="btn btn-primary">
-                                            Register
+                                            Registrarse
                                         </button>
                                     </div>
                                 </div>
