@@ -8,6 +8,8 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ConfirmarPedido;
 
 class ExternoController extends Controller
 {
@@ -68,6 +70,8 @@ class ExternoController extends Controller
         $this->anadirPedido($request->userId, $idOficina, $idTaquilla->id);
 
         $this->ocuparTaquilla($idTaquilla->id);
+
+        Mail::to(Auth::guard('web')->user()->email)->send(new ConfirmarPedido(Auth::guard('web')->user()));
 
         session()->put('success','Pedido realizado correctamente');
 

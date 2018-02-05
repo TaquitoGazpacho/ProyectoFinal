@@ -32,7 +32,7 @@ class Contacto extends Mailable
      */
     public function build()
     {
-        return $this->view('fijas.contactMail')->with([
+        return $this->view('mail.contactMail')->with([
             'data' => $this->data,
             'email' => $this->email,
         ]);
