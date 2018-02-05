@@ -22,7 +22,7 @@
                             {{ csrf_field() }}
                             <div class="panel-form">
                                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                    <label for="email" class="col-md-12 control-label">E-Mail Address</label>
+                                    <label for="email" class="col-md-12 control-label">E-Mail</label>
 
                                     <div class="col-md-12 control-label">
                                         <input id="email" type="email" class="col-md-12 control-label inputText" name="email" value="{{ old('email') }}" required autofocus>
@@ -36,7 +36,7 @@
                                 </div>
 
                                 <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                    <label for="password" class="col-md-12 control-label">Password</label>
+                                    <label for="password" class="col-md-12 control-label">Contraseña</label>
 
                                     <div class="col-md-12 control-label">
                                         <input id="password" type="password" class="col-md-12 control-label inputText" name="password" required>
@@ -51,7 +51,7 @@
                                 <div class="form-group">
                                     <div class="col-md-12 text-center">
                                         <button type="submit" class="btn btn-primary">
-                                            Login
+                                            Iniciar sesión
                                         </button>
 
                                         <!--<a class="btn btn-link" href="{{ route('password.request') }}">
