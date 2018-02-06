@@ -46,7 +46,7 @@ class HomeController extends Controller
 
     public function sendContactMail(Request $request){
         Mail::to(env('MAIL_USERNAME'))->send(new Contacto($request->texto, $request->email));
-        Mail::to(env($request->email))->send(new Contacto("Tu correo se ha enviado correctamente. Contactaremos contigo lo antes posible.", ""));
+        Mail::to($request->email)->send(new Contacto("Tu correo se ha enviado correctamente. Contactaremos contigo lo antes posible.", ""));
         session()->put('success','Email enviado correctamente, contactaremos contigo lo antes posible.');
         return redirect(route('index'));
     }
