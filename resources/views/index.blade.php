@@ -111,10 +111,14 @@
 
 
 <section class="sectionHeight" id="servicios">
+    <br/>
+    <br/>
+    <br/>
     <div class="container">
         <div class="row text-center">
             <h2 style="color: #F96F00;">Servicios</h2>
         </div>
+        <br/>
     </div>
     <div class="container icons">
         <div class="row">
@@ -140,43 +144,52 @@
             </div>
         </div>
     </div>
+    <br/>
+    <br/>
+    <br/>
     <hr id="opiniones">
-
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     <!-- PASOS A SEGUIR PARA LA COMPRA -->
     <div class="container pasos">
-        <div class="row vertical-align">
-            <div class="col-xs-12 col-md-2 col-lg-4">
+        <div class="row aligner">
+            <div class="col-xs-12 col-md-2 col-lg-3 col-lg-offset-1">
                 <div class="circulo text-center">1</div>
             </div>
-            <div class="col-xs-12 col-md-10 col-lg-8">
-                <div class="pasos-texto">
+            <div class="col-xs-12 col-md-10 col-lg-8 eq-line">
+                <div class="pasos-texto separador">
                     Quisque quis laoreet ante. Sed rutrum justo sit amet massa cursus, convallis semper nisi laoreet. Mauris in porta sapien. Aliquam scelerisque vulputate ex nec accumsan.
                 </div>
             </div>
         </div>
-        <div class="row">
+        <br/>
+        <div class="row aligner">
             <div class="col-xs-12 col-md-10 col-lg-8">
-                <div class="pasos-texto">
+                <div class="pasos-texto separador-lf pull-right">
                     Quisque quis laoreet ante. Sed rutrum justo sit amet massa cursus, convallis semper nisi laoreet. Mauris in porta sapien. Aliquam scelerisque vulputate ex nec accumsan.
                 </div>
             </div>
-            <div class="col-xs-12 col-md-2 col-lg-4">
+            <div class="col-xs-12 col-md-2 col-lg-3">
                 <div class="circulo text-center">2</div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12 col-md-2 col-lg-4">
+        <br/>
+        <div class="row aligner">
+            <div class="col-xs-12 col-md-2 col-lg-3 col-lg-offset-1">
                 <div class="circulo text-center">3</div>
             </div>
             <div class="col-xs-12 col-md-10 col-lg-8">
-                <div class="pasos-texto">
+                <div class="pasos-texto separador">
                     Quisque quis laoreet ante. Sed rutrum justo sit amet massa cursus, convallis semper nisi laoreet. Mauris in porta sapien. Aliquam scelerisque vulputate ex nec accumsan.
                 </div>
             </div>
         </div>
     </div>
-
-
+    <br/>
+    <br/>
+    <br/>
 </section> <!-- FIN ID SERVICIOS -->
 <section>
     <div class="parallax" id="sobreLaEmpresa">

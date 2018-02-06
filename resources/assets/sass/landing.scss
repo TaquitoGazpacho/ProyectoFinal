@@ -166,19 +166,45 @@ hr {
   .row {
     position: relative;
 
-    .circulo {
-      border: 2px solid black;
-      width: 200px;
-      height: 200px;
-      border-radius: 100px;
-      line-height: 200px;
-      font-family: 'Satisfy', cursive;
-      font-size: 50px;
-      margin:auto;
-    }
-    .pasos-texto {
-      height: 10em;
-      vertical-align: middle;
+    &.aligner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .separador{
+        border-left: 2px solid $naranja;
+        border-radius: 0 50px 50px 0;
+        border-bottom: 2px solid $naranja2;
+        padding: 20px;
+        text-align: justify;
+        background: $white;
+        max-width: 80%;
+      }
+      .separador-lf{
+        border-right: 2px solid $naranja;
+        border-radius: 50px 0 0 50px;
+        border-bottom: 2px solid $naranja2;
+        padding: 20px;
+        text-align: justify;
+        background: $white;
+        max-width: 80%;
+      }
+      .circulo {
+        border: 2px solid $azulNav;
+        background: $azulPrice1;
+        color: $white;
+        width: 120px;
+        height: 120px;
+        border-radius: 100px;
+        line-height: 135px;
+        font-family: 'Satisfy', cursive;
+        font-size: 80px;
+        margin:auto;
+      }
+      .pasos-texto {
+        vertical-align: middle;
+        font-family: Ubuntu, Sans-Serif;
+      }
     }
   }
 }
