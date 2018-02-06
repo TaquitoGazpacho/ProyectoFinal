@@ -77,10 +77,13 @@
     </style>
 </head>
 <body>
-@desktop
-    Hola desktop
-@enddesktop
-@include("fijas.nav")
+@mobile
+    @include("fijas.nav")
+@endmobile
+@tablet
+    @include("fijas.nav")
+@endtablet
+
 
 <header>
     <div class="centrado">
@@ -92,6 +95,10 @@
         </h2>
     </div>
 </header>
+
+@desktop
+    @include("fijas.nav")
+@enddesktop
 
 
 <section class="sectionHeight" id="servicios">
