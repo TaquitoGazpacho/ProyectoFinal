@@ -11,16 +11,20 @@ var mix = require('laravel-mix');
  |
  */
 
-mix.sass('resources/assets/sass/style.scss', 'public/css')
-    .options({
-        processCssUrls: false,
-        includePaths: ['node_modules']
-    });
-mix.sass('resources/assets/sass/admin.scss', 'public/css')
-    .options({
-        processCssUrls: false,
-        includePaths: ['node_modules']
-    });
+mix.options({
+    processCssUrls: false, // Process/optimize relative stylesheet url()'s. Set to false, if you don't want them touched.
+    postCss: [
+        require('autoprefixer')({
+            browsers: ['last 3 versions'],
+            cascade: false
+        })
+    ],
+    includePaths: ['node_modules']
+});
+
+mix.sass('resources/assets/sass/style.scss', 'public/css');
+
+mix.sass('resources/assets/sass/admin.scss', 'public/css');
 
 //mix.copy('node_modules/bootstrap/dist/css/bootstrap.min.css', 'public/css/complementos');
 mix.copy('node_modules/bootstrap/dist/css', 'public/bootstrap/css');

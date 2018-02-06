@@ -4,7 +4,6 @@ footer {
   position: relative;
   .vertical-logo-container {
     width: 126px;
-    //padding-top: 55px;
     padding-bottom: 20px;
     position: relative;
     display: inline-block;
@@ -14,6 +13,9 @@ footer {
       padding: 0;
       transition: all 150ms linear;
       width: 100px;
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 
@@ -24,12 +26,10 @@ footer {
 
     li {
       display: inline-block;
-      //margin-left: 2.8em;
       color: #221f1f;
       transition: all 150ms linear;
       line-height: 1;
       font-size: 1em;
-      //margin-bottom: 0;
       &:hover a{
         color: black;
         border-bottom: 2px solid $naranja;
@@ -38,6 +38,9 @@ footer {
         color: black;
         text-decoration: none;
         padding-bottom: 7px;
+        i {
+          line-height: 55px;
+        }
       }
       &:first-child {
         font-family: Ubuntu, Sans-Serif;
@@ -106,6 +109,7 @@ footer {
     margin-left: -25px;
     .nombre {
       padding-left: 0;
+      margin-top: 25px;
     }
     li:hover {
       a {
@@ -116,7 +120,16 @@ footer {
   }
   @media(min-width: 992px){
     .row-legal-nav {
-      margin-top: 55px;
+      margin-top: 25px;
     }
+  }
+  @media (max-width: 992px) {
+    .row-legal-nav {
+      margin-top: 15px;
+    }
+  }
+  .container-footer {
+    max-width: 1000px;
+    margin: auto;
   }
 }
