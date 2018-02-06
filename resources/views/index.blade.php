@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Landing Page Taquillas</title>
+    <title>LockBox</title>
     <meta charset="UTF-8"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,6 +77,11 @@
     </style>
 </head>
 <body>
+@desktop
+    Hola desktop
+@enddesktop
+@include("fijas.nav")
+
 <header>
     <div class="centrado">
         <h1>
@@ -88,7 +93,6 @@
     </div>
 </header>
 
-@include("fijas.nav")
 
 <section class="sectionHeight" id="servicios">
     <div class="container">
