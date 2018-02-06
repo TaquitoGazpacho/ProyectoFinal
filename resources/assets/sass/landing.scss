@@ -1,64 +1,46 @@
 header{
-  background-image: url("../img/gothamMarkerOpA.jpg");
+  background-image: url("../img/fotoLanding.jpg");
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  /*padding-top: 8%;*/
   .centrado {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    background: rgba(60, 141, 188, 0.90);
     text-align: center;
     font-weight: bold;
-    /*background-color: rgba(0, 154, 178, 0.81);*/
-    color: $beige;
-    max-width: 95%;
-    margin: auto;
-    /*border: 2px solid black;*/
-    border-radius: 10px;
+    color: $white;
+    max-width: 500px;
+    border-radius: 3px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    position: absolute;
+    right: 50px;
+    padding: 10px;
     h2{
-      font-family: "Vollkorn SC", serif;
-      font-size: 40px;
-      /*text-shadow: -2px 0 #F96F00, 0 2px #F96F00, 2px 0 #F96F00, 0 -2px #F96F00;*/
-      text-shadow:
-              -2px 2px $negro,
-              0px 2px $negro,
-              2px 2px $negro,
-              -2px 0px $negro,
-              0px 0px $negro,
-              2px 0px $negro,
-              -2px -2px $negro,
-              0px -2px $negro,
-              2px -2px $negro;
+      font-family: 'Encode Sans Expanded', sans-serif;
     }
     h1{
-      font: normal 36px 'Cookie', cursive;
-      text-shadow:
-              -1px 1px $naranja,
-              0px 1px $naranja,
-              1px 1px $naranja,
-              -1px 0px $naranja,
-              0px 0px $naranja,
-              1px 0px $naranja,
-              -1px -1px $naranja,
-              0px -1px $naranja,
-              1px -1px $naranja;
-      font-size: 100px;
-
+      font-family: 'Poiret One', cursive;
+      font-size: 60px;
+      color: $white;
       label{
         color: $naranja;
-        text-shadow:
-          -1px 1px $beige,
-          0px 1px $beige,
-          1px 1px $beige,
-          -1px 0px $beige,
-          0px 0px $beige,
-          1px 0px $beige,
-          -1px -1px $beige,
-          0px -1px $beige,
-          1px -1px $beige;
       }
+    }
+    hr {
+      border-color: $white;
+    }
+    a {
+      width: 200px;
+      border: 2px solid $white;
+      &:hover {
+        background: $white;
+        border: 2px solid $naranja;
+        color: $naranja;
+      }
+    }
+  }
+  @media(max-width: 992px) {
+    .centrado  {
+      margin: auto;
     }
   }
 } //End of header
@@ -70,7 +52,7 @@ a {
 /* -------------------------------------SECTIONS-------------------------------------------- */
 
 .sectionHeight {
-    background-image: url('../img/subtle_white_feathers.png');
+    background-image: url('../img/dust_scratches.png');
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 20px;
@@ -160,130 +142,6 @@ hr {
     width: 80%;
 }
 
-
-/*-------------------- COMENTARIO USUARIOS ---------------------------------------*/
-
-.content {
-    padding-top: 30px;
-}
-
-/* Heading */
-.heading {
-    z-index: 1;
-    position: relative;
-    text-align: center;
-    margin-bottom: 100px;
-  h2 {
-    font-size: 40px;
-    font-weight: 500;
-    margin: 0 0 20px;
-    color: #444;
-  }
-  p {
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    color: #8693a7;
-  }
-}
-
-.heading:after {
-    left: 50%;
-    height: 3px;
-    width: 50px;
-    content: " ";
-    bottom: -35px;
-    margin-left: -25px;
-    position: absolute;
-    background: $naranja;
-}
-
-
-/* Team Members */
-.team-members {
-    width: 100%;
-    cursor: pointer;
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 35px;
-  .team-avatar {
-    position: relative;
-    img {
-      display: block;
-      margin: 0 auto;
-      text-align: center;
-    }
-  }
-  .team-avatar:after {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: " ";
-    position: absolute;
-    background: rgba(129, 129, 129, 0.1);
-    transition-duration: 300ms;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
-  }
-  .team-desc {
-    left: auto;
-    bottom: 0;
-    width: 100%;
-    padding: 0 20px;
-    position: absolute;
-    opacity: 0;
-    color: $white;
-    -webkit-transform: translate3d(0, 10%, 0);
-    transform: translate3d(0, 10%, 0);
-    -webkit-transition: opacity 0.3s;
-    -moz-transition: opacity 0.3s;
-    -ms-transition: opacity 0.3s;
-    -o-transition: opacity 0.3s;
-    transition: opacity 0.3s;
-    h4 {
-      font-size: 22px;
-      font-weight: 600;
-      margin: 0 0 10px;
-      color: $white;
-    }
-    span {
-      display: block;
-      font-size: 13px;
-      font-weight: 600;
-      text-transform: uppercase;
-      color: $white;
-    }
-  }
-
-
-} //end of team members
-
-.team-members:hover{
-  .team-avatar:after {
-    background: rgba(47, 60, 72, 0.5);
-    transition-duration: 300ms;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
-  }
-  .team-desc {
-    -webkit-transform: translate3d(0, -5%, 0);
-    transform: translate3d(0, -5%, 0);
-    -webkit-transform: translate3d(0, -10%, 0);
-    transform: translate3d(0, -10%, 0);
-  }
-  .team-desc {
-    opacity: 1;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
-  }
-
-} //end team-members:hover
-
 //navbar
 .progress{
   background-color: #d1d5d0;
@@ -303,6 +161,24 @@ hr {
 
 }
 
+/* ----------------------------------- PASOS DE COMPRA -------------------------------- */
+.container.pasos{
+  .row {
+    position: relative;
 
-
-/* ------------------------------------- animaciones -------------------------------------------- */
+    .circulo {
+      border: 2px solid black;
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
+      line-height: 200px;
+      font-family: 'Satisfy', cursive;
+      font-size: 50px;
+      margin:auto;
+    }
+    .pasos-texto {
+      height: 10em;
+      vertical-align: middle;
+    }
+  }
+}

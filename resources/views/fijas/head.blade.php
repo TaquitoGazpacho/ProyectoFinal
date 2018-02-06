@@ -9,10 +9,6 @@
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href={{asset("font-awesome/css/font-awesome.min.css")}}>
-<!-- Fuentes: Open Sans Condensed y Montserrat -->
-<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans+Condensed:300" rel="stylesheet">
-<!-- Fuente: Poiret one -->
-<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 
 <!-- JQuery -->
 <script src={{asset("js/complementos/jquery.min.js")}}></script>

@@ -1,11 +1,3 @@
-var documentReady = false;
-
-
-if(documentReady === false) {
-    $("body").css("display", "none");
-}
-
-
 $( document ).ready( function() {
     documentReady = true;
     $("body").css("display", "block");

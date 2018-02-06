@@ -86,13 +86,22 @@
 
 
 <header>
-    <div class="centrado">
-        <h1>
-            Lock<label>Box</label>
-        </h1>
-        <h2 id="TextoLanding">
-            Nuestras oficinas en cualquier lado!!
-        </h2>
+    <div class="centrado contaner text-center">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>
+                    Lock<label>Box</label>
+                </h1>
+                <hr/>
+                <h2 id="TextoLanding">
+                    Integrando seguridad y disponibilidad
+                </h2>
+                <br/>
+                <a class="btn btn-default btn-lg" href='{{ route("register") }}'>únete</a>
+                <br/>
+                <br/>
+            </div>
+        </div>
     </div>
 </header>
 
@@ -132,51 +141,41 @@
         </div>
     </div>
     <hr id="opiniones">
-    <!-- COMENTARIOS USUARIOS -->
-    <div class="container content">
-        <div class="heading">
-            <h2 style="color: #F96F00;"><strong>Nuestros Usuarios Nos Avalan</strong></h2>
-            <p>Generamos confianza</p>
-        </div><!-- //end heading -->
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="team-members">
-                    <div class="team-avatar">
-                        <img class="img-responsive" src="http://keenthemes.com/assets/bootsnipp/member1.png" alt="">
-                    </div>
-                    <div class="team-desc">
-                        <h4>El paquete siempre en su sitio</h4>
-                        <span>"Puedo hacer lo que quiera y olvidarme del pedido, se que siempre llegará a una taquilla"</span>
-                        <p>Ricardo Martinez, Ávila</p>
-                    </div>
-                </div>
+
+    <!-- PASOS A SEGUIR PARA LA COMPRA -->
+    <div class="container pasos">
+        <div class="row vertical-align">
+            <div class="col-xs-12 col-md-2 col-lg-4">
+                <div class="circulo text-center">1</div>
             </div>
-            <div class="col-sm-4">
-                <div class="team-members">
-                    <div class="team-avatar">
-                        <img class="img-responsive" src="http://keenthemes.com/assets/bootsnipp/member2.png" alt="">
-                    </div>
-                    <div class="team-desc">
-                        <h4>Facilidad y Comodidad</h4>
-                        <span>Es muy cómodo poder recoger el paquete cuando y donde quiera, ademas de la facilidad para localizar sus oficinas</span>
-                        <p>MªDolores Dominguez, Sevilla</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="team-members">
-                    <div class="team-avatar">
-                        <img class="img-responsive" src="http://keenthemes.com/assets/bootsnipp/member3.png" alt="">
-                    </div>
-                    <div class="team-desc">
-                        <h4>Tecnología de confianza</h4>
-                        <span>Gracias a su sistema de clave de usar y tirar mis pedidos estrán siempre a salvo</span>
-                        <p>Jacinto Bermudez, Zaragoza</p>
-                    </div>
+            <div class="col-xs-12 col-md-10 col-lg-8">
+                <div class="pasos-texto">
+                    Quisque quis laoreet ante. Sed rutrum justo sit amet massa cursus, convallis semper nisi laoreet. Mauris in porta sapien. Aliquam scelerisque vulputate ex nec accumsan.
                 </div>
             </div>
         </div>
-    </div><!-- FIN COMENTARIOS USUARIOS -->
+        <div class="row">
+            <div class="col-xs-12 col-md-10 col-lg-8">
+                <div class="pasos-texto">
+                    Quisque quis laoreet ante. Sed rutrum justo sit amet massa cursus, convallis semper nisi laoreet. Mauris in porta sapien. Aliquam scelerisque vulputate ex nec accumsan.
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-2 col-lg-4">
+                <div class="circulo text-center">2</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-2 col-lg-4">
+                <div class="circulo text-center">3</div>
+            </div>
+            <div class="col-xs-12 col-md-10 col-lg-8">
+                <div class="pasos-texto">
+                    Quisque quis laoreet ante. Sed rutrum justo sit amet massa cursus, convallis semper nisi laoreet. Mauris in porta sapien. Aliquam scelerisque vulputate ex nec accumsan.
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 </section> <!-- FIN ID SERVICIOS -->
 <section>
