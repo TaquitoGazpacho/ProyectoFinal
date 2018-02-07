@@ -38,7 +38,7 @@
                                     <label for="surname" class="col-md-12 control-label">Apellido <label id="asterisco">*</label></label>
                                     <br/>
                                     <div class="col-md-12 text-center">
-                                        <input id="surname" type="text" class="inputText" name="surname" value="{{ old('surname') }}" autofocus>
+                                        <input id="surname" type="text" class="inputText" name="surname" value="{{ old('surname') }}">
 
                                         @if ($errors->has('surname'))
                                             <span class="help-block">
@@ -52,7 +52,7 @@
                                     <label for="surname" class="col-md-12 control-label">Teléfono <label id="asterisco">*</label></label>
                                     <br/>
                                     <div class="col-md-12 text-center">
-                                        <input id="phone" type="text" class="inputText" name="phone" value="{{ old('phone') }}" autofocus>
+                                        <input id="phone" type="text" class="inputText" name="phone" value="{{ old('phone') }}">
 
                                         @if ($errors->has('phone'))
                                             <span class="help-block">
@@ -91,10 +91,10 @@
                                 </div>
 
                                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                    <label for="email" class="col-md-12 control-label">Email <label id="asterisco">*</label></label>
+                                    <label type="text" for="email" class="col-md-12 control-label">Email <label id="asterisco">*</label></label>
                                     <br/>
                                     <div class="col-md-12 text-center">
-                                        <input id="email" type="email" class="inputText" name="email" value="{{ old('email') }}">
+                                        <input id="email" class="inputText" name="email" value="{{ old('email') }}">
 
                                         @if ($errors->has('email'))
                                             <span class="help-block">

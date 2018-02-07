@@ -212,7 +212,7 @@
 <section class="sectionHeight form">
     <form class="well form-width" id="contactanos" action="{{ route('contactanos') }}" method="post">
         {{csrf_field()}}
-        <h3 class="text-center">Consúltanos cualqueir duda</h3>
+        <h3 class="text-center">¿Tienes alguna duda? ¡Consúltanos!</h3>
         <hr/>
         <div class="form-group">
             <label for="nombre">Nombre</label>
@@ -220,11 +220,11 @@
         </div>
         <div class="form-group">
             <label for="email">Email de contacto</label>
-            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Introduce tu email" required>
+            <input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Introduce tu email">
         </div>
         <div class="form-group">
             <label for="texto">Problema o pregunta</label>
-            <textarea class="form-control" id="texto" name="texto" aria-describedby="emailHelp" placeholder="Consúltanos lo que quieras" required></textarea>
+            <textarea class="form-control" id="texto" name="texto" aria-describedby="emailHelp" placeholder="Consúltanos lo que quieras"></textarea>
             <small id="emailHelp" class="form-text text-muted">No compartimos tu información con terceros.</small>
         </div>
         <button type="submit" class="btn btn-primary">Enviar</button>
