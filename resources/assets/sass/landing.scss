@@ -114,25 +114,31 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    .descripcionServicio{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-      color: white;
-      text-shadow: 1px 1px $naranja;
-      h1,h2{
-        font-weight: bold;
+    padding-top: 10%;
+    @media(min-width: 768px){
+      padding-left:10%;
+      padding-top: 100px;
+      .descripcionServicio{
+        float: left;
       }
     }
-    @media (max-width: 590px){
-      .descripcionServicio{
-        left:5%;
-        transform: translateX(-5%) translateY(-50%);
+    .descripcionServicio{
+      background: rgba(60, 141, 188, 0.90);
+      border-radius: 3px;
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      max-width: 400px;
+      margin-left:auto;
+      margin-right:auto;
+      text-align: center;
+      color: white;
+      h2{
+        font-family: 'Ubuntu', sans-serif;
+      }
+      p{
+        font-family: 'Encode Sans Expanded', sans-serif;
+      }
+      hr{
+        border-color: $white;
       }
     }
 }
