@@ -80,7 +80,7 @@ a {
       padding-right: 40px;
     }
 }
-
+/* -------------------------------------FORMULARIO DE CONTACTO-------------------------------------------- */
 .form{
   .well{
     background-color: $azulPrice1;
@@ -93,7 +93,7 @@ a {
     textarea{
       background: $azulPrice3;
       color: $white;
-      border: 1px solid $white;
+      border: 2px solid $white;
       border-radius: 20px;
       font-family: 'Comfortaa', cursive;
     }
@@ -110,21 +110,21 @@ a {
     .btn-error{
       background: $naranja;
       color: $white;
-      border-color: $naranja2;
+      border:2px solid $naranja2;
       &:hover {
         background: $white;
-        border: 2px solid $naranja;
+        border-color: $naranja;
         color: $naranja;
       }
     }
     .btn-primary {
       background: $azulPrice6;
       color: $white;
-      border-color: $azulPrice2;
+      border:2px solid $azulPrice2;
       &:hover {
         background-color: $white;
         color: $azulPrice6;
-        border: 1px solid $azulPrice6;
+        border-color: $azulPrice6;
       }
     }
     small {
@@ -156,6 +156,15 @@ a {
 #servicios{
   .distributed-icons {
     margin: auto;
+  }
+  .titulo {
+    color: $naranja;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-size: 50px;
+  }
+  .subtitulo {
+    color: $naranja;
+    font-family: 'Ubuntu', sans-serif;
   }
 }
 
