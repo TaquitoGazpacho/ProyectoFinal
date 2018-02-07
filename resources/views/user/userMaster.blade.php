@@ -30,9 +30,7 @@
 
 <body>
     <div id="navbar-wrapper">
-        <header>
-            @include("fijas.nav")
-        </header>
+        @include("fijas.nav")
     </div>
     <div id="wrapper">
         @if (Auth::guard('web')->check())

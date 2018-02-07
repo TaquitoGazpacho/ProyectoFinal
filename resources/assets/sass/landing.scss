@@ -237,15 +237,29 @@ hr {
 
 /* ------------------------------------- 404 Page -------------------------------------------- */
 .background404 {
-  background-image: url("../img/gothamMarkerOpA.jpg");
+  background-image: url("../img/perro.jpg");
   color: white;
-  background-repeat: no-repeat ;
+  background-repeat: no-repeat;
+  background-size: 100%;
 .error-template {
-  padding: 40px 15px;text-align: center;}
+  padding: 40px 15px;
+  text-align: center;
+}
 .error-actions {
-  margin-top:15px;margin-bottom:15px;}
+  margin-top:15px;
+  margin-bottom:15px;
+}
 .error-actions .btn {
-  margin-right:10px; }
+  margin-right: 10px;
+}
+.error-details {
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.51);
+  width: 50%;
+  margin: auto;
+  color: $negro;
+  border-radius: 5px;
+}
 
 }
 
