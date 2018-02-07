@@ -38,16 +38,17 @@ $( document ).ready( function() {
                     errors += "<p>Tu nombre no puede estar vacío</p>";
                 }
             }
-            if (eInput.name === "textarea"){
+            if(eInput.name === "email"){
+                if(!validateEmail(eInput.value)){
+                    errors += "<p>Tu email no es válido</p>";
+                }
+            }
+            if (eInput.name === "texto"){
                 if (eInput.value.length <= 20){
                     errors += "<p>Tu texto es demasiado corto</p>";
                 }
             }
-            if(eInput.name === "email"){
-                if(!validateEmail(eInput.value)){
-                    errors+="<p>Tu email no es válido</p>";
-                }
-            }
+
         }
 
         if(errors!=""){

@@ -111,9 +111,14 @@ footer {
       padding-left: 0;
       margin-top: 25px;
     }
-    li:hover {
+    li {
       a {
         color: $white;
+      }
+    }
+    li:hover {
+      a {
+        color: $naranja;
         border-bottom: 2px solid $naranja;
       }
     }

@@ -60,7 +60,8 @@
                 swal({
                     title: "{!! alert()->message() !!}",
                     text: "{!! alert()->option('text') !!}",
-                    type: "{!! alert()->type() !!}"
+                    type: "{!! alert()->type() !!}",
+                    confirmButtonColor: '#3C8DBC',
                 });
             @endif
 
@@ -98,7 +99,7 @@
                 </h2>
                 <br/>
                 @if(!Auth::guard('web')->check())
-                <a class="btn btn-default btn-lg" href='{{ route("register") }}'>únete</a>
+                <a class="btn btn-default btn-lg" href='{{ route("register") }}'>¡Quiero probarlo!</a>
                 @endif
                 <br/>
                 <br/>
@@ -118,7 +119,7 @@
     <br/>
     <div class="container">
         <div class="row text-center">
-            <h2 style="color: #F96F00;">Servicios</h2>
+            <h2 class="titulo">Servicios</h2>
         </div>
         <br/>
     </div>
@@ -126,22 +127,22 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 text-center distributed-icons">
                 <i class="fa fa-envelope-o fa-5x text-primary" aria-hidden="true"></i>
-                <h3>Envíos</h3>
+                <h3 class="subtitulo">Envíos</h3>
                 <p class="text-muted">Recibe cómodamente tu paquete sin tener que estar en casa</p>
             </div>
             <div class="col-lg-3 col-md-6 text-center distributed-icons">
                 <i class="fa fa-handshake-o fa-5x text-primary" aria-hidden="true"></i>
-                <h3>Digno de Confianza</h3>
+                <h3 class="subtitulo">Confianza</h3>
                 <p class="text-muted">Servicio que te permite acceder a tu envío de forma segura</p>
             </div>
             <div class="col-lg-3 col-md-6 text-center distributed-icons">
                 <i class="fa fa-map-marker fa-5x text-primary" aria-hidden="true"></i>
-                <h3>Localización</h3>
+                <h3 class="subtitulo">Localización</h3>
                 <p class="text-muted">Encuentra siempre una oficina muy cerca de tu casa o trabajo</p>
             </div>
             <div class="col-lg-3 col-md-6 text-center distributed-icons">
                 <i class="fa fa-lock fa-5x text-primary" aria-hidden="true"></i>
-                <h3>Seguridad</h3>
+                <h3 class="subtitulo">Seguridad</h3>
                 <p class="text-muted">Gracias a nuestro sistema de seguridad, solo tú podrás acceder</p>
             </div>
         </div>
@@ -155,6 +156,12 @@
     <br/>
     <br/>
     <!-- PASOS A SEGUIR PARA LA COMPRA -->
+    <div class="container">
+        <div class="row text-center">
+            <h2 class="titulo">Simple y sencillo</h2>
+        </div>
+        <br/>
+    </div>
     <div class="container pasos">
         <div class="row aligner">
             <div class="col-xs-12 col-md-2 col-lg-3 col-lg-offset-1">
@@ -205,7 +212,7 @@
 <section class="sectionHeight form">
     <form class="well form-width" id="contactanos" action="{{ route('contactanos') }}" method="post">
         {{csrf_field()}}
-        <h3 class="text-center">Consúltanos cualqueir duda</h3>
+        <h3 class="text-center">¿Tienes alguna duda? ¡Consúltanos!</h3>
         <hr/>
         <div class="form-group">
             <label for="nombre">Nombre</label>
@@ -213,11 +220,11 @@
         </div>
         <div class="form-group">
             <label for="email">Email de contacto</label>
-            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Introduce tu email" required>
+            <input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Introduce tu email">
         </div>
         <div class="form-group">
             <label for="texto">Problema o pregunta</label>
-            <textarea class="form-control" id="texto" name="texto" aria-describedby="emailHelp" placeholder="Consúltanos lo que quieras" required></textarea>
+            <textarea class="form-control" id="texto" name="texto" aria-describedby="emailHelp" placeholder="Consúltanos lo que quieras"></textarea>
             <small id="emailHelp" class="form-text text-muted">No compartimos tu información con terceros.</small>
         </div>
         <button type="submit" class="btn btn-primary">Enviar</button>

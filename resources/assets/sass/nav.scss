@@ -16,6 +16,60 @@ small {
   margin-bottom: 0px;
   background-color: $azulNav;
 
+  .navbar-right {
+    .user-menu {
+      .dropdown-menu {
+        padding: 0;
+        background: rgb(60,141,188); /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(60,141,188,1) 0%, rgba(255,255,255,1) 65%);
+        background: -webkit-linear-gradient(top, rgba(60,141,188,1) 0%,rgba(255,255,255,1) 65%);
+        background: linear-gradient(to bottom, rgba(60,141,188,1) 0%,rgba(255,255,255,1) 65%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c8dbc', endColorstr='#ffffff',GradientType=0 );
+        .user-header {
+          .img-circle {
+            border: 1px solid $white;
+          }
+          p {
+            color: $azulPrice5;
+          }
+        }
+        .user-footer {
+          background: $white;
+          a.btn.btn-default {
+            background: $white;
+            border: 2px solid $azulNav;
+            color: $azulNav;
+            border-radius: 2px;
+            &:hover {
+              background: $azulPrice1;
+              border: 2px solid $azulPrice3;
+              color: $white;
+
+            }
+          }
+          a.btn.btn-error {
+            background: $white;
+            border: 2px solid $naranja;
+            color: $naranja;
+            border-radius: 2px;
+            &:hover {
+              background: $naranja;
+              border: 2px solid $naranja2;
+              color: $white;
+
+            }
+            @media(max-width: 992px) {
+              margin-left: 0;
+            }
+          }
+          @media(max-width: 992px) {
+            background: $azulNav;
+          }
+        }
+      }
+    }
+  }
+
   @media (min-width: 1024px){
     .navbar-nav {
       display: inline-block;
@@ -50,7 +104,6 @@ small {
   }
 
   .navbar-header {
-    //font-family: 'Montserrat', sans-serif;
       color: $white;
     }
   .navbar-collapse ul>li>a{
@@ -134,7 +187,7 @@ small {
   .container {
     padding-top: 8px;
   }
-} //end of navbar-inverse
+} //fin navbar-inverse
 
 
 .navbar-toggle{
