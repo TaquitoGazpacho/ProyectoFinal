@@ -97,7 +97,9 @@
                     Integrando seguridad y disponibilidad
                 </h2>
                 <br/>
+                @if(!Auth::guard('web')->check())
                 <a class="btn btn-default btn-lg" href='{{ route("register") }}'>únete</a>
+                @endif
                 <br/>
                 <br/>
             </div>

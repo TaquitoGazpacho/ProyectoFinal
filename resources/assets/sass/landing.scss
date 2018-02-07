@@ -3,6 +3,17 @@ header{
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
+  @media(min-width: 1920px){
+    .centrado{
+
+      h1{
+        font-size: 80px;
+      }
+      h4{
+
+      }
+    }
+  }
   .centrado {
     background: rgba(60, 141, 188, 0.90);
     text-align: center;
