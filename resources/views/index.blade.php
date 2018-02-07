@@ -203,22 +203,23 @@
 <section class="sectionHeight form">
     <form class="well form-width" id="contactanos" action="{{ route('contactanos') }}" method="post">
         {{csrf_field()}}
-        <h3>Si tiene alguna duda sobre nuestro servicio, no dude en contactarnos.</h3>
+        <h3 class="text-center">Consúltanos cualqueir duda</h3>
+        <hr/>
         <div class="form-group">
             <label for="nombre">Nombre</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp" placeholder="Tu nombre">
+            <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp" placeholder="Introduce tu nombre">
         </div>
         <div class="form-group">
             <label for="email">Email de contacto</label>
-            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" required>
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Introduce tu email" required>
         </div>
         <div class="form-group">
             <label for="texto">Problema o pregunta</label>
-            <textarea class="form-control" id="texto" name="texto" aria-describedby="emailHelp" placeholder="Problema o pregunta" required></textarea>
+            <textarea class="form-control" id="texto" name="texto" aria-describedby="emailHelp" placeholder="Consúltanos lo que quieras" required></textarea>
+            <small id="emailHelp" class="form-text text-muted">No compartimos tu información con terceros.</small>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <input type="reset" id="clear" class="btn btn-error" value="Clear"/>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <input type="reset" id="clear" class="btn btn-error pull-right" value="Limpiar formulario"/>
 
         <div id="errores"></div>
     </form>

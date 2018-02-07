@@ -72,7 +72,62 @@ a {
 
 .form{
   .well{
-    background-color: #f5f5f54a;
+    background-color: $azulPrice1;
+    border: 2px solid $azulNav;
+    border-radius: 10px;
+    color: $azulPrice6;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    input[type="text"],
+    input[type="email"],
+    textarea{
+      background: $azulPrice3;
+      color: $white;
+      border: 1px solid $white;
+      border-radius: 20px;
+      font-family: 'Comfortaa', cursive;
+    }
+    ::placeholder {
+      color: $white;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      border-color: $naranja;
+      background-color: $azulPrice5;
+
+    }
+    .btn-error{
+      background: $naranja;
+      color: $white;
+      border-color: $naranja2;
+      &:hover {
+        background: $white;
+        border: 2px solid $naranja;
+        color: $naranja;
+      }
+    }
+    .btn-primary {
+      background: $azulPrice6;
+      color: $white;
+      border-color: $azulPrice2;
+      &:hover {
+        background-color: $white;
+        color: $azulPrice6;
+        border: 2px solid $azulPrice6;
+      }
+    }
+    small {
+      color: $azulPrice6;
+      padding: 5px;
+    }
+    h3 {
+      color: $white;
+      font-family: Ubuntu, Sans-Serif;
+    }
+    label {
+      padding: 5px;
+      font-family: 'Comfortaa', cursive;
+    }
   }
   #errores{
     margin-top: 20px;
