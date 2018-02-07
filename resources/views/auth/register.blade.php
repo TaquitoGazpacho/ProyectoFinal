@@ -167,24 +167,34 @@
                 if (eInput.name === "name"){
                     if (eInput.value.length === 0) {
                         errores += "<p>Debe introcucir su Nombre</p>";
+                    } else if (eInput.value.length < 2 || eInput.value.length > 20) {
+                        errores += "<p>El nombre debe contener entre 2 y 20 carácteres</p>";
+                    } else if (!/^[A-Za-z\s]+$/.test(eInput.value)) {
+                        errores += "<p>El nombre no puede contener carácteres especiales</p>";
                     }
                 }
                 if (eInput.name === "surname"){
                     if (eInput.value.length === 0) {
                         errores += "<p>Debe introcucir su Apellido</p>";
+                    } else if (eInput.value.length < 2 || eInput.value.length > 20) {
+                        errores += "<p>El apellido debe contener entre 2 y 20 carácteres</p>";
+                    }  else if (!/^[A-Za-z\s]+$/.test(eInput.value)) {
+                        errores += "<p>El apellido no puede contener carácteres especiales</p>";
                     }
                 }
                 if (eInput.name === "phone"){
                     if (eInput.value.length === 0 ){
                         errores += "<p>Introduzca un número de teléfono</p>";
-                    }
-                    else if (eInput.value.length != 9 ){
+                    } else if (eInput.value.length != 9 ){
                         errores += "<p>Introduzca un número de teléfono correcto</p>";
                     }
                 }
                 if (eInput.name === "email"){
                     if (eInput.value.length === 0) {
                         errores += "<p>Debe introcucir su Email</p>";
+                    } else if(!validateEmail(eInput.value)) {
+                        errores += "<p>Formato de email no válido</p>";
+
                     }
                 }
                 if (eInput.name === "password"){
@@ -207,6 +217,12 @@
                     document.getElementById('erroresRegister').innerHTML="<div class='alert alert-danger'>"+errores+"</div>";
                 }
             }
+        }
+        function validateEmail(email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            //esta otra también es válida
+            //var re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+            return re.test(email);
         }
     </script>
 @endsection

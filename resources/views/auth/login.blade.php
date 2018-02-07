@@ -29,7 +29,7 @@
                                     <label for="email" class="col-md-12 control-label">E-Mail</label>
 
                                     <div class="col-md-12 text-center">
-                                        <input id="email" type="email" class="form-control inputText" name="email" value="{{ old('email') }}" required autofocus>
+                                        <input id="email" type="text" class="form-control inputText" name="email" value="{{ old('email') }}" autofocus>
 
                                         @if ($errors->has('email'))
                                             <span class="help-block">
@@ -91,12 +91,17 @@
                 var eInput = elementos[i];
                 if (eInput.name === "email"){
                     if (eInput.value.length === 0) {
-                        errores += "<p>Debe introcucir su Email</p>";
+                        errores += "<p>Debe introducir su email</p>";
+                    } else if(!validateEmail(eInput.value)) {
+                        errores += "<p>Formato de email no válido</p>";
+
                     }
                 }
                 if (eInput.name === "password"){
-                    if (eInput.value.length === 0 ){
+                    if (eInput.value.length === 0){
                         errores += "<p>Debe introducir su constraseña</p>";
+                    } else if (eInput.value.length < 6) {
+                        errores += "<p>Contraseña demasiado corta</p>";
                     }
                 }
 
@@ -108,6 +113,13 @@
 
             }
 
+        }
+
+        function validateEmail(email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            //esta otra también es válida
+            //var re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+            return re.test(email);
         }
 
         @if(Session::has('infoSinVerify'))

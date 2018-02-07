@@ -35,17 +35,24 @@ $( document ).ready( function() {
             var eInput = elementos[i];
             if (eInput.name === "nombre"){
                 if (eInput.value.length == 0) {
-                    errors += "<p>Tu nombre no puede estar vacío</p>";
+                    errors += "<p>Debe introcucir su Nombre</p>";
+                } else if (eInput.value.length < 2 || eInput.value.length > 20) {
+                    errors += "<p>El nombre debe contener entre 2 y 20 carácteres</p>";
+                } else if (!/^[A-Za-z\s]+$/.test(eInput.value)) {
+                    errors += "<p>El nombre no puede contener carácteres especiales</p>";
                 }
             }
             if(eInput.name === "email"){
-                if(!validateEmail(eInput.value)){
-                    errors += "<p>Tu email no es válido</p>";
+                if (eInput.value.length === 0) {
+                    errors += "<p>Debe introcucir su Email</p>";
+                } else if(!validateEmail(eInput.value)) {
+                    errors += "<p>Formato de email no válido</p>";
+
                 }
             }
             if (eInput.name === "texto"){
-                if (eInput.value.length <= 20){
-                    errors += "<p>Tu texto es demasiado corto</p>";
+                if (eInput.value.length < 20 || eInput.value.length > 1000){
+                    errors += "<p>El mensaje debe contener entre 20 y 1000 carácteres</p>";
                 }
             }
 

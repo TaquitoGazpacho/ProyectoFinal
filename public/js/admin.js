@@ -83,12 +83,12 @@ function validateRegisterEmpresa(event) {
         var eInput = elementos[i];
         if (eInput.name === "nombre") {
             if (eInput.value.length === 0) {
-                errores += "<p>Debe introcucir su Nombre</p>";
+                errores += "<p>Debe introducir su Nombre</p>";
             }
         }
         if (eInput.name === "email") {
             if (eInput.value.length === 0) {
-                errores += "<p>Debe introcucir su Email</p>";
+                errores += "<p>Debe introducir su Email</p>";
             }
         }
         if (eInput.name === "telefono") {
