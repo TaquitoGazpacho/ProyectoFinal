@@ -1,7 +1,7 @@
 @extends('user.userMaster')
 
 @section('contenido')
-    <div class="hidden-lg hidden-md col-xs-offset-4 col-sm-offset-6 ">
+    <div class="hidden-lg hidden-md col-xs-12 col-sm-12 text-center">
         <h1>Perfil</h1>
     </div>
 

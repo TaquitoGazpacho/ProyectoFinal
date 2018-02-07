@@ -1,7 +1,7 @@
 @extends('user.userMaster')
 
 @section('contenido')
-    <div class="hidden-lg hidden-md col-xs-offset-3 col-sm-offset-6 ">
+    <div class="hidden-lg hidden-md col-xs-12 col-sm-12 text-center">
         <h1>Tiendas Asociadas</h1>
     </div>
     <br/>

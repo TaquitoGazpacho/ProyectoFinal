@@ -6,7 +6,7 @@
 
 @extends('user.userMaster')
 @section('contenido')
-    <div class="hidden-lg hidden-md col-xs-offset-3 col-sm-offset-5 ">
+    <div class="hidden-lg hidden-md col-xs-12 col-sm-12 text-center">
         <h1>Pedidos</h1>
     </div>
     <div class="box-body table-responsive sombras bordes-redondeados-tabla">

@@ -1,7 +1,7 @@
 @extends('user.userMaster')
 
 @section('contenido')
-    <div class="hidden-lg hidden-md col-xs-offset-1 col-sm-offset-5 ">
+    <div class="hidden-lg hidden-md col-xs-12 col-sm-12 text-center">
         <h1>Suscripción</h1>
     </div>
     <form  action="{{route('cambiarSuscripcion')}}" method="post">

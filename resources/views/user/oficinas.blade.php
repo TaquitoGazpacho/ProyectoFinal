@@ -4,7 +4,7 @@
     @php
         $oficinas=\App\Models\Oficina::getOficinas();
     @endphp
-    <div class="hidden-lg hidden-md col-xs-offset-2 col-sm-offset-4 ">
+    <div class="hidden-lg hidden-md col-xs-12 col-sm-12 text-center">
         <h1>Oficinas</h1>
     </div>
     <div class="row">
