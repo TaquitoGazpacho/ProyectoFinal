@@ -3,6 +3,8 @@ header{
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
+  padding-left: 15px;
+  padding-right:15px;
   .centrado {
     background: rgba(60, 141, 188, 0.90);
     text-align: center;
@@ -40,6 +42,7 @@ header{
   }
   @media(max-width: 992px) {
     .centrado  {
+      position: inherit;
       margin: auto;
     }
   }
