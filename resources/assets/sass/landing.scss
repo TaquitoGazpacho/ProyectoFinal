@@ -12,7 +12,7 @@ header{
     border-radius: 3px;
     border: 2px solid rgba(255, 255, 255, 0.6);
     position: absolute;
-    right: 50px;
+    right: 10%;
     padding: 10px;
     h2{
       font-family: 'Encode Sans Expanded', sans-serif;
@@ -106,7 +106,7 @@ a {
 .parallax{
     padding-left: 10px;
     padding-right: 10px;
-    background-image: url("../img/taquillas.jpg");
+    background-image: url("../img/fotoMovil.jpg");
     min-height: 500px;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
