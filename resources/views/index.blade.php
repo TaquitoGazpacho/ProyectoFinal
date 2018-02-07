@@ -160,7 +160,7 @@
             </div>
             <div class="col-xs-12 col-md-10 col-lg-8 eq-line">
                 <div class="pasos-texto separador">
-                    Quisque quis laoreet ante. Sed rutrum justo sit amet massa cursus, convallis semper nisi laoreet. Mauris in porta sapien. Aliquam scelerisque vulputate ex nec accumsan.
+                    Compra por internet y selecciona nuestro servicio para taquillas públicas o privadas.
                 </div>
             </div>
         </div>
@@ -168,7 +168,7 @@
         <div class="row aligner">
             <div class="col-xs-12 col-md-10 col-lg-8">
                 <div class="pasos-texto separador-lf pull-right">
-                    Quisque quis laoreet ante. Sed rutrum justo sit amet massa cursus, convallis semper nisi laoreet. Mauris in porta sapien. Aliquam scelerisque vulputate ex nec accumsan.
+                    Una vez depositado tu paquete, recibirás un correo con una clave única con la que solamente tú podrás abrir la taquilla.
                 </div>
             </div>
             <div class="col-xs-12 col-md-2 col-lg-3">
@@ -182,7 +182,7 @@
             </div>
             <div class="col-xs-12 col-md-10 col-lg-8">
                 <div class="pasos-texto separador">
-                    Quisque quis laoreet ante. Sed rutrum justo sit amet massa cursus, convallis semper nisi laoreet. Mauris in porta sapien. Aliquam scelerisque vulputate ex nec accumsan.
+                    Nuestras oficinas están abiertas las 24h para que puedas recoger tu pedido en cualquier momento y a cualquier hora del dia.
                 </div>
             </div>
         </div>
@@ -196,8 +196,7 @@
         <div class="descripcionServicio">
             <h2>Tu servicio de confianza</h2>
             <hr/>
-            <h4>¡Olvídate de tener que ir a casa corriendo para recibir un paquete! Gracias a nuestro servicio, podrás volver a casa cuando quieras y recoger tu paquete por el camino</h4>
-            <h4>Ofrecemos oficinas por toda la ciudad, solo tendrás que pedir en tu tienda que utilicen nuestro servicio. Será tan simple como recibir un código en tu móvil e introducirlo para abrir la taquilla. Sea la hora que sea.</h4>
+            <h4>A parte de disponer de distintas oficinas repartidas por la ciudad, también ofrecemos la opción de instalarte una taquilla en tu portal. Mediante nuestro servicio, no tendrás que perder tiempo y cambiar tus planes para recibir un paquete. Lo único que tienes que hacer es solicitar nuestro servicio como método de entrega e ir al punto de recogida deseado.</h4>
         </div>
     </div>
 </section>
