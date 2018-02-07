@@ -6,7 +6,7 @@
             padding-left: 0px;
         }
         .mobile-area{
-            margin: 0;
+            margin: auto;
         }
     </style>
 @endsection
