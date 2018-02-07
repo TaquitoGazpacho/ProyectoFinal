@@ -575,6 +575,11 @@ BACKGROUND COLORS
 .tiendas.contenido{
   max-width: 1024px;
   margin: auto;
+  div{
+    h2{
+      font-family: 'Comfortaa', cursive;
+    }
+  }
   .row{
     margin-bottom: 10px;
     div {

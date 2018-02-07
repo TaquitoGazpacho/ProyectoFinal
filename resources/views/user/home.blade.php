@@ -1,6 +1,10 @@
 @extends('user.userMaster')
 
 @section('contenido')
+    <div class="hidden-lg hidden-md col-xs-offset-4 col-sm-offset-6 ">
+        <h1>Perfil</h1>
+    </div>
+
 
     <div class="row row-eq-height">
         <div class="col-md-4 col-xs-8 col-sm-6 col-lg-4 col-xs-offset-2 col-lg-offset-2 col-md-offset-2 fondo-user borde-user-iz">

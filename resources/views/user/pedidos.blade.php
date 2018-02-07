@@ -6,6 +6,9 @@
 
 @extends('user.userMaster')
 @section('contenido')
+    <div class="hidden-lg hidden-md col-xs-offset-3 col-sm-offset-5 ">
+        <h1>Pedidos</h1>
+    </div>
     <div class="box-body table-responsive sombras bordes-redondeados-tabla">
         <table id="tablaPedidos" class="table table-hover">
             <thead>
