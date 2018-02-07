@@ -60,7 +60,7 @@
                 swal({
                     title: "{!! alert()->message() !!}",
                     text: "{!! alert()->option('text') !!}",
-                    type: icono
+                    type: "{!! alert()->type() !!}"
                 });
             @endif
 
