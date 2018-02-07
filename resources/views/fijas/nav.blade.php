@@ -38,7 +38,7 @@
 
                                         <p>
                                             {{ Auth::guard('web')->user()->name }}
-                                            <small>Member since Nov. 2012</small>
+                                            <small>{{ Auth::guard('web')->user()->email }}</small>
                                         </p>
                                     </li>
                                     <!-- Menu Footer-->
@@ -50,7 +50,7 @@
                                             {{ csrf_field() }}
                                         </form>
                                         <div class="pull-right">
-                                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-default btn-flat">Cerrar sesión</a>
+                                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-error btn-flat">Cerrar sesión</a>
                                         </div>
                                     </li>
                                 </ul>

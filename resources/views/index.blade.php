@@ -60,7 +60,8 @@
                 swal({
                     title: "{!! alert()->message() !!}",
                     text: "{!! alert()->option('text') !!}",
-                    type: "{!! alert()->type() !!}"
+                    type: "{!! alert()->type() !!}",
+                    confirmButtonColor: '#3C8DBC',
                 });
             @endif
 
