@@ -23,7 +23,7 @@
 
                     @if(Auth::guard('web')->check())
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown user user-menu">
+                            <li id="droup" class="dropup dropdown user user-menu">
                                 <!-- Menu Toggle Button -->
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <!-- The user image in the navbar-->
@@ -33,7 +33,7 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- The user image in the menu -->
-                                    <li class="user-header hide-mobile">
+                                    <li id="userPanel" class="user-header hide-mobile panel-invertido">
                                         <img src="{{ asset(Auth::guard('web')->user()->image) }}" class="img-circle" alt="User Image">
 
                                         <p>
@@ -42,7 +42,7 @@
                                         </p>
                                     </li>
                                     <!-- Menu Footer-->
-                                    <li class="user-footer">
+                                    <li id="userFooter" class="user-footer">
                                         <div class="pull-left">
                                             <a href="{{ route('home.pedidos') }}" class="btn btn-default btn-flat">Tu cuenta</a>
                                         </div>

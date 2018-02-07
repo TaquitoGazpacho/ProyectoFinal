@@ -18,9 +18,13 @@ $( document ).ready( function() {
             if(scroll >= os){
                 $('#servicios').addClass('vg');
                 $('#droup').removeClass('dropup');
+                $('#userPanel').removeClass('panel-invertido').addClass('panel-normal');
+                $('#userFooter').css('background-color', '#ffffff');
             } else{
                 $('#servicios').removeClass('vg');
                 $('#droup').addClass('dropup');
+                $('#userPanel').removeClass('panel-normal').addClass('panel-invertido');
+                $('#userFooter').css('background-color', '#3C8DBC');
             }
         });
     });
