@@ -16,8 +16,8 @@
                     <ul class="nav navbar-nav">
                         <li class="color"><a href="{{ route('index') }}">Home<span class="animacion-linea"></span></a></li>
                         <li class="color"><a href="{{ route('index') }}#servicios">Servicios<span class="animacion-linea"></span></a></li>
-                        <li class="color"><a href="{{ route('index') }}#opiniones">Opiniones<span class="animacion-linea"></span></a></li>
-                        <li class="color"><a href="{{ route('index') }}#sobreLaEmpresa">Sobre la empresa<span class="animacion-linea"></span></a></li>
+                        <li class="color"><a href="{{ route('index') }}#opiniones">Funcionamiento<span class="animacion-linea"></span></a></li>
+                        <li class="color"><a href="{{ route('index') }}#sobreLaEmpresa">Disponibilidad<span class="animacion-linea"></span></a></li>
                         <li class="color"><a href="{{ route('index') }}#contactanos">Contáctanos<span class="animacion-linea"></span></a></li>
                     </ul>
 

@@ -95,8 +95,7 @@
                         </form>
                         @if ($errors->any())
                             <script>
-                                $('#profile').show();
-                                $("#editProfile").modal();
+                                mostrarModal();
                             </script>
                             <div class="alert alert-danger">
                                 <ul>
@@ -254,8 +253,6 @@
                 }
             });
         });
-
-
 
 
     </script>

@@ -25,6 +25,15 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/favicon.ico') }}">
 
+    <script>
+
+        function mostrarModal(){
+            window.onload = modal;
+            function modal() {
+                $("#editProfile").modal("show")
+            }
+        }
+    </script>
     @yield('css')
 </head>
 

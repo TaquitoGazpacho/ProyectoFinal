@@ -38,7 +38,6 @@
             addEvent();
         } catch (e) {}
     }
-
 </script>
 
 <!-- Favicon -->
