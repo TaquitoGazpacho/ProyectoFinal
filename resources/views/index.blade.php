@@ -237,5 +237,10 @@
 
 @include('fijas.footer')
 
+<script>
+    $("#droup").addClass("dropup");
+    $("#userPanel").addClass("panel-invertido");
+    $('#userFooter').css('background-color', '#3C8DBC');
+</script>
 
 </body>
