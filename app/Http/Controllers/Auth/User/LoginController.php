@@ -58,8 +58,8 @@ class LoginController extends Controller
         // Attempt to log the user in
         //if (Auth::attempt($credential, $request->member)){
         Auth::attempt($credential, $request->member);
-        if(Auth::check() && Auth::user()->verified) {
-            return redirect()->intended(route('home'));
+        if(Auth::guard('web')->check() && Auth::guard('web')->user()->verified) {
+            return redirect()->route('home');
         } elseif (Auth::check()) {
             Auth::logout();
 //            alert()->flash('Email no verificado', 'warning', [

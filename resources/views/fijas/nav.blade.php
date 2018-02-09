@@ -57,10 +57,16 @@
                             </li>
                         </ul>
                     @else
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="{{ route('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i> Iniciar sesión</a></li>
-                            <li><a href="{{ route('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i> Regístrate</a></li>
-                        </ul>
+                        @if(Auth::guard('empresa')->check())
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="{{ route('empresa.home') }}">{{ Auth::guard('empresa')->user()->nombre }}</a></li>
+                            </ul>
+                        @else
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="{{ route('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i> Iniciar sesión</a></li>
+                                <li><a href="{{ route('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i> Regístrate</a></li>
+                            </ul>
+                        @endif
                     @endif
                 </div>
             </div>

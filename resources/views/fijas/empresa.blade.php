@@ -75,7 +75,7 @@
 
 @section('js')
     <script>
-        $("tbody .select2").select2();
+        $("tbody .select2").select2({minimumResultsForSearch: -1});
         $(function () {
             $('#tablaEmpresa').DataTable({
                 'paging'      : true,
