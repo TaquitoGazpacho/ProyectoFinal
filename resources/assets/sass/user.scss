@@ -313,6 +313,9 @@ body {
     @media(min-width: 768px) and (max-width: 991px){
       max-width: 600px;
       margin: auto;
+      .row-eq-height {
+        width: 100%;
+      }
     }
   }
   .mobile-img {
@@ -324,6 +327,7 @@ body {
     display: none;
   }
 }
+
 
 @media (min-width: 767px) and (max-width: 1023px){
   #sidebar-wrapper{

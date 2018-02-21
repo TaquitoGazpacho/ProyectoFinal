@@ -7,11 +7,11 @@
 
 
     <div class="row row-eq-height">
-        <div class="col-md-4 col-xs-8 col-sm-6 col-lg-4 col-xs-offset-2 col-lg-offset-2 col-md-offset-2 fondo-user borde-user-iz">
+        <div class="col-md-4 col-xs-8 col-sm-6 col-lg-4 col-xs-offset-2 col-sm-offset-0 col-lg-offset-2 col-md-offset-2 fondo-user borde-user-iz">
             <img src="{{Auth::guard('web')->user()->image}}" alt="Foto" class="img img-responsive mobile-img img-centrada"/>
 
         </div>
-        <div class="col-md-4 col-xs-8 col-sm-6 col-lg-4 col-xs-offset-2 col-sm-offset-0 text-center fondo-user borde-user-dr">
+        <div class="col-md-4 col-xs-8 col-sm-6 col-lg-4 col-xs-offset-2 col-sm-offset-0 col-md-offset-0 text-center fondo-user borde-user-dr">
             <div class="usu-nombre text-center">
                 <h2>{{Auth::guard('web')->user()->name." ".Auth::guard('web')->user()->surname}}</h2>
             </div>
