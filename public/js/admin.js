@@ -102,7 +102,7 @@ function validateRegisterEmpresa(event) {
             }
         }
         if (eInput.name === "password") {
-            if (eInput.value.length < 9 ) {
+            if (eInput.value.length < 6 ) {
                 errores += "<p>La contraseña debe tener mínimo 6 caracteres</p>";
             }
         }
