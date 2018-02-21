@@ -255,11 +255,7 @@ function estadoTaquilla(event, id){
         if (http.readyState === 4) {
             // Se ha recibido la respuesta.
             if (http.status === 200) {
-                // Aquí escribiremos lo que queremos que
-                // se ejecute tras recibir la respuesta
-                let datosDoc = http.responseText;
-                // console.log(datosDoc);
-
+                $.notify("El estado de la taquilla ha sido cambiado satisfactoriamente", "success");
             } else {
                 // Ha ocurrido un error
                 alert(

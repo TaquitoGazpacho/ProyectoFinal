@@ -25,6 +25,7 @@ class Taquilla extends Model
             ['ocupada', 0],
             ['estado','Funcionando'],
             ['oficina_id', $oficina_id]
+//        ])->min('id');
         ])->first();
     }
 
