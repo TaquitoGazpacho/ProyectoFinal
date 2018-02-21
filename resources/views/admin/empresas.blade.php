@@ -56,6 +56,6 @@ $empresas = Empresa_reparto::getEmpresas();
                 'info'        : false,
                 'autoWidth'   : false
             })
-        })
+        });
     </script>
 @endsection

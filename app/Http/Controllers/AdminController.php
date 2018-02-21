@@ -86,11 +86,14 @@ class AdminController extends Controller
     public function storeEmpresa(Request $request)
     {
         $this->validatorEmpresa($request->all())->validate();
-        $empresaReparto=$this->create($request->all());
-        $empresaReparto->save();
-
-
-        return redirect()->route('admin.home');
+        DB::table('empresa_repartos')->insert([
+           ['nombre' => $request->nombre,
+               'email' => $request->email,
+               'telefono' => $request->telefono,
+               'nif' => $request->nif,
+               'password' => $request->password]
+        ]);
+        return redirect()->route('admin.empresa');
     }
 
     public function actualizarEmpresa(Request $request)
