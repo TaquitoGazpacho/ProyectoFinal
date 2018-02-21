@@ -91,7 +91,7 @@ class AdminController extends Controller
                'email' => $request->email,
                'telefono' => $request->telefono,
                'nif' => $request->nif,
-               'password' => $request->password]
+               'password' => bcrypt($request->password)]
         ]);
         return redirect()->route('admin.empresa');
     }
